@@ -1,0 +1,175 @@
+\hypertarget{class_touchesfonction_sql_model}{}\doxysection{Touchesfonction\+Sql\+Model Class Reference}
+\label{class_touchesfonction_sql_model}\index{TouchesfonctionSqlModel@{TouchesfonctionSqlModel}}
+
+
+\mbox{\hyperlink{class_touchesfonction_sql_model}{Touchesfonction\+Sql\+Model}} class.  
+
+
+
+
+{\ttfamily \#include $<$mainwindow.\+h$>$}
+
+Inheritance diagram for Touchesfonction\+Sql\+Model\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_touchesfonction_sql_model}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_touchesfonction_sql_model_a29f495777d3730a5b9fa08a1879e7bf4}{Touchesfonction\+Sql\+Model}} (Q\+Object $\ast$parent, Q\+Sql\+Database config\+\_\+db)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_touchesfonction_sql_model_a29f495777d3730a5b9fa08a1879e7bf4}{Touchesfonction\+Sql\+Model\+::\+Touchesfonction\+Sql\+Model}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_touchesfonction_sql_model_aa6882ed3f5192ad96dce1df6e4454cb2}{set\+Query}} (const Q\+String \&query, const Q\+Sql\+Database \&db=Q\+Sql\+Database())
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_touchesfonction_sql_model_aa6882ed3f5192ad96dce1df6e4454cb2}{Touchesfonction\+Sql\+Model\+::set\+Query}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_touchesfonction_sql_model_aa535009b8b15cd5be16d8adcee0321fe}{set\+Query}} (const Q\+Sql\+Query \&query)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_touchesfonction_sql_model_aa6882ed3f5192ad96dce1df6e4454cb2}{Touchesfonction\+Sql\+Model\+::set\+Query}}. \end{DoxyCompactList}\item 
+Q\+Variant \mbox{\hyperlink{class_touchesfonction_sql_model_a26adf3260419c66cab6bd0b2e82df2be}{data}} (const Q\+Model\+Index \&index, int role) const
+\item 
+\mbox{\Hypertarget{class_touchesfonction_sql_model_a9ebf4b74ab2be27a5cebd649e1f330bf}\label{class_touchesfonction_sql_model_a9ebf4b74ab2be27a5cebd649e1f330bf}} 
+Q\+Hash$<$ int, Q\+Byte\+Array $>$ {\bfseries role\+Names} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_touchesfonction_sql_model_a8eccc9ee9b44507bde47da248202bcec}{generate\+Role\+Names}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_touchesfonction_sql_model_a8eccc9ee9b44507bde47da248202bcec}{Touchesfonction\+Sql\+Model\+::generate\+Role\+Names}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_touchesfonction_sql_model_a992b403ea61c3ff62b9ccecce4352f7c}\label{class_touchesfonction_sql_model_a992b403ea61c3ff62b9ccecce4352f7c}} 
+Q\+Hash$<$ int, Q\+Byte\+Array $>$ {\bfseries m\+\_\+role\+Names}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{class_touchesfonction_sql_model}{Touchesfonction\+Sql\+Model}} class. 
+
+Qt5 Q\+Quick\+View replaces Qt4 Qt\+Declarative, Q\+W\+Server obsolete 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_touchesfonction_sql_model_a29f495777d3730a5b9fa08a1879e7bf4}\label{class_touchesfonction_sql_model_a29f495777d3730a5b9fa08a1879e7bf4}} 
+\index{TouchesfonctionSqlModel@{TouchesfonctionSqlModel}!TouchesfonctionSqlModel@{TouchesfonctionSqlModel}}
+\index{TouchesfonctionSqlModel@{TouchesfonctionSqlModel}!TouchesfonctionSqlModel@{TouchesfonctionSqlModel}}
+\doxysubsubsection{\texorpdfstring{TouchesfonctionSqlModel()}{TouchesfonctionSqlModel()}}
+{\footnotesize\ttfamily Touchesfonction\+Sql\+Model\+::\+Touchesfonction\+Sql\+Model (\begin{DoxyParamCaption}\item[{Q\+Object $\ast$}]{parent,  }\item[{Q\+Sql\+Database}]{config\+\_\+db }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+\mbox{\hyperlink{class_touchesfonction_sql_model_a29f495777d3730a5b9fa08a1879e7bf4}{Touchesfonction\+Sql\+Model\+::\+Touchesfonction\+Sql\+Model}}. 
+
+
+\begin{DoxyItemize}
+\item constructor 
+\end{DoxyItemize}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{18                                                                                       :QSqlQueryModel(parent)}
+\DoxyCodeLine{19 \{\}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_touchesfonction_sql_model_a26adf3260419c66cab6bd0b2e82df2be}\label{class_touchesfonction_sql_model_a26adf3260419c66cab6bd0b2e82df2be}} 
+\index{TouchesfonctionSqlModel@{TouchesfonctionSqlModel}!data@{data}}
+\index{data@{data}!TouchesfonctionSqlModel@{TouchesfonctionSqlModel}}
+\doxysubsubsection{\texorpdfstring{data()}{data()}}
+{\footnotesize\ttfamily Q\+Variant Touchesfonction\+Sql\+Model\+::data (\begin{DoxyParamCaption}\item[{const Q\+Model\+Index \&}]{index,  }\item[{int}]{role }\end{DoxyParamCaption}) const}
+
+\mbox{\hyperlink{class_touchesfonction_sql_model_a26adf3260419c66cab6bd0b2e82df2be}{Touchesfonction\+Sql\+Model\+::data}}
+\begin{DoxyItemize}
+\item access database\+\_\+setup.\+db, get database value 
+\begin{DoxyParams}{Parameters}
+{\em in} & \+: index, role \\
+\hline
+{\em out} & \+: value \\
+\hline
+\end{DoxyParams}
+
+\end{DoxyItemize}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{60 \{}
+\DoxyCodeLine{61     QVariant value;}
+\DoxyCodeLine{62     \textcolor{keywordflow}{if}(role < Qt::UserRole) \{}
+\DoxyCodeLine{63            value = QSqlQueryModel::data(index, role);}
+\DoxyCodeLine{64        \}}
+\DoxyCodeLine{65        \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{66            \textcolor{keywordtype}{int} columnIdx = role -\/ Qt::UserRole -\/ 1;}
+\DoxyCodeLine{67            QModelIndex modelIndex = this-\/>index(index.row(), columnIdx);}
+\DoxyCodeLine{68            value = QSqlQueryModel::data(modelIndex, Qt::DisplayRole);}
+\DoxyCodeLine{69        \}}
+\DoxyCodeLine{70        \textcolor{keywordflow}{return} value;}
+\DoxyCodeLine{71 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_touchesfonction_sql_model_a8eccc9ee9b44507bde47da248202bcec}\label{class_touchesfonction_sql_model_a8eccc9ee9b44507bde47da248202bcec}} 
+\index{TouchesfonctionSqlModel@{TouchesfonctionSqlModel}!generateRoleNames@{generateRoleNames}}
+\index{generateRoleNames@{generateRoleNames}!TouchesfonctionSqlModel@{TouchesfonctionSqlModel}}
+\doxysubsubsection{\texorpdfstring{generateRoleNames()}{generateRoleNames()}}
+{\footnotesize\ttfamily void Touchesfonction\+Sql\+Model\+::generate\+Role\+Names (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\mbox{\hyperlink{class_touchesfonction_sql_model_a8eccc9ee9b44507bde47da248202bcec}{Touchesfonction\+Sql\+Model\+::generate\+Role\+Names}}. 
+
+
+\begin{DoxyItemize}
+\item access database\+\_\+setup.\+db and create column names 
+\end{DoxyItemize}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{46 \{}
+\DoxyCodeLine{47     m\_roleNames.clear();}
+\DoxyCodeLine{48     \textcolor{keywordflow}{for}( \textcolor{keywordtype}{int} i = 0; i < record().count(); i ++) \{}
+\DoxyCodeLine{49         m\_roleNames.insert(Qt::UserRole + i + 1, record().fieldName(i).toUtf8());}
+\DoxyCodeLine{50     \}}
+\DoxyCodeLine{51 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_touchesfonction_sql_model_aa535009b8b15cd5be16d8adcee0321fe}\label{class_touchesfonction_sql_model_aa535009b8b15cd5be16d8adcee0321fe}} 
+\index{TouchesfonctionSqlModel@{TouchesfonctionSqlModel}!setQuery@{setQuery}}
+\index{setQuery@{setQuery}!TouchesfonctionSqlModel@{TouchesfonctionSqlModel}}
+\doxysubsubsection{\texorpdfstring{setQuery()}{setQuery()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Touchesfonction\+Sql\+Model\+::set\+Query (\begin{DoxyParamCaption}\item[{const Q\+Sql\+Query \&}]{query }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{class_touchesfonction_sql_model_aa6882ed3f5192ad96dce1df6e4454cb2}{Touchesfonction\+Sql\+Model\+::set\+Query}}. 
+
+
+\begin{DoxyItemize}
+\item access database\+\_\+setup.\+db 
+\end{DoxyItemize}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{36 \{}
+\DoxyCodeLine{37     QSqlQueryModel::setQuery(query);}
+\DoxyCodeLine{38     \mbox{\hyperlink{class_touchesfonction_sql_model_a8eccc9ee9b44507bde47da248202bcec}{generateRoleNames}}();}
+\DoxyCodeLine{39 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_touchesfonction_sql_model_aa6882ed3f5192ad96dce1df6e4454cb2}\label{class_touchesfonction_sql_model_aa6882ed3f5192ad96dce1df6e4454cb2}} 
+\index{TouchesfonctionSqlModel@{TouchesfonctionSqlModel}!setQuery@{setQuery}}
+\index{setQuery@{setQuery}!TouchesfonctionSqlModel@{TouchesfonctionSqlModel}}
+\doxysubsubsection{\texorpdfstring{setQuery()}{setQuery()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Touchesfonction\+Sql\+Model\+::set\+Query (\begin{DoxyParamCaption}\item[{const Q\+String \&}]{query,  }\item[{const Q\+Sql\+Database \&}]{db = {\ttfamily QSqlDatabase()} }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{class_touchesfonction_sql_model_aa6882ed3f5192ad96dce1df6e4454cb2}{Touchesfonction\+Sql\+Model\+::set\+Query}}. 
+
+
+\begin{DoxyItemize}
+\item access database\+\_\+setup.\+db 
+\end{DoxyItemize}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{26 \{}
+\DoxyCodeLine{27     QSqlQueryModel::setQuery(query, db);}
+\DoxyCodeLine{28     \mbox{\hyperlink{class_touchesfonction_sql_model_a8eccc9ee9b44507bde47da248202bcec}{generateRoleNames}}();}
+\DoxyCodeLine{29 \}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{mainwindow_8h}{mainwindow.\+h}}\item 
+\mbox{\hyperlink{mainwindow_8cpp}{mainwindow.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,121 @@
+\hypertarget{class_request_mapper1}{}\doxysection{Request\+Mapper1 Class Reference}
+\label{class_request_mapper1}\index{RequestMapper1@{RequestMapper1}}
+Inheritance diagram for Request\+Mapper1\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_request_mapper1}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_request_mapper1_a0d247e7900b235256a6dbedf85e692ab}{Request\+Mapper1}} (Q\+Object $\ast$parent=0)
+\item 
+\mbox{\hyperlink{class_request_mapper1_a4c47a8ef180c609b2c64ae374f8f0b16}{$\sim$\+Request\+Mapper1}} ()
+\item 
+void \mbox{\hyperlink{class_request_mapper1_acc7ca1d5b19d4a37cb64a4e898d16050}{service}} (Http\+Request \&request, Http\+Response \&response)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_request_mapper1_a99c2f1963907f8fac1bc3ea3b541cf75}\label{class_request_mapper1_a99c2f1963907f8fac1bc3ea3b541cf75}} 
+static log4cpp\+::\+Category $\ast$ {\bfseries log4cpp} = \&log4cpp\+::\+Category\+::get\+Instance(\char`\"{}Request\+Mapper1\char`\"{})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_request_mapper1_a0d247e7900b235256a6dbedf85e692ab}\label{class_request_mapper1_a0d247e7900b235256a6dbedf85e692ab}} 
+\index{RequestMapper1@{RequestMapper1}!RequestMapper1@{RequestMapper1}}
+\index{RequestMapper1@{RequestMapper1}!RequestMapper1@{RequestMapper1}}
+\doxysubsubsection{\texorpdfstring{RequestMapper1()}{RequestMapper1()}}
+{\footnotesize\ttfamily Request\+Mapper1\+::\+Request\+Mapper1 (\begin{DoxyParamCaption}\item[{Q\+Object $\ast$}]{parent = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+Constructor. 
+\begin{DoxyParams}{Parameters}
+{\em parent} & Parent object \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{41                                               :HttpRequestHandler(parent) \{}
+\DoxyCodeLine{42     log4cpp-\/>debug(\textcolor{stringliteral}{"constructeur"});}
+\DoxyCodeLine{43 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_request_mapper1_a4c47a8ef180c609b2c64ae374f8f0b16}\label{class_request_mapper1_a4c47a8ef180c609b2c64ae374f8f0b16}} 
+\index{RequestMapper1@{RequestMapper1}!````~RequestMapper1@{$\sim$RequestMapper1}}
+\index{````~RequestMapper1@{$\sim$RequestMapper1}!RequestMapper1@{RequestMapper1}}
+\doxysubsubsection{\texorpdfstring{$\sim$RequestMapper1()}{~RequestMapper1()}}
+{\footnotesize\ttfamily Request\+Mapper1\+::$\sim$\+Request\+Mapper1 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Destructor. 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{45 \{}
+\DoxyCodeLine{46     qDebug(\textcolor{stringliteral}{"RequestMapper1: deleted"});}
+\DoxyCodeLine{47 \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_request_mapper1_acc7ca1d5b19d4a37cb64a4e898d16050}\label{class_request_mapper1_acc7ca1d5b19d4a37cb64a4e898d16050}} 
+\index{RequestMapper1@{RequestMapper1}!service@{service}}
+\index{service@{service}!RequestMapper1@{RequestMapper1}}
+\doxysubsubsection{\texorpdfstring{service()}{service()}}
+{\footnotesize\ttfamily void Request\+Mapper1\+::service (\begin{DoxyParamCaption}\item[{Http\+Request \&}]{request,  }\item[{Http\+Response \&}]{response }\end{DoxyParamCaption})}
+
+Dispatch incoming H\+T\+TP requests to different controllers depending on the U\+RL. 
+\begin{DoxyParams}{Parameters}
+{\em request} & The received H\+T\+TP request \\
+\hline
+{\em response} & Must be used to return the response \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{48                                                                          \{}
+\DoxyCodeLine{49     QByteArray path=request.getPath();}
+\DoxyCodeLine{50     log4cpp-\/>debug(\textcolor{stringliteral}{"*********************************************"});}
+\DoxyCodeLine{51     log4cpp-\/>debug(\textcolor{stringliteral}{"Path : "} + QString(path).toStdString());}
+\DoxyCodeLine{52     log4cpp-\/>debug(\textcolor{stringliteral}{"*********************************************"});}
+\DoxyCodeLine{53 }
+\DoxyCodeLine{54     \textcolor{keywordflow}{if} (path.startsWith(\textcolor{stringliteral}{"/horodate"})) \{}
+\DoxyCodeLine{55         \mbox{\hyperlink{class_horodate_controller}{HorodateController}}().\mbox{\hyperlink{class_horodate_controller_a76ee684678729173dc61326c66a0f6b5}{service}}(request, response);}
+\DoxyCodeLine{56     \}}
+\DoxyCodeLine{57     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (path.startsWith(\textcolor{stringliteral}{"/setup"})) \{}
+\DoxyCodeLine{58         \mbox{\hyperlink{class_setup_controller}{SetupController}}().\mbox{\hyperlink{class_setup_controller_a919db5c4805c713038996d0d0948e94a}{service}}(request, response);}
+\DoxyCodeLine{59     \}}
+\DoxyCodeLine{60     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (path.startsWith(\textcolor{stringliteral}{"/hostname"})) \{}
+\DoxyCodeLine{61         \mbox{\hyperlink{class_nom_controller}{NomController}}().\mbox{\hyperlink{class_nom_controller_a4868197de9f5d3c32af79d02c7a47874}{service}}(request, response);}
+\DoxyCodeLine{62     \}}
+\DoxyCodeLine{63     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (path.startsWith(\textcolor{stringliteral}{"/fichier"})) \{}
+\DoxyCodeLine{64         \mbox{\hyperlink{class_file_upload_controller}{FileUploadController}}().\mbox{\hyperlink{class_file_upload_controller_adfa8811a91e6f1ddf7f28f4d98cb1679}{service}}(request, response);}
+\DoxyCodeLine{65     \}}
+\DoxyCodeLine{66     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (path.startsWith(\textcolor{stringliteral}{"/browser"})) \{}
+\DoxyCodeLine{67         \mbox{\hyperlink{class_browser_controller}{BrowserController}}().\mbox{\hyperlink{class_browser_controller_aadf88466ae257d2099bedf6c2d29d8cb}{service}}(request, response);}
+\DoxyCodeLine{68     \}}
+\DoxyCodeLine{69     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (path.startsWith(\textcolor{stringliteral}{"/message"})) \{}
+\DoxyCodeLine{70         \mbox{\hyperlink{class_message_controller}{MessageController}}().\mbox{\hyperlink{class_message_controller_a99e698a89e43ef21c3f2bae6d5337d37}{service}}(request, response);}
+\DoxyCodeLine{71     \}}
+\DoxyCodeLine{72     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (path.startsWith(\textcolor{stringliteral}{"/badgeage"})) \{}
+\DoxyCodeLine{73         \mbox{\hyperlink{class_badgeage_controller}{BadgeageController}}().\mbox{\hyperlink{class_badgeage_controller_a976ac5cff88a14ff12229be5bc85df9f}{service}}(request, response);}
+\DoxyCodeLine{74     \}}
+\DoxyCodeLine{75     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (path.startsWith(\textcolor{stringliteral}{"/gfi"})) \{}
+\DoxyCodeLine{76         \mbox{\hyperlink{class_gfi_controller}{GfiController}}().\mbox{\hyperlink{class_gfi_controller_a5137140f3e84d4f946638922cf879c39}{service}}(request, response);}
+\DoxyCodeLine{77     \}}
+\DoxyCodeLine{78     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (path.startsWith(\textcolor{stringliteral}{"/video"})) \{}
+\DoxyCodeLine{79         \mbox{\hyperlink{class_video_controller}{VideoController}}().\mbox{\hyperlink{class_video_controller_a737197281a6f5fdd41c0b96bf7195c29}{service}}(request, response);}
+\DoxyCodeLine{80     \}}
+\DoxyCodeLine{81     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (path.startsWith(\textcolor{stringliteral}{"/status"})) \{}
+\DoxyCodeLine{82         \mbox{\hyperlink{class_status_controller}{StatusController}}().\mbox{\hyperlink{class_status_controller_a61667334c9f96c63cce8a67f36253a58}{service}}(request, response);}
+\DoxyCodeLine{83     \}}
+\DoxyCodeLine{84     log4cpp-\/>debug(\textcolor{stringliteral}{"finished request"});}
+\DoxyCodeLine{85 \}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{requestmapper_8h}{requestmapper.\+h}}\item 
+\mbox{\hyperlink{requestmapper_8cpp}{requestmapper.\+cpp}}\end{DoxyCompactItemize}

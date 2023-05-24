@@ -1,0 +1,257 @@
+ Evolutions Logiciel Time2bii
+
+ 01/2016   Time2bii-1.5
+ Version de base avec nouvelle Interface opérateur
+
+ -------------------------------------------------------------------------------------------------------
+
+ 05/2016   Time2bii-1.6
+
+ Modification passage en mode veille
+     parametre Divers->sleep mode =0 => Gestion passage en mode veille si passage en alimentation secourue
+     parametre Divers->sleep mode =1 => Forçage passage en mode veille
+
+ Modification affichage message serveur pour centrage ligne 1 du message 1
+
+ Modification ecran utilitaire lecteur empreintes pour affichage correct en mode ecran vertical
+
+ Ajout Visualisation du mode d'attribution d'adresse ip  dans ecran setup html
+ "Static" ou  "Dhcp" est associé avec le type de l'Interface
+
+    Configuration reseau
+
+         Nom	    Interface	   Adresse	       Netmask
+    time2bii-001	eth0 Dhcp	172.16.65.48	255.255.254.0
+
+    Gateway     	Mac Adress
+    172.16.64.1	    3C:19:15:00:10:3D
+
+ Ajout Visualisation du mode d'attribution d'adresse ip  dans message web service
+ "Static" ou  "Dhcp" est associé avec le type de l'Interface
+
+    <?xml version="1.0" encoding="UTF-8"?>
+    <root>
+     <firmware>
+      <nom key="version" value="Time2bii 1.6 (b)"/>
+     </firmware>
+     <hostname>
+      <nom key="name" value="time2bii-001"/>
+     </hostname>
+     <ip>
+      <nom key="interface" value="eth0 Dhcp"/>
+      <nom key="adresse" value="172.16.65.48"/>
+      <nom key="netmask" value="255.255.254.0"/>
+      <nom key="gateway" value="172.16.64.1"/>
+      <nom key="MacAdress" value="3C:19:15:00:10:3D"/>
+     </ip>
+    </root>
+ -------------------------------------------------------------------------------------------------------
+ 05/2016   Time2bii-1.7
+
+ Nouveau kernel
+    -pour gestion dalle tactile capacitive
+     Modification du source  board-dimmam335x.c pour gestion irq i2c sur gpio 12
+
+
+    - dongles usb wifi Realtek et ralink
+    Realtek modules rtl * + firmware /rtlwifi
+    Ralink modules rt* +firmware /ralink
+
+ Gestion determination type dalle tactile
+ Modification logiciel pour meilleure gestion dhcp
+ Modification utilitaire de réglage du niveau sonore haut parleur:
+ -ajout extinction complete par appui prolongé sur icone
+ -------------------------------------------------------------------------------------------------------
+ 09/2016   Time2bii-1.8
+ - amélioration gestion reinitialisation couche réseau
+
+ - ajout possibilite de transfert du fichier Webservices.ini via webservice transfert fichier
+
+ -ajout saisie de 2 dns-nameserver dans le configurateur saisie nom,ip,netmasq,gateway STATIQUE
+
+ -Amélioration gestion 3G:
+    -ajout de la configuration appel 3G dans utilitaire de configuration
+    -amélioration des batchs de reinitialisation reseau
+
+ -------------------------------------------------------------------------------------------------------
+
+10/2016   Time2bii-1.9
+
+ - Libération de mémoire
+    - à chaque accès aux bases SQL (badge, Setup), on libère la mémoire
+    - Démarrage d'un shell de libération memoire périodique
+    - Création/ destruction dynamique du browser associé à chaque touche fonction
+
+ - ajout de l'élément "tempo" associé à chaque touche dans table SQL touche fonction
+   - Valeur par défaut de cette tempo =120 secondes
+   - modification page HTML setup pour nouvel affichage des touches fonctions
+   - modification web service acces au setup pour nouvelles emission/reception des touches fonctions
+   - Gestion de la tempo d'affichage des pages Web
+ -------------------------------------------------------------------------------------------------------
+
+20/10/2016   Time2bii-1.10
+
+- Libération de mémoire
+    -Dans tous le web services
+        - Déclaration statique de l'objet "QDomDocument doc"
+        - Effacement systématique de l'objet "doc" en fin d'utilisation
+
+
+-Ajout des fonctionnalités "reboot automatique" ou "restart application automatique" programmable
+ avec création fichier "rebootauto_log" ou "restartauto_log" avec image de commande "cat /proc/meminfo"
+
+
+        - Si fichiers "rebootauto" et "restartauto" non téléchargés
+           -"reboot" si la memoire libre mesurée est inférieure 50000 KB
+
+        - Si fichier "rebootauto" ou "restartauto" téléchargés
+            -si 1ere ligne contient= "hh:mm" => "reboot" ou "restart" à hh:mm:00
+                ex: si 1ere ligne de "rebootauto"= "1:9" => reboot à 1:09:00
+                ex: si 1ere ligne de "restartauto"= "12:25"  => restart à 12:25:00
+
+            -si 1ere ligne contient une valeur décimale (ex:152000)
+            => "reboot" ou "restart" si la memoire libre mesurée (en Kilo-octets) est inférieure à cette valeur décimale
+            bornes automatiques dans logiciel :mini=50000 KB  maxi=400000 KB
+
+ -------------------------------------------------------------------------------------------------------
+
+25/10/2016   Time2bii-1.11
+
+- Correction PB sur restart application time2bii lors d'une reception web service modifiant la zone ntp du setup
+ - Au lancement application verification de l'égalite des valeurs timezone et langue dans database_setup et fichier /etc/profile.d/timezone_langue
+    avec modification fichier /etc/profile.d/timezone_langue si nécessaire
+
+- Modification des fonctionnalités "reboot automatique" et "restart application automatique" programmables
+
+        - Si fichier "rebootauto" non téléchargé
+           -"reboot" si la memoire libre mesurée est inférieure 50000 KB
+           - avant "reboot" création fichier "rebootauto_log"  avec image de commande "cat /proc/meminfo"
+
+        - Si fichier "rebootauto"  téléchargé
+            -si 1ere ligne contient= "hh:mm" => "reboot"  à hh:mm:00
+                ex: si 1ere ligne de "rebootauto"= "1:9" => reboot à 1:09:00
+            -si 1ere ligne contient une valeur décimale (ex:152000)
+                => "reboot" si la memoire libre mesurée (en Kilo-octets) est inférieure à cette valeur décimale
+                bornes automatiques dans logiciel :mini=50000 KB  maxi=400000 KB
+            - avant "reboot" création fichier "rebootauto_log"  avec image de commande "cat /proc/meminfo"
+
+        - Si fichier "restartauto" téléchargé
+            -si 1ere ligne contient= "hh:mm" => "reboot" ou "restart" à hh:mm:00
+                ex: si 1ere ligne de "restartauto"= "1:9" => reboot à 1:09:00
+                ex: si 1ere ligne de "restartauto"= "12:25"  => restart à 12:25:00
+            -si 1ere ligne contient une valeur décimale (ex:152000)
+                => "restart" si la memoire libre mesurée (en Kilo-octets) est inférieure à cette valeur décimale
+                bornes automatiques dans logiciel :mini=50000 KB  maxi=400000 KB
+            - avant "restart" création fichier "restartauto_log"  avec image de commande "cat /proc/meminfo"
+
+        Note: on peut donc cumuler "rebootauto" et "restartauto"
+ -------------------------------------------------------------------------------------------------------
+
+10/11/2016   Time2bii-1.12
+    -ajout des valeurs des dns1 et dns2 dans:
+        - page html /setup
+
+                Version Logiciel: Time2bii 1.12 (a)
+
+                2016-11-02 11:45:53
+
+                Badgeages stockés: 0
+
+                Configuration reseau
+
+                    Nom	        Interface	  Adresse	   Netmask
+                time2bii-001	eth0 Dhcp	172.16.65.3	255.255.254.0
+                    Gateway	       Mac Adress
+                172.16.64.1	  3C:19:15:00:10:45
+                  Dns1	           Dns2
+                172.16.64.200	172.16.66.200
+
+
+
+        - webservice /hostname
+                <?xml version="1.0" encoding="UTF-8"?>
+                <root>
+                 <firmware>
+                  <nom key="version" value="Time2bii 1.12 (a)"/>
+                 </firmware>
+                 <hostname>
+                  <nom key="name" value="time2bii-001"/>
+                 </hostname>
+                 <ip>
+                  <nom key="interface" value="eth0 Dhcp"/>
+                  <nom key="adresse" value="172.16.65.3"/>
+                  <nom key="netmask" value="255.255.254.0"/>
+                  <nom key="gateway" value="172.16.64.1"/>
+                  <nom key="MacAdress" value="3C:19:15:00:10:45"/>
+                  <nom key="dns1" value="172.16.64.200"/>
+                  <nom key="dns2" value="172.16.66.200"/>
+                 </ip>
+                </root>
+
+      - modification de la configuration/demarrage reseau:
+            - Modification des procédures de gestion reseau pour ajout du hostname ds fichier:/home/root/interfaces.dhcp à partir du fichier: /home/root/interfaces.dhcpinit
+            - Mise à jour automatique de /etc/network/interfaces
+
+        - Suppression des restart thread supervision et badge sur reception d'un setup modifié
+            -Remplacement par des slots de reinitialisation (supervision :init_http badge :init_lecteur)
+
+        -ajout d'un shell "watchdog"
+            -scrutation chaque minute de l'activite du process time2bii :
+                - reboot sur mort du process
+
+
+        - Gestion de restartauto et rebootauto
+            - Modification bornes automatiques de restartauto et rebootauto: defaut et mini=20000 KB  maxi=100000 KB
+
+        -Par défaut:
+            - Pas de fichier /home/root/rebootauto:
+                 => un reboot automatique se fera si la memoire libre est inférieure à 20000KB
+
+
+            -un fichier /home/root/restartauto avec valeur 3:30 est installé:
+                => un restart application automatique chaque jour à 3h30
+
+
+
+        - Modification thread supervision ajout reply->deleteLater dans :
+         void Supervision_qobject::finishedSlot(QNetworkReply* reply)
+         et sur Timeout
+
+        - ajout deconnexion signaux pour les webservices avec connexion signal
+
+    - Modification Gestion des signaux audio
+
+
+ -------------------------------------------------------------------------------------------------------
+
+25/11/2016   Time2bii-1.13
+
+    -Ajout  Fonctionnalité de rendre invisible le numero badge sur icone badge lors d'un badgeage
+        -Avec type ecran sur 1 digit= Numero badge visible  (ex: ecran=1)
+        -Avec type ecran sur 2 digits= Numero badge invisible (ex: ecran=01)
+
+    -Fichier de cryptage différent selon connexion à chronotime (url http:service contient "chronotime")=> my.crypt ou Gnet=> my.cryprGnet
+
+    -Corrections bug:
+        -Dans ecran Setup 3G : Modification du champ "Phone"
+        -sur type badge= MORPHOetWiegand : pointeur non initialisé (new absent à init)
+
+
+ -------------------------------------------------------------------------------------------------------
+
+26/01/2017   Time2bii-1.14
+
+
+    -Utilisation d'un seul Objet Webbrowser pour affichage du setup :
+        - Ajout Objet Webbrowser dans ViewSetup.qml
+        - suppression Objet Webbrowser dans les autres vues du setup
+
+   -Correction bug dans ViewDivers
+        -Sur Click du widget validation mise à jour correcte du type ecran
+
+   -Correction des ecrans de setup qui ne prenaient pas en compte les changements de configuration.
+
+   -L'animation de badgeage s'arrete si un message apparait.
+
+   -Si badge connue remplacement du numero de badge dans l'animation par le Nom prenom sur deux lignes.
+        Utilisation du fichier time2bii.nom fichier a plat contenant num_badge;nom;prenom

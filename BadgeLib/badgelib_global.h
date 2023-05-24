@@ -1,0 +1,12 @@
+#ifndef BADGELIB_GLOBAL_H
+#define BADGELIB_GLOBAL_H
+
+#include <QtCore/qglobal.h>
+
+#if defined(BADGELIB_LIBRARY)
+#  define BADGELIBSHARED_EXPORT Q_DECL_EXPORT
+#else
+#  define BADGELIBSHARED_EXPORT Q_DECL_IMPORT
+#endif
+
+#endif // BADGELIB_GLOBAL_H

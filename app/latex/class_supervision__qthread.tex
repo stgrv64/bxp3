@@ -1,0 +1,84 @@
+\hypertarget{class_supervision__qthread}{}\doxysection{Supervision\+\_\+qthread Class Reference}
+\label{class_supervision__qthread}\index{Supervision\_qthread@{Supervision\_qthread}}
+
+
+The \mbox{\hyperlink{class_supervision__qthread}{Supervision\+\_\+qthread}} class.  
+
+
+
+
+{\ttfamily \#include $<$supervision.\+h$>$}
+
+Inheritance diagram for Supervision\+\_\+qthread\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_supervision__qthread}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_supervision__qthread_adff744d0ed1391e9d612d957ef76440d}{supervision\+\_\+qthread\+\_\+init}} (void)
+\begin{DoxyCompactList}\small\item\em Supervision\+\_\+qthread\+::init. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_supervision__qthread_a2c55283e05ee364b503164e79e7ce63f}{run}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_supervision__qthread_a2c55283e05ee364b503164e79e7ce63f}{Supervision\+\_\+qthread\+::run}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_supervision__qthread_a5cde33e261975e9486dfc2781d1b7adc}\label{class_supervision__qthread_a5cde33e261975e9486dfc2781d1b7adc}} 
+\mbox{\hyperlink{class_supervision__qobject}{Supervision\+\_\+qobject}} {\bfseries supervision}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{class_supervision__qthread}{Supervision\+\_\+qthread}} class. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_supervision__qthread_a2c55283e05ee364b503164e79e7ce63f}\label{class_supervision__qthread_a2c55283e05ee364b503164e79e7ce63f}} 
+\index{Supervision\_qthread@{Supervision\_qthread}!run@{run}}
+\index{run@{run}!Supervision\_qthread@{Supervision\_qthread}}
+\doxysubsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily void Supervision\+\_\+qthread\+::run (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{class_supervision__qthread_a2c55283e05ee364b503164e79e7ce63f}{Supervision\+\_\+qthread\+::run}}. 
+
+
+\begin{DoxyItemize}
+\item appel \mbox{\hyperlink{class_supervision__qobject_abe8123ea66b3ce11ba6c06ec5c5e441e}{Supervision\+\_\+qobject\+::supervision\+\_\+init()}} 
+\end{DoxyItemize}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{885 \{}
+\DoxyCodeLine{886     \mbox{\hyperlink{class_supervision__qthread_adff744d0ed1391e9d612d957ef76440d}{supervision\_qthread\_init}}();}
+\DoxyCodeLine{887     supervision.\mbox{\hyperlink{class_supervision__qobject_abe8123ea66b3ce11ba6c06ec5c5e441e}{supervision\_init}}();}
+\DoxyCodeLine{888     exec();}
+\DoxyCodeLine{889 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_supervision__qthread_adff744d0ed1391e9d612d957ef76440d}\label{class_supervision__qthread_adff744d0ed1391e9d612d957ef76440d}} 
+\index{Supervision\_qthread@{Supervision\_qthread}!supervision\_qthread\_init@{supervision\_qthread\_init}}
+\index{supervision\_qthread\_init@{supervision\_qthread\_init}!Supervision\_qthread@{Supervision\_qthread}}
+\doxysubsubsection{\texorpdfstring{supervision\_qthread\_init()}{supervision\_qthread\_init()}}
+{\footnotesize\ttfamily void Supervision\+\_\+qthread\+::supervision\+\_\+qthread\+\_\+init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Supervision\+\_\+qthread\+::init. 
+
+
+\begin{DoxyItemize}
+\item appel set\+Termination\+Enabled() pour utilisation de Q\+Thread\+::terminate() 
+\end{DoxyItemize}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{876 \{}
+\DoxyCodeLine{877     setTerminationEnabled(\textcolor{keyword}{true});}
+\DoxyCodeLine{878 \}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{supervision_8h}{supervision.\+h}}\item 
+\mbox{\hyperlink{supervision_8cpp}{supervision.\+cpp}}\end{DoxyCompactItemize}

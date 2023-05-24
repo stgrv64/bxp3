@@ -1,0 +1,1359 @@
+\hypertarget{class_q_serial_port}{}\doxysection{Q\+Serial\+Port Class Reference}
+\label{class_q_serial_port}\index{QSerialPort@{QSerialPort}}
+
+
+Provides functions to access serial ports.  
+
+
+Inheritance diagram for Q\+Serial\+Port\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_q_serial_port}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{class_q_serial_port_ac5d094511260c30d5239c9b0316c2733}{Direction}} \{ {\bfseries Input} = 1, 
+{\bfseries Output} = 2, 
+{\bfseries All\+Directions} = Input $\vert$ Output
+ \}
+\item 
+enum \mbox{\hyperlink{class_q_serial_port_ac98215b9f88bd9c4a2d95224ee69e8f5}{Baud\+Rate}} \{ \newline
+{\bfseries Baud1200} = 1200, 
+{\bfseries Baud2400} = 2400, 
+{\bfseries Baud4800} = 4800, 
+{\bfseries Baud9600} = 9600, 
+\newline
+{\bfseries Baud19200} = 19200, 
+{\bfseries Baud38400} = 38400, 
+{\bfseries Baud57600} = 57600, 
+{\bfseries Baud115200} = 115200, 
+\newline
+{\bfseries Unknown\+Baud} = -\/1
+ \}
+\item 
+enum \mbox{\hyperlink{class_q_serial_port_a62ab4348249442e2b6e2d22e40e02ed5}{Data\+Bits}} \{ \newline
+{\bfseries Data5} = 5, 
+{\bfseries Data6} = 6, 
+{\bfseries Data7} = 7, 
+{\bfseries Data8} = 8, 
+\newline
+{\bfseries Unknown\+Data\+Bits} = -\/1
+ \}
+\item 
+enum \mbox{\hyperlink{class_q_serial_port_a86f1a911c1adf0ca0a5952f0957ada6f}{Parity}} \{ \newline
+{\bfseries No\+Parity} = 0, 
+{\bfseries Even\+Parity} = 2, 
+{\bfseries Odd\+Parity} = 3, 
+{\bfseries Space\+Parity} = 4, 
+\newline
+{\bfseries Mark\+Parity} = 5, 
+{\bfseries Unknown\+Parity} = -\/1
+ \}
+\item 
+enum \mbox{\hyperlink{class_q_serial_port_ad4ec8df2fd7623ca1f2450b0681e5082}{Stop\+Bits}} \{ {\bfseries One\+Stop} = 1, 
+{\bfseries One\+And\+Half\+Stop} = 3, 
+{\bfseries Two\+Stop} = 2, 
+{\bfseries Unknown\+Stop\+Bits} = -\/1
+ \}
+\item 
+enum \mbox{\hyperlink{class_q_serial_port_ae3a50da39358348585e6e74dee63a353}{Flow\+Control}} \{ {\bfseries No\+Flow\+Control}, 
+{\bfseries Hardware\+Control}, 
+{\bfseries Software\+Control}, 
+{\bfseries Unknown\+Flow\+Control} = -\/1
+ \}
+\item 
+enum \mbox{\hyperlink{class_q_serial_port_aa3ab0eccf97411cef94a8f3d96149a40}{Pinout\+Signal}} \{ \newline
+{\bfseries No\+Signal} = 0x00, 
+{\bfseries Transmitted\+Data\+Signal} = 0x01, 
+{\bfseries Received\+Data\+Signal} = 0x02, 
+{\bfseries Data\+Terminal\+Ready\+Signal} = 0x04, 
+\newline
+{\bfseries Data\+Carrier\+Detect\+Signal} = 0x08, 
+{\bfseries Data\+Set\+Ready\+Signal} = 0x10, 
+{\bfseries Ring\+Indicator\+Signal} = 0x20, 
+{\bfseries Request\+To\+Send\+Signal} = 0x40, 
+\newline
+{\bfseries Clear\+To\+Send\+Signal} = 0x80, 
+{\bfseries Secondary\+Transmitted\+Data\+Signal} = 0x100, 
+{\bfseries Secondary\+Received\+Data\+Signal} = 0x200
+ \}
+\item 
+enum \mbox{\hyperlink{class_q_serial_port_aa31f0921d43bb30acfe9a6cc5abbe6b0}{Serial\+Port\+Error}} \{ \newline
+{\bfseries No\+Error}, 
+{\bfseries Device\+Not\+Found\+Error}, 
+{\bfseries Permission\+Error}, 
+{\bfseries Open\+Error}, 
+\newline
+{\bfseries Parity\+Error}, 
+{\bfseries Framing\+Error}, 
+{\bfseries Break\+Condition\+Error}, 
+{\bfseries Write\+Error}, 
+\newline
+{\bfseries Read\+Error}, 
+{\bfseries Resource\+Error}, 
+{\bfseries Unsupported\+Operation\+Error}, 
+{\bfseries Unknown\+Error}, 
+\newline
+{\bfseries Timeout\+Error}, 
+{\bfseries Not\+Open\+Error}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Signals}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_q_serial_port_a37b3751e75dee27b1e80eb00f2d3b8af}{baud\+Rate\+Changed}} (qint32 baud\+Rate, Q\+Serial\+Port\+::\+Directions directions)
+\item 
+void \mbox{\hyperlink{class_q_serial_port_a7e9459ef00adaf13f6ca87141331a1e0}{data\+Bits\+Changed}} (\mbox{\hyperlink{class_q_serial_port_a62ab4348249442e2b6e2d22e40e02ed5}{Q\+Serial\+Port\+::\+Data\+Bits}} \mbox{\hyperlink{class_q_serial_port_ae168fd2d888e7b635a33b5a1b132f8b2}{data\+Bits}})
+\item 
+void \mbox{\hyperlink{class_q_serial_port_a412487863f92d9c6f0e40ac18258abeb}{parity\+Changed}} (\mbox{\hyperlink{class_q_serial_port_a86f1a911c1adf0ca0a5952f0957ada6f}{Q\+Serial\+Port\+::\+Parity}} \mbox{\hyperlink{class_q_serial_port_ae3ef114c970dcbb5dbec109eab7de432}{parity}})
+\item 
+void \mbox{\hyperlink{class_q_serial_port_a7cc5f4375402803e95a3f5b67e528d2e}{stop\+Bits\+Changed}} (\mbox{\hyperlink{class_q_serial_port_ad4ec8df2fd7623ca1f2450b0681e5082}{Q\+Serial\+Port\+::\+Stop\+Bits}} \mbox{\hyperlink{class_q_serial_port_a811099894ac40e3a1f7aa5c07a26eb65}{stop\+Bits}})
+\item 
+void \mbox{\hyperlink{class_q_serial_port_aa9710460416a746be894fbec74915a4c}{flow\+Control\+Changed}} (\mbox{\hyperlink{class_q_serial_port_ae3a50da39358348585e6e74dee63a353}{Q\+Serial\+Port\+::\+Flow\+Control}} \mbox{\hyperlink{class_q_serial_port_a710167f7f790c5f7497319c273e14de9}{flow\+Control}})
+\item 
+void \mbox{\hyperlink{class_q_serial_port_a254913131b033042530e63d3c76aaca8}{data\+Terminal\+Ready\+Changed}} (bool set)
+\item 
+void \mbox{\hyperlink{class_q_serial_port_a23aae0a9cf0f4879601dd2d0ecc1d021}{request\+To\+Send\+Changed}} (bool set)
+\item 
+void \mbox{\hyperlink{class_q_serial_port_a5614a5d76859606e2c2aed87da333157}{error\+Occurred}} (\mbox{\hyperlink{class_q_serial_port_aa31f0921d43bb30acfe9a6cc5abbe6b0}{Q\+Serial\+Port\+::\+Serial\+Port\+Error}} \mbox{\hyperlink{class_q_serial_port_ad3b0d74404cf2d5432552d4bf578058a}{error}})
+\item 
+\mbox{\Hypertarget{class_q_serial_port_a6a97042ad76242070a7a57c26238679f}\label{class_q_serial_port_a6a97042ad76242070a7a57c26238679f}} 
+void {\bfseries break\+Enabled\+Changed} (bool set)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_q_serial_port_a7c58206c8db3cea14f0b06d158a14e48}{Q\+Serial\+Port}} (Q\+Object $\ast$parent=nullptr)
+\item 
+\mbox{\hyperlink{class_q_serial_port_a23096e7407878758fa0e4f0c4775e472}{Q\+Serial\+Port}} (const Q\+String \&name, Q\+Object $\ast$parent=nullptr)
+\item 
+\mbox{\hyperlink{class_q_serial_port_a14c6ecc933e3279085b19557c07647e4}{Q\+Serial\+Port}} (const \mbox{\hyperlink{class_q_serial_port_info}{Q\+Serial\+Port\+Info}} \&info, Q\+Object $\ast$parent=nullptr)
+\item 
+virtual \mbox{\hyperlink{class_q_serial_port_a96403bee768cc8990c560f09da70d9d9}{$\sim$\+Q\+Serial\+Port}} ()
+\item 
+void \mbox{\hyperlink{class_q_serial_port_a34a8477c8deda835d8d9986f38834b0f}{set\+Port\+Name}} (const Q\+String \&name)
+\item 
+Q\+String \mbox{\hyperlink{class_q_serial_port_aa703a7fafeaca6e8efaa83f2c3b9cf6e}{port\+Name}} () const
+\item 
+void \mbox{\hyperlink{class_q_serial_port_a595e5a5cfd5cd0f7f53e35b439c7a6cf}{set\+Port}} (const \mbox{\hyperlink{class_q_serial_port_info}{Q\+Serial\+Port\+Info}} \&info)
+\item 
+bool \mbox{\hyperlink{class_q_serial_port_a2d6586b11209863aa05574975f79615f}{open}} (Open\+Mode mode) override
+\item 
+void \mbox{\hyperlink{class_q_serial_port_a2e221672652676a33daaf7f1a2228294}{close}} () override
+\item 
+\mbox{\Hypertarget{class_q_serial_port_abc0adb0e14f44408790d99793743968f}\label{class_q_serial_port_abc0adb0e14f44408790d99793743968f}} 
+bool {\bfseries set\+Baud\+Rate} (qint32 baud\+Rate, Directions directions=All\+Directions)
+\item 
+\mbox{\Hypertarget{class_q_serial_port_a135a3adf6ef92df64cdda137c9306030}\label{class_q_serial_port_a135a3adf6ef92df64cdda137c9306030}} 
+qint32 {\bfseries baud\+Rate} (Directions directions=All\+Directions) const
+\item 
+\mbox{\Hypertarget{class_q_serial_port_adbb577b4149aa60f6f7355a51553d8c0}\label{class_q_serial_port_adbb577b4149aa60f6f7355a51553d8c0}} 
+bool {\bfseries set\+Data\+Bits} (\mbox{\hyperlink{class_q_serial_port_a62ab4348249442e2b6e2d22e40e02ed5}{Data\+Bits}} \mbox{\hyperlink{class_q_serial_port_ae168fd2d888e7b635a33b5a1b132f8b2}{data\+Bits}})
+\item 
+\mbox{\Hypertarget{class_q_serial_port_ab2ad0f34c9da0be50f87218bd78973db}\label{class_q_serial_port_ab2ad0f34c9da0be50f87218bd78973db}} 
+\mbox{\hyperlink{class_q_serial_port_a62ab4348249442e2b6e2d22e40e02ed5}{Data\+Bits}} {\bfseries data\+Bits} () const
+\item 
+\mbox{\Hypertarget{class_q_serial_port_ae442d0d31164ce57dd4469a415af586c}\label{class_q_serial_port_ae442d0d31164ce57dd4469a415af586c}} 
+bool {\bfseries set\+Parity} (\mbox{\hyperlink{class_q_serial_port_a86f1a911c1adf0ca0a5952f0957ada6f}{Parity}} \mbox{\hyperlink{class_q_serial_port_ae3ef114c970dcbb5dbec109eab7de432}{parity}})
+\item 
+\mbox{\Hypertarget{class_q_serial_port_a289435bbd046e62edada8d29fcca27d5}\label{class_q_serial_port_a289435bbd046e62edada8d29fcca27d5}} 
+\mbox{\hyperlink{class_q_serial_port_a86f1a911c1adf0ca0a5952f0957ada6f}{Parity}} {\bfseries parity} () const
+\item 
+\mbox{\Hypertarget{class_q_serial_port_a2fca50c35900c99f40be73b7ebdbd1ec}\label{class_q_serial_port_a2fca50c35900c99f40be73b7ebdbd1ec}} 
+bool {\bfseries set\+Stop\+Bits} (\mbox{\hyperlink{class_q_serial_port_ad4ec8df2fd7623ca1f2450b0681e5082}{Stop\+Bits}} \mbox{\hyperlink{class_q_serial_port_a811099894ac40e3a1f7aa5c07a26eb65}{stop\+Bits}})
+\item 
+\mbox{\Hypertarget{class_q_serial_port_a644e0d07c8646d2c09e7c5f1e0f05df6}\label{class_q_serial_port_a644e0d07c8646d2c09e7c5f1e0f05df6}} 
+\mbox{\hyperlink{class_q_serial_port_ad4ec8df2fd7623ca1f2450b0681e5082}{Stop\+Bits}} {\bfseries stop\+Bits} () const
+\item 
+\mbox{\Hypertarget{class_q_serial_port_affad1e6880cbec6d516de4f33412053e}\label{class_q_serial_port_affad1e6880cbec6d516de4f33412053e}} 
+bool {\bfseries set\+Flow\+Control} (\mbox{\hyperlink{class_q_serial_port_ae3a50da39358348585e6e74dee63a353}{Flow\+Control}} \mbox{\hyperlink{class_q_serial_port_a710167f7f790c5f7497319c273e14de9}{flow\+Control}})
+\item 
+\mbox{\Hypertarget{class_q_serial_port_a9acd591e4982acdc71264596a40e152d}\label{class_q_serial_port_a9acd591e4982acdc71264596a40e152d}} 
+\mbox{\hyperlink{class_q_serial_port_ae3a50da39358348585e6e74dee63a353}{Flow\+Control}} {\bfseries flow\+Control} () const
+\item 
+\mbox{\Hypertarget{class_q_serial_port_a1e4ea58bbd014bd8b2f47684ee681c2b}\label{class_q_serial_port_a1e4ea58bbd014bd8b2f47684ee681c2b}} 
+bool {\bfseries set\+Data\+Terminal\+Ready} (bool set)
+\item 
+\mbox{\Hypertarget{class_q_serial_port_ad63c7d2015eb1861d7102b0ccbe6323e}\label{class_q_serial_port_ad63c7d2015eb1861d7102b0ccbe6323e}} 
+bool {\bfseries is\+Data\+Terminal\+Ready} ()
+\item 
+\mbox{\Hypertarget{class_q_serial_port_a7a2377f79359b54a0c7ba31afaad6b3b}\label{class_q_serial_port_a7a2377f79359b54a0c7ba31afaad6b3b}} 
+bool {\bfseries set\+Request\+To\+Send} (bool set)
+\item 
+\mbox{\Hypertarget{class_q_serial_port_aa45e7dc83c6da4ad5e4002a81789b1e1}\label{class_q_serial_port_aa45e7dc83c6da4ad5e4002a81789b1e1}} 
+bool {\bfseries is\+Request\+To\+Send} ()
+\item 
+Pinout\+Signals \mbox{\hyperlink{class_q_serial_port_a8f88f140bf533b8f97229163209c585f}{pinout\+Signals}} ()
+\item 
+bool \mbox{\hyperlink{class_q_serial_port_a7e97e0071618a7a0e70ab7d9f7aec5f4}{flush}} ()
+\item 
+bool \mbox{\hyperlink{class_q_serial_port_a6bbab6615bcd8bcc3a838e2c182b5e5c}{clear}} (Directions directions=All\+Directions)
+\item 
+bool \mbox{\hyperlink{class_q_serial_port_a5ce7503179032e2d6a09987cd234ec93}{at\+End}} () const override
+\item 
+\mbox{\Hypertarget{class_q_serial_port_ababf39e01c70ff151cb4e7212113d37d}\label{class_q_serial_port_ababf39e01c70ff151cb4e7212113d37d}} 
+\mbox{\hyperlink{class_q_serial_port_aa31f0921d43bb30acfe9a6cc5abbe6b0}{Serial\+Port\+Error}} {\bfseries error} () const
+\item 
+\mbox{\Hypertarget{class_q_serial_port_a91e1151677de4e1dcd8f96927e83075c}\label{class_q_serial_port_a91e1151677de4e1dcd8f96927e83075c}} 
+void {\bfseries clear\+Error} ()
+\item 
+qint64 \mbox{\hyperlink{class_q_serial_port_a2496c721431637b801efde42f0a8681c}{read\+Buffer\+Size}} () const
+\item 
+void \mbox{\hyperlink{class_q_serial_port_affb5534880671d30438b2bc07b0008b1}{set\+Read\+Buffer\+Size}} (qint64 size)
+\item 
+bool \mbox{\hyperlink{class_q_serial_port_a2ccb6e3962f65899d0907bbff09131e8}{is\+Sequential}} () const override
+\item 
+qint64 \mbox{\hyperlink{class_q_serial_port_af8b1a4876916f4773bf13bae1fd05fb4}{bytes\+Available}} () const override
+\item 
+qint64 \mbox{\hyperlink{class_q_serial_port_a6a95f45127c46a3395862a5d1395333d}{bytes\+To\+Write}} () const override
+\item 
+bool \mbox{\hyperlink{class_q_serial_port_a7c44328cfcfd6ec9519cc99a427be8e9}{can\+Read\+Line}} () const override
+\item 
+bool \mbox{\hyperlink{class_q_serial_port_a5a274fca3c9315fb5536cc8e716e4d9a}{wait\+For\+Ready\+Read}} (int msecs=30000) override
+\item 
+bool \mbox{\hyperlink{class_q_serial_port_a4df1aac683ab204adc11eaafc4c1cc0b}{wait\+For\+Bytes\+Written}} (int msecs=30000) override
+\item 
+\mbox{\Hypertarget{class_q_serial_port_aade6a8ae6c66966b434b1bc43e4606da}\label{class_q_serial_port_aade6a8ae6c66966b434b1bc43e4606da}} 
+bool {\bfseries set\+Break\+Enabled} (bool set=true)
+\item 
+\mbox{\Hypertarget{class_q_serial_port_aece7308c055c688afac4b3884d54bfc2}\label{class_q_serial_port_aece7308c055c688afac4b3884d54bfc2}} 
+bool {\bfseries is\+Break\+Enabled} () const
+\item 
+Handle \mbox{\hyperlink{class_q_serial_port_a5ab1aa30759ab7aa7c01036eaf681e39}{handle}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+qint64 \mbox{\hyperlink{class_q_serial_port_a00bf8d212fae7150091c57d0862109a6}{read\+Data}} (char $\ast$data, qint64 max\+Size) override
+\item 
+qint64 \mbox{\hyperlink{class_q_serial_port_a072a2e4ed40f448d3586078d57d8798c}{read\+Line\+Data}} (char $\ast$data, qint64 max\+Size) override
+\item 
+qint64 \mbox{\hyperlink{class_q_serial_port_a41275d93730bc43a5fe09cffd8e9d4f8}{write\+Data}} (const char $\ast$data, qint64 max\+Size) override
+\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_q_serial_port_a1fa8812a79697ab077746b1029d45101}\label{class_q_serial_port_a1fa8812a79697ab077746b1029d45101}} 
+qint32 {\bfseries baud\+Rate}
+\item 
+\mbox{\hyperlink{class_q_serial_port_a62ab4348249442e2b6e2d22e40e02ed5}{Data\+Bits}} \mbox{\hyperlink{class_q_serial_port_ae168fd2d888e7b635a33b5a1b132f8b2}{data\+Bits}}
+\begin{DoxyCompactList}\small\item\em the data bits in a frame \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_q_serial_port_a86f1a911c1adf0ca0a5952f0957ada6f}{Parity}} \mbox{\hyperlink{class_q_serial_port_ae3ef114c970dcbb5dbec109eab7de432}{parity}}
+\begin{DoxyCompactList}\small\item\em the parity checking mode \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_q_serial_port_ad4ec8df2fd7623ca1f2450b0681e5082}{Stop\+Bits}} \mbox{\hyperlink{class_q_serial_port_a811099894ac40e3a1f7aa5c07a26eb65}{stop\+Bits}}
+\begin{DoxyCompactList}\small\item\em the number of stop bits in a frame \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_q_serial_port_ae3a50da39358348585e6e74dee63a353}{Flow\+Control}} \mbox{\hyperlink{class_q_serial_port_a710167f7f790c5f7497319c273e14de9}{flow\+Control}}
+\begin{DoxyCompactList}\small\item\em the desired flow control mode \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_q_serial_port_a90d9cb53f0b7948a1e2166fd395e7458}{data\+Terminal\+Ready}}
+\begin{DoxyCompactList}\small\item\em the state (high or low) of the line signal D\+TR \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_q_serial_port_a918269d1550b4fe0d1333cdee98e8020}{request\+To\+Send}}
+\begin{DoxyCompactList}\small\item\em the state (high or low) of the line signal R\+TS \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_q_serial_port_aa31f0921d43bb30acfe9a6cc5abbe6b0}{Serial\+Port\+Error}} \mbox{\hyperlink{class_q_serial_port_ad3b0d74404cf2d5432552d4bf578058a}{error}}
+\begin{DoxyCompactList}\small\item\em the error status of the serial port \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_q_serial_port_a63ff344d6da2bf735bdeeb84dd2c0415}{break\+Enabled}}
+\begin{DoxyCompactList}\small\item\em the state of the transmission line in break \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_q_serial_port_af404575593cdc79d80d44d5de8cd8a2e}\label{class_q_serial_port_af404575593cdc79d80d44d5de8cd8a2e}} 
+typedef int {\bfseries Handle}
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_q_serial_port_ae534499419356d43f58e6790ae698c00}\label{class_q_serial_port_ae534499419356d43f58e6790ae698c00}} 
+Q\+Serial\+Port\+Private $\ast$const {\bfseries d\+\_\+dummy}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Provides functions to access serial ports. 
+
+\textbackslash{}reentrant
+
+\textbackslash{}inmodule Qt\+Serial\+Port \begin{DoxySince}{Since}
+5.\+1
+\end{DoxySince}
+You can get information about the available serial ports using the \mbox{\hyperlink{class_q_serial_port_info}{Q\+Serial\+Port\+Info}} helper class, which allows an enumeration of all the serial ports in the system. This is useful to obtain the correct name of the serial port you want to use. You can pass an object of the helper class as an argument to the \mbox{\hyperlink{class_q_serial_port_a595e5a5cfd5cd0f7f53e35b439c7a6cf}{set\+Port()}} or \mbox{\hyperlink{class_q_serial_port_a34a8477c8deda835d8d9986f38834b0f}{set\+Port\+Name()}} methods to assign the desired serial device.
+
+After setting the port, you can open it in read-\/only (r/o), write-\/only (w/o), or read-\/write (r/w) mode using the \mbox{\hyperlink{class_q_serial_port_a2d6586b11209863aa05574975f79615f}{open()}} method.
+
+\begin{DoxyNote}{Note}
+The serial port is always opened with exclusive access (that is, no other process or thread can access an already opened serial port).
+\end{DoxyNote}
+Use the \mbox{\hyperlink{class_q_serial_port_a2e221672652676a33daaf7f1a2228294}{close()}} method to close the port and cancel the I/O operations.
+
+Having successfully opened, \mbox{\hyperlink{class_q_serial_port}{Q\+Serial\+Port}} tries to determine the current configuration of the port and initializes itself. You can reconfigure the port to the desired setting using the set\+Baud\+Rate(), set\+Data\+Bits(), set\+Parity(), set\+Stop\+Bits(), and set\+Flow\+Control() methods.
+
+There are a couple of properties to work with the pinout signals namely\+: \mbox{\hyperlink{class_q_serial_port_a90d9cb53f0b7948a1e2166fd395e7458}{Q\+Serial\+Port\+::data\+Terminal\+Ready}}, \mbox{\hyperlink{class_q_serial_port_a918269d1550b4fe0d1333cdee98e8020}{Q\+Serial\+Port\+::request\+To\+Send}}. It is also possible to use the \mbox{\hyperlink{class_q_serial_port_a8f88f140bf533b8f97229163209c585f}{pinout\+Signals()}} method to query the current pinout signals set.
+
+Once you know that the ports are ready to read or write, you can use the read() or write() methods. Alternatively the read\+Line() and read\+All() convenience methods can also be invoked. If not all the data is read at once, the remaining data will be available for later as new incoming data is appended to the \mbox{\hyperlink{class_q_serial_port}{Q\+Serial\+Port}}\textquotesingle{}s internal read buffer. You can limit the size of the read buffer using \mbox{\hyperlink{class_q_serial_port_affb5534880671d30438b2bc07b0008b1}{set\+Read\+Buffer\+Size()}}.
+
+\mbox{\hyperlink{class_q_serial_port}{Q\+Serial\+Port}} provides a set of functions that suspend the calling thread until certain signals are emitted. These functions can be used to implement blocking serial ports\+:
+
+\textbackslash{}list
+
+\begin{DoxyItemize}
+\item \mbox{\hyperlink{class_q_serial_port_a5a274fca3c9315fb5536cc8e716e4d9a}{wait\+For\+Ready\+Read()}} blocks calls until new data is available for reading.\end{DoxyItemize}
+\begin{DoxyItemize}
+\item \mbox{\hyperlink{class_q_serial_port_a4df1aac683ab204adc11eaafc4c1cc0b}{wait\+For\+Bytes\+Written()}} blocks calls until one payload of data has been written to the serial port.\end{DoxyItemize}
+\textbackslash{}endlist
+
+See the following example\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordtype}{int} numRead = 0, numReadTotal = 0;}
+\DoxyCodeLine{\textcolor{keywordtype}{char} buffer[50];}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keywordflow}{for} (;;) \{}
+\DoxyCodeLine{    numRead  = serial.read(buffer, 50);}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{comment}{// Do whatever with the array}}
+\DoxyCodeLine{}
+\DoxyCodeLine{    numReadTotal += numRead;}
+\DoxyCodeLine{    \textcolor{keywordflow}{if} (numRead == 0 \&\& !serial.waitForReadyRead())}
+\DoxyCodeLine{        \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\}}
+\end{DoxyCode}
+
+
+If \textbackslash{}l\{Q\+I\+O\+Device\+:\+:\}\{\mbox{\hyperlink{class_q_serial_port_a5a274fca3c9315fb5536cc8e716e4d9a}{wait\+For\+Ready\+Read()}}\} returns {\ttfamily false}, the connection has been closed or an error has occurred.
+
+If an error occurs at any point in time, \mbox{\hyperlink{class_q_serial_port}{Q\+Serial\+Port}} will emit the \mbox{\hyperlink{class_q_serial_port_a5614a5d76859606e2c2aed87da333157}{error\+Occurred()}} signal. You can also call \mbox{\hyperlink{class_q_serial_port_ad3b0d74404cf2d5432552d4bf578058a}{error()}} to find the type of error that occurred last.
+
+\begin{DoxyNote}{Note}
+Not all error conditions are handled in a platform independent way in Q\+Serialport, as for example the Framing, Parity, and Break condition errors. These kind of errors need to be handled by the application code, probably using OS system specific ioctls on the device descriptor and/or parsing the stream\textquotesingle{}s byte-\/stuffing.
+\end{DoxyNote}
+Programming with a blocking serial port is radically different from programming with a non-\/blocking serial port. A blocking serial port does not require an event loop and typically leads to simpler code. However, in a G\+UI application, blocking serial port should only be used in non-\/\+G\+UI threads, to avoid freezing the user interface.
+
+For more details about these approaches, refer to the \textbackslash{}l \{Qt Serial Port Examples\}\{example\} applications.
+
+The \mbox{\hyperlink{class_q_serial_port}{Q\+Serial\+Port}} class can also be used with Q\+Text\+Stream and Q\+Data\+Stream\textquotesingle{}s stream operators (operator$<$$<$() and operator$>$$>$()). There is one issue to be aware of, though\+: make sure that enough data is available before attempting to read by using the operator$>$$>$() overloaded operator.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_q_serial_port_info}{Q\+Serial\+Port\+Info}} 
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{class_q_serial_port_ac98215b9f88bd9c4a2d95224ee69e8f5}\label{class_q_serial_port_ac98215b9f88bd9c4a2d95224ee69e8f5}} 
+\index{QSerialPort@{QSerialPort}!BaudRate@{BaudRate}}
+\index{BaudRate@{BaudRate}!QSerialPort@{QSerialPort}}
+\doxysubsubsection{\texorpdfstring{BaudRate}{BaudRate}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{class_q_serial_port_ac98215b9f88bd9c4a2d95224ee69e8f5}{Q\+Serial\+Port\+::\+Baud\+Rate}}}
+
+This enum describes the baud rate which the communication device operates with.
+
+\begin{DoxyNote}{Note}
+Only the most common standard baud rates are listed in this enum.
+\end{DoxyNote}
+\textbackslash{}value Baud1200 1200 baud. \textbackslash{}value Baud2400 2400 baud. \textbackslash{}value Baud4800 4800 baud. \textbackslash{}value Baud9600 9600 baud. \textbackslash{}value Baud19200 19200 baud. \textbackslash{}value Baud38400 38400 baud. \textbackslash{}value Baud57600 57600 baud. \textbackslash{}value Baud115200 115200 baud. \textbackslash{}value Unknown\+Baud Unknown baud. This value is obsolete. It is provided to keep old source code working. We strongly advise against using it in new code.
+
+\begin{DoxySeeAlso}{See also}
+Q\+Serial\+Port\+::baud\+Rate 
+\end{DoxySeeAlso}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{91                   \{}
+\DoxyCodeLine{92         Baud1200 = 1200,}
+\DoxyCodeLine{93         Baud2400 = 2400,}
+\DoxyCodeLine{94         Baud4800 = 4800,}
+\DoxyCodeLine{95         Baud9600 = 9600,}
+\DoxyCodeLine{96         Baud19200 = 19200,}
+\DoxyCodeLine{97         Baud38400 = 38400,}
+\DoxyCodeLine{98         Baud57600 = 57600,}
+\DoxyCodeLine{99         Baud115200 = 115200,}
+\DoxyCodeLine{100         UnknownBaud = -\/1}
+\DoxyCodeLine{101     \};}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_q_serial_port_a62ab4348249442e2b6e2d22e40e02ed5}\label{class_q_serial_port_a62ab4348249442e2b6e2d22e40e02ed5}} 
+\index{QSerialPort@{QSerialPort}!DataBits@{DataBits}}
+\index{DataBits@{DataBits}!QSerialPort@{QSerialPort}}
+\doxysubsubsection{\texorpdfstring{DataBits}{DataBits}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{class_q_serial_port_a62ab4348249442e2b6e2d22e40e02ed5}{Q\+Serial\+Port\+::\+Data\+Bits}}}
+
+This enum describes the number of data bits used.
+
+\textbackslash{}value Data5 The number of data bits in each character is 5. It is used for Baudot code. It generally only makes sense with older equipment such as teleprinters. \textbackslash{}value Data6 The number of data bits in each character is 6. It is rarely used. \textbackslash{}value Data7 The number of data bits in each character is 7. It is used for true A\+S\+C\+II. It generally only makes sense with older equipment such as teleprinters. \textbackslash{}value Data8 The number of data bits in each character is 8. It is used for most kinds of data, as this size matches the size of a byte. It is almost universally used in newer applications. \textbackslash{}value Unknown\+Data\+Bits Unknown number of bits. This value is obsolete. It is provided to keep old source code working. We strongly advise against using it in new code.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_q_serial_port_ae168fd2d888e7b635a33b5a1b132f8b2}{Q\+Serial\+Port\+::data\+Bits}} 
+\end{DoxySeeAlso}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{104                   \{}
+\DoxyCodeLine{105         Data5 = 5,}
+\DoxyCodeLine{106         Data6 = 6,}
+\DoxyCodeLine{107         Data7 = 7,}
+\DoxyCodeLine{108         Data8 = 8,}
+\DoxyCodeLine{109         UnknownDataBits = -\/1}
+\DoxyCodeLine{110     \};}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_q_serial_port_ac5d094511260c30d5239c9b0316c2733}\label{class_q_serial_port_ac5d094511260c30d5239c9b0316c2733}} 
+\index{QSerialPort@{QSerialPort}!Direction@{Direction}}
+\index{Direction@{Direction}!QSerialPort@{QSerialPort}}
+\doxysubsubsection{\texorpdfstring{Direction}{Direction}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{class_q_serial_port_ac5d094511260c30d5239c9b0316c2733}{Q\+Serial\+Port\+::\+Direction}}}
+
+This enum describes the possible directions of the data transmission.
+
+\begin{DoxyNote}{Note}
+This enumeration is used for setting the baud rate of the device separately for each direction on some operating systems (for example, P\+O\+S\+I\+X-\/like).
+\end{DoxyNote}
+\textbackslash{}value Input Input direction. \textbackslash{}value Output Output direction. \textbackslash{}value All\+Directions Simultaneously in two directions. 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{83                     \{}
+\DoxyCodeLine{84         Input = 1,}
+\DoxyCodeLine{85         Output = 2,}
+\DoxyCodeLine{86         AllDirections = Input | Output}
+\DoxyCodeLine{87     \};}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_q_serial_port_ae3a50da39358348585e6e74dee63a353}\label{class_q_serial_port_ae3a50da39358348585e6e74dee63a353}} 
+\index{QSerialPort@{QSerialPort}!FlowControl@{FlowControl}}
+\index{FlowControl@{FlowControl}!QSerialPort@{QSerialPort}}
+\doxysubsubsection{\texorpdfstring{FlowControl}{FlowControl}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{class_q_serial_port_ae3a50da39358348585e6e74dee63a353}{Q\+Serial\+Port\+::\+Flow\+Control}}}
+
+This enum describes the flow control used.
+
+\textbackslash{}value No\+Flow\+Control No flow control. \textbackslash{}value Hardware\+Control Hardware flow control (R\+T\+S/\+C\+TS). \textbackslash{}value Software\+Control Software flow control (X\+O\+N/\+X\+O\+FF). \textbackslash{}value Unknown\+Flow\+Control Unknown flow control. This value is obsolete. It is provided to keep old source code working. We strongly advise against using it in new code.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_q_serial_port_a710167f7f790c5f7497319c273e14de9}{Q\+Serial\+Port\+::flow\+Control}} 
+\end{DoxySeeAlso}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{131                      \{}
+\DoxyCodeLine{132         NoFlowControl,}
+\DoxyCodeLine{133         HardwareControl,}
+\DoxyCodeLine{134         SoftwareControl,}
+\DoxyCodeLine{135         UnknownFlowControl = -\/1}
+\DoxyCodeLine{136     \};}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_q_serial_port_a86f1a911c1adf0ca0a5952f0957ada6f}\label{class_q_serial_port_a86f1a911c1adf0ca0a5952f0957ada6f}} 
+\index{QSerialPort@{QSerialPort}!Parity@{Parity}}
+\index{Parity@{Parity}!QSerialPort@{QSerialPort}}
+\doxysubsubsection{\texorpdfstring{Parity}{Parity}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{class_q_serial_port_a86f1a911c1adf0ca0a5952f0957ada6f}{Q\+Serial\+Port\+::\+Parity}}}
+
+This enum describes the parity scheme used.
+
+\textbackslash{}value No\+Parity No parity bit it sent. This is the most common parity setting. Error detection is handled by the communication protocol. \textbackslash{}value Even\+Parity The number of 1 bits in each character, including the parity bit, is always even. \textbackslash{}value Odd\+Parity The number of 1 bits in each character, including the parity bit, is always odd. It ensures that at least one state transition occurs in each character. \textbackslash{}value Space\+Parity Space parity. The parity bit is sent in the space signal condition. It does not provide error detection information. \textbackslash{}value Mark\+Parity Mark parity. The parity bit is always set to the mark signal condition (logical 1). It does not provide error detection information. \textbackslash{}value Unknown\+Parity Unknown parity. This value is obsolete. It is provided to keep old source code working. We strongly advise against using it in new code.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_q_serial_port_ae3ef114c970dcbb5dbec109eab7de432}{Q\+Serial\+Port\+::parity}} 
+\end{DoxySeeAlso}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{113                 \{}
+\DoxyCodeLine{114         NoParity = 0,}
+\DoxyCodeLine{115         EvenParity = 2,}
+\DoxyCodeLine{116         OddParity = 3,}
+\DoxyCodeLine{117         SpaceParity = 4,}
+\DoxyCodeLine{118         MarkParity = 5,}
+\DoxyCodeLine{119         UnknownParity = -\/1}
+\DoxyCodeLine{120     \};}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_q_serial_port_aa3ab0eccf97411cef94a8f3d96149a40}\label{class_q_serial_port_aa3ab0eccf97411cef94a8f3d96149a40}} 
+\index{QSerialPort@{QSerialPort}!PinoutSignal@{PinoutSignal}}
+\index{PinoutSignal@{PinoutSignal}!QSerialPort@{QSerialPort}}
+\doxysubsubsection{\texorpdfstring{PinoutSignal}{PinoutSignal}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{class_q_serial_port_aa3ab0eccf97411cef94a8f3d96149a40}{Q\+Serial\+Port\+::\+Pinout\+Signal}}}
+
+This enum describes the possible R\+S-\/232 pinout signals.
+
+\textbackslash{}value No\+Signal No line active \textbackslash{}value Transmitted\+Data\+Signal TxD (Transmitted Data). This value is obsolete. It is provided to keep old source code working. We strongly advise against using it in new code. \textbackslash{}value Received\+Data\+Signal RxD (Received Data). This value is obsolete. It is provided to keep old source code working. We strongly advise against using it in new code. \textbackslash{}value Data\+Terminal\+Ready\+Signal D\+TR (Data Terminal Ready). \textbackslash{}value Data\+Carrier\+Detect\+Signal D\+CD (Data Carrier Detect). \textbackslash{}value Data\+Set\+Ready\+Signal D\+SR (Data Set Ready). \textbackslash{}value Ring\+Indicator\+Signal R\+NG (Ring Indicator). \textbackslash{}value Request\+To\+Send\+Signal R\+TS (Request To Send). \textbackslash{}value Clear\+To\+Send\+Signal C\+TS (Clear To Send). \textbackslash{}value Secondary\+Transmitted\+Data\+Signal S\+TD (Secondary Transmitted Data). \textbackslash{}value Secondary\+Received\+Data\+Signal S\+RD (Secondary Received Data).
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_q_serial_port_a8f88f140bf533b8f97229163209c585f}{pinout\+Signals()}}, \mbox{\hyperlink{class_q_serial_port_a90d9cb53f0b7948a1e2166fd395e7458}{Q\+Serial\+Port\+::data\+Terminal\+Ready}}, \mbox{\hyperlink{class_q_serial_port_a918269d1550b4fe0d1333cdee98e8020}{Q\+Serial\+Port\+::request\+To\+Send}} 
+\end{DoxySeeAlso}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{139                       \{}
+\DoxyCodeLine{140         NoSignal = 0x00,}
+\DoxyCodeLine{141         TransmittedDataSignal = 0x01,}
+\DoxyCodeLine{142         ReceivedDataSignal = 0x02,}
+\DoxyCodeLine{143         DataTerminalReadySignal = 0x04,}
+\DoxyCodeLine{144         DataCarrierDetectSignal = 0x08,}
+\DoxyCodeLine{145         DataSetReadySignal = 0x10,}
+\DoxyCodeLine{146         RingIndicatorSignal = 0x20,}
+\DoxyCodeLine{147         RequestToSendSignal = 0x40,}
+\DoxyCodeLine{148         ClearToSendSignal = 0x80,}
+\DoxyCodeLine{149         SecondaryTransmittedDataSignal = 0x100,}
+\DoxyCodeLine{150         SecondaryReceivedDataSignal = 0x200}
+\DoxyCodeLine{151     \};}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_q_serial_port_aa31f0921d43bb30acfe9a6cc5abbe6b0}\label{class_q_serial_port_aa31f0921d43bb30acfe9a6cc5abbe6b0}} 
+\index{QSerialPort@{QSerialPort}!SerialPortError@{SerialPortError}}
+\index{SerialPortError@{SerialPortError}!QSerialPort@{QSerialPort}}
+\doxysubsubsection{\texorpdfstring{SerialPortError}{SerialPortError}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{class_q_serial_port_aa31f0921d43bb30acfe9a6cc5abbe6b0}{Q\+Serial\+Port\+::\+Serial\+Port\+Error}}}
+
+This enum describes the errors that may be contained by the \mbox{\hyperlink{class_q_serial_port_ad3b0d74404cf2d5432552d4bf578058a}{Q\+Serial\+Port\+::error}} property.
+
+\textbackslash{}value No\+Error No error occurred.
+
+\textbackslash{}value Device\+Not\+Found\+Error An error occurred while attempting to open an non-\/existing device.
+
+\textbackslash{}value Permission\+Error An error occurred while attempting to open an already opened device by another process or a user not having enough permission and credentials to open.
+
+\textbackslash{}value Open\+Error An error occurred while attempting to open an already opened device in this object.
+
+\textbackslash{}value Not\+Open\+Error This error occurs when an operation is executed that can only be successfully performed if the device is open. This value was introduced in Qt\+Serial\+Port 5.\+2.
+
+\textbackslash{}value Parity\+Error Parity error detected by the hardware while reading data. This value is obsolete. We strongly advise against using it in new code.
+
+\textbackslash{}value Framing\+Error Framing error detected by the hardware while reading data. This value is obsolete. We strongly advise against using it in new code.
+
+\textbackslash{}value Break\+Condition\+Error Break condition detected by the hardware on the input line. This value is obsolete. We strongly advise against using it in new code.
+
+\textbackslash{}value Write\+Error An I/O error occurred while writing the data.
+
+\textbackslash{}value Read\+Error An I/O error occurred while reading the data.
+
+\textbackslash{}value Resource\+Error An I/O error occurred when a resource becomes unavailable, e.\+g. when the device is unexpectedly removed from the system.
+
+\textbackslash{}value Unsupported\+Operation\+Error The requested device operation is not supported or prohibited by the running operating system.
+
+\textbackslash{}value Timeout\+Error A timeout error occurred. This value was introduced in Qt\+Serial\+Port 5.\+2.
+
+\textbackslash{}value Unknown\+Error An unidentified error occurred. \begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_q_serial_port_ad3b0d74404cf2d5432552d4bf578058a}{Q\+Serial\+Port\+::error}} 
+\end{DoxySeeAlso}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{178                          \{}
+\DoxyCodeLine{179         NoError,}
+\DoxyCodeLine{180         DeviceNotFoundError,}
+\DoxyCodeLine{181         PermissionError,}
+\DoxyCodeLine{182         OpenError,}
+\DoxyCodeLine{183         ParityError,}
+\DoxyCodeLine{184         FramingError,}
+\DoxyCodeLine{185         BreakConditionError,}
+\DoxyCodeLine{186         WriteError,}
+\DoxyCodeLine{187         ReadError,}
+\DoxyCodeLine{188         ResourceError,}
+\DoxyCodeLine{189         UnsupportedOperationError,}
+\DoxyCodeLine{190         UnknownError,}
+\DoxyCodeLine{191         TimeoutError,}
+\DoxyCodeLine{192         NotOpenError}
+\DoxyCodeLine{193     \};}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_q_serial_port_ad4ec8df2fd7623ca1f2450b0681e5082}\label{class_q_serial_port_ad4ec8df2fd7623ca1f2450b0681e5082}} 
+\index{QSerialPort@{QSerialPort}!StopBits@{StopBits}}
+\index{StopBits@{StopBits}!QSerialPort@{QSerialPort}}
+\doxysubsubsection{\texorpdfstring{StopBits}{StopBits}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{class_q_serial_port_ad4ec8df2fd7623ca1f2450b0681e5082}{Q\+Serial\+Port\+::\+Stop\+Bits}}}
+
+This enum describes the number of stop bits used.
+
+\textbackslash{}value One\+Stop 1 stop bit. \textbackslash{}value One\+And\+Half\+Stop 1.\+5 stop bits. This is only for the Windows platform. \textbackslash{}value Two\+Stop 2 stop bits. \textbackslash{}value Unknown\+Stop\+Bits Unknown number of stop bits. This value is obsolete. It is provided to keep old source code working. We strongly advise against using it in new code.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_q_serial_port_a811099894ac40e3a1f7aa5c07a26eb65}{Q\+Serial\+Port\+::stop\+Bits}} 
+\end{DoxySeeAlso}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{123                   \{}
+\DoxyCodeLine{124         OneStop = 1,}
+\DoxyCodeLine{125         OneAndHalfStop = 3,}
+\DoxyCodeLine{126         TwoStop = 2,}
+\DoxyCodeLine{127         UnknownStopBits = -\/1}
+\DoxyCodeLine{128     \};}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_q_serial_port_a7c58206c8db3cea14f0b06d158a14e48}\label{class_q_serial_port_a7c58206c8db3cea14f0b06d158a14e48}} 
+\index{QSerialPort@{QSerialPort}!QSerialPort@{QSerialPort}}
+\index{QSerialPort@{QSerialPort}!QSerialPort@{QSerialPort}}
+\doxysubsubsection{\texorpdfstring{QSerialPort()}{QSerialPort()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily Q\+Serial\+Port\+::\+Q\+Serial\+Port (\begin{DoxyParamCaption}\item[{Q\+Object $\ast$}]{parent = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+Constructs a new serial port object with the given {\itshape parent}. 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{437     : QIODevice(*\textcolor{keyword}{new} QSerialPortPrivate, parent)}
+\DoxyCodeLine{438     , d\_dummy(0)}
+\DoxyCodeLine{439 \{}
+\DoxyCodeLine{440 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_q_serial_port_a23096e7407878758fa0e4f0c4775e472}\label{class_q_serial_port_a23096e7407878758fa0e4f0c4775e472}} 
+\index{QSerialPort@{QSerialPort}!QSerialPort@{QSerialPort}}
+\index{QSerialPort@{QSerialPort}!QSerialPort@{QSerialPort}}
+\doxysubsubsection{\texorpdfstring{QSerialPort()}{QSerialPort()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily Q\+Serial\+Port\+::\+Q\+Serial\+Port (\begin{DoxyParamCaption}\item[{const Q\+String \&}]{name,  }\item[{Q\+Object $\ast$}]{parent = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+Constructs a new serial port object with the given {\itshape parent} to represent the serial port with the specified {\itshape name}.
+
+The name should have a specific format; see the \mbox{\hyperlink{class_q_serial_port_a595e5a5cfd5cd0f7f53e35b439c7a6cf}{set\+Port()}} method. 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{449     : QIODevice(*\textcolor{keyword}{new} QSerialPortPrivate, parent)}
+\DoxyCodeLine{450     , d\_dummy(0)}
+\DoxyCodeLine{451 \{}
+\DoxyCodeLine{452     \mbox{\hyperlink{class_q_serial_port_a34a8477c8deda835d8d9986f38834b0f}{setPortName}}(name);}
+\DoxyCodeLine{453 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_q_serial_port_a14c6ecc933e3279085b19557c07647e4}\label{class_q_serial_port_a14c6ecc933e3279085b19557c07647e4}} 
+\index{QSerialPort@{QSerialPort}!QSerialPort@{QSerialPort}}
+\index{QSerialPort@{QSerialPort}!QSerialPort@{QSerialPort}}
+\doxysubsubsection{\texorpdfstring{QSerialPort()}{QSerialPort()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily Q\+Serial\+Port\+::\+Q\+Serial\+Port (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_q_serial_port_info}{Q\+Serial\+Port\+Info}} \&}]{serial\+Port\+Info,  }\item[{Q\+Object $\ast$}]{parent = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+Constructs a new serial port object with the given {\itshape parent} to represent the serial port with the specified helper class {\itshape serial\+Port\+Info}. 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{461     : QIODevice(*\textcolor{keyword}{new} QSerialPortPrivate, parent)}
+\DoxyCodeLine{462     , d\_dummy(0)}
+\DoxyCodeLine{463 \{}
+\DoxyCodeLine{464     \mbox{\hyperlink{class_q_serial_port_a595e5a5cfd5cd0f7f53e35b439c7a6cf}{setPort}}(serialPortInfo);}
+\DoxyCodeLine{465 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_q_serial_port_a96403bee768cc8990c560f09da70d9d9}\label{class_q_serial_port_a96403bee768cc8990c560f09da70d9d9}} 
+\index{QSerialPort@{QSerialPort}!````~QSerialPort@{$\sim$QSerialPort}}
+\index{````~QSerialPort@{$\sim$QSerialPort}!QSerialPort@{QSerialPort}}
+\doxysubsubsection{\texorpdfstring{$\sim$QSerialPort()}{~QSerialPort()}}
+{\footnotesize\ttfamily Q\+Serial\+Port\+::$\sim$\+Q\+Serial\+Port (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Closes the serial port, if necessary, and then destroys object. 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{471 \{}
+\DoxyCodeLine{472     }
+\DoxyCodeLine{473     \textcolor{keywordflow}{if} (isOpen())}
+\DoxyCodeLine{474         \mbox{\hyperlink{class_q_serial_port_a2e221672652676a33daaf7f1a2228294}{close}}();}
+\DoxyCodeLine{475 \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_q_serial_port_a5ce7503179032e2d6a09987cd234ec93}\label{class_q_serial_port_a5ce7503179032e2d6a09987cd234ec93}} 
+\index{QSerialPort@{QSerialPort}!atEnd@{atEnd}}
+\index{atEnd@{atEnd}!QSerialPort@{QSerialPort}}
+\doxysubsubsection{\texorpdfstring{atEnd()}{atEnd()}}
+{\footnotesize\ttfamily bool Q\+Serial\+Port\+::at\+End (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}}
+
+\textbackslash{}reimp
+
+Returns {\ttfamily true} if no more data is currently available for reading; otherwise returns {\ttfamily false}.
+
+This function is most commonly used when reading data from the serial port in a loop. For example\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{comment}{// This slot is connected to QSerialPort::readyRead()}}
+\DoxyCodeLine{\textcolor{keywordtype}{void} QSerialPortClass::readyReadSlot()}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{    \textcolor{keywordflow}{while} (!port.atEnd()) \{}
+\DoxyCodeLine{        QByteArray data = port.read(100);}
+\DoxyCodeLine{        ....}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{\}}
+\end{DoxyCode}
+
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_q_serial_port_af8b1a4876916f4773bf13bae1fd05fb4}{bytes\+Available()}}, ready\+Read() 
+\end{DoxySeeAlso}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1092 \{}
+\DoxyCodeLine{1093     \textcolor{keywordflow}{return} QIODevice::atEnd();}
+\DoxyCodeLine{1094 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_q_serial_port_a37b3751e75dee27b1e80eb00f2d3b8af}\label{class_q_serial_port_a37b3751e75dee27b1e80eb00f2d3b8af}} 
+\index{QSerialPort@{QSerialPort}!baudRateChanged@{baudRateChanged}}
+\index{baudRateChanged@{baudRateChanged}!QSerialPort@{QSerialPort}}
+\doxysubsubsection{\texorpdfstring{baudRateChanged}{baudRateChanged}}
+{\footnotesize\ttfamily void Q\+Serial\+Port\+::baud\+Rate\+Changed (\begin{DoxyParamCaption}\item[{qint32}]{baud\+Rate,  }\item[{Q\+Serial\+Port\+::\+Directions}]{directions }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+This signal is emitted after the baud rate has been changed. The new baud rate is passed as {\itshape baud\+Rate} and directions as {\itshape directions}.
+
+\begin{DoxySeeAlso}{See also}
+Q\+Serial\+Port\+::baud\+Rate 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{class_q_serial_port_af8b1a4876916f4773bf13bae1fd05fb4}\label{class_q_serial_port_af8b1a4876916f4773bf13bae1fd05fb4}} 
+\index{QSerialPort@{QSerialPort}!bytesAvailable@{bytesAvailable}}
+\index{bytesAvailable@{bytesAvailable}!QSerialPort@{QSerialPort}}
+\doxysubsubsection{\texorpdfstring{bytesAvailable()}{bytesAvailable()}}
+{\footnotesize\ttfamily qint64 Q\+Serial\+Port\+::bytes\+Available (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}}
+
+\textbackslash{}reimp
+
+Returns the number of incoming bytes that are waiting to be read.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_q_serial_port_a6a95f45127c46a3395862a5d1395333d}{bytes\+To\+Write()}}, read() 
+\end{DoxySeeAlso}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1252 \{}
+\DoxyCodeLine{1253     \textcolor{keywordflow}{return} QIODevice::bytesAvailable();}
+\DoxyCodeLine{1254 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_q_serial_port_a6a95f45127c46a3395862a5d1395333d}\label{class_q_serial_port_a6a95f45127c46a3395862a5d1395333d}} 
+\index{QSerialPort@{QSerialPort}!bytesToWrite@{bytesToWrite}}
+\index{bytesToWrite@{bytesToWrite}!QSerialPort@{QSerialPort}}
+\doxysubsubsection{\texorpdfstring{bytesToWrite()}{bytesToWrite()}}
+{\footnotesize\ttfamily qint64 Q\+Serial\+Port\+::bytes\+To\+Write (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}}
+
+\textbackslash{}reimp
+
+Returns the number of bytes that are waiting to be written. The bytes are written when control goes back to the event loop or when \mbox{\hyperlink{class_q_serial_port_a7e97e0071618a7a0e70ab7d9f7aec5f4}{flush()}} is called.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_q_serial_port_af8b1a4876916f4773bf13bae1fd05fb4}{bytes\+Available()}}, \mbox{\hyperlink{class_q_serial_port_a7e97e0071618a7a0e70ab7d9f7aec5f4}{flush()}} 
+\end{DoxySeeAlso}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1266 \{}
+\DoxyCodeLine{1267     qint64 pendingBytes = QIODevice::bytesToWrite();}
+\DoxyCodeLine{1268 \textcolor{preprocessor}{\#if defined(Q\_OS\_WIN32)}}
+\DoxyCodeLine{1269     pendingBytes += d\_func()-\/>writeChunkBuffer.size();}
+\DoxyCodeLine{1270 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{1271     \textcolor{keywordflow}{return} pendingBytes;}
+\DoxyCodeLine{1272 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_q_serial_port_a7c44328cfcfd6ec9519cc99a427be8e9}\label{class_q_serial_port_a7c44328cfcfd6ec9519cc99a427be8e9}} 
+\index{QSerialPort@{QSerialPort}!canReadLine@{canReadLine}}
+\index{canReadLine@{canReadLine}!QSerialPort@{QSerialPort}}
+\doxysubsubsection{\texorpdfstring{canReadLine()}{canReadLine()}}
+{\footnotesize\ttfamily bool Q\+Serial\+Port\+::can\+Read\+Line (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}}
+
+\textbackslash{}reimp
+
+Returns {\ttfamily true} if a line of data can be read from the serial port; otherwise returns {\ttfamily false}.
+
+\begin{DoxySeeAlso}{See also}
+read\+Line() 
+\end{DoxySeeAlso}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1283 \{}
+\DoxyCodeLine{1284     \textcolor{keywordflow}{return} QIODevice::canReadLine();}
+\DoxyCodeLine{1285 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_q_serial_port_a6bbab6615bcd8bcc3a838e2c182b5e5c}\label{class_q_serial_port_a6bbab6615bcd8bcc3a838e2c182b5e5c}} 
+\index{QSerialPort@{QSerialPort}!clear@{clear}}
+\index{clear@{clear}!QSerialPort@{QSerialPort}}
+\doxysubsubsection{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily bool Q\+Serial\+Port\+::clear (\begin{DoxyParamCaption}\item[{Directions}]{directions = {\ttfamily AllDirections} }\end{DoxyParamCaption})}
+
+Discards all characters from the output or input buffer, depending on given directions {\itshape directions}. This includes clearing the internal class buffers and the U\+A\+RT (driver) buffers. Also terminate pending read or write operations. If successful, returns {\ttfamily true}; otherwise returns {\ttfamily false}.
+
+\begin{DoxyNote}{Note}
+The serial port has to be open before trying to clear any buffered data; otherwise returns {\ttfamily false} and sets the Not\+Open\+Error error code. 
+\end{DoxyNote}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1053 \{}
+\DoxyCodeLine{1054     Q\_D(\mbox{\hyperlink{class_q_serial_port}{QSerialPort}});}
+\DoxyCodeLine{1055 }
+\DoxyCodeLine{1056     \textcolor{keywordflow}{if} (!isOpen()) \{}
+\DoxyCodeLine{1057         d-\/>setError(QSerialPortErrorInfo(QSerialPort::NotOpenError));}
+\DoxyCodeLine{1058         qWarning(\textcolor{stringliteral}{"\%s: device not open"}, Q\_FUNC\_INFO);}
+\DoxyCodeLine{1059         \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{1060     \}}
+\DoxyCodeLine{1061 }
+\DoxyCodeLine{1062     \textcolor{keywordflow}{if} (directions \& Input)}
+\DoxyCodeLine{1063         d-\/>buffer.clear();}
+\DoxyCodeLine{1064     \textcolor{keywordflow}{if} (directions \& Output)}
+\DoxyCodeLine{1065         d-\/>writeBuffer.clear();}
+\DoxyCodeLine{1066     \textcolor{keywordflow}{return} d-\/>clear(directions);}
+\DoxyCodeLine{1067 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_q_serial_port_a2e221672652676a33daaf7f1a2228294}\label{class_q_serial_port_a2e221672652676a33daaf7f1a2228294}} 
+\index{QSerialPort@{QSerialPort}!close@{close}}
+\index{close@{close}!QSerialPort@{QSerialPort}}
+\doxysubsubsection{\texorpdfstring{close()}{close()}}
+{\footnotesize\ttfamily void Q\+Serial\+Port\+::close (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+\textbackslash{}reimp
+
+\begin{DoxyNote}{Note}
+The serial port has to be open before trying to close it; otherwise sets the Not\+Open\+Error error code.
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+Q\+I\+O\+Device\+::close() 
+\end{DoxySeeAlso}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{578 \{}
+\DoxyCodeLine{579     Q\_D(\mbox{\hyperlink{class_q_serial_port}{QSerialPort}});}
+\DoxyCodeLine{580     \textcolor{keywordflow}{if} (!isOpen()) \{}
+\DoxyCodeLine{581         d-\/>setError(QSerialPortErrorInfo(QSerialPort::NotOpenError));}
+\DoxyCodeLine{582         \textcolor{keywordflow}{return};}
+\DoxyCodeLine{583     \}}
+\DoxyCodeLine{584 }
+\DoxyCodeLine{585     d-\/>close();}
+\DoxyCodeLine{586     d-\/>isBreakEnabled = \textcolor{keyword}{false};}
+\DoxyCodeLine{587     QIODevice::close();}
+\DoxyCodeLine{588 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_q_serial_port_a7e9459ef00adaf13f6ca87141331a1e0}\label{class_q_serial_port_a7e9459ef00adaf13f6ca87141331a1e0}} 
+\index{QSerialPort@{QSerialPort}!dataBitsChanged@{dataBitsChanged}}
+\index{dataBitsChanged@{dataBitsChanged}!QSerialPort@{QSerialPort}}
+\doxysubsubsection{\texorpdfstring{dataBitsChanged}{dataBitsChanged}}
+{\footnotesize\ttfamily void Q\+Serial\+Port\+::data\+Bits\+Changed (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_q_serial_port_a62ab4348249442e2b6e2d22e40e02ed5}{Q\+Serial\+Port\+::\+Data\+Bits}}}]{data\+Bits }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+This signal is emitted after the data bits in a frame has been changed. The new data bits in a frame is passed as {\itshape data\+Bits}.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_q_serial_port_ae168fd2d888e7b635a33b5a1b132f8b2}{Q\+Serial\+Port\+::data\+Bits}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{class_q_serial_port_a254913131b033042530e63d3c76aaca8}\label{class_q_serial_port_a254913131b033042530e63d3c76aaca8}} 
+\index{QSerialPort@{QSerialPort}!dataTerminalReadyChanged@{dataTerminalReadyChanged}}
+\index{dataTerminalReadyChanged@{dataTerminalReadyChanged}!QSerialPort@{QSerialPort}}
+\doxysubsubsection{\texorpdfstring{dataTerminalReadyChanged}{dataTerminalReadyChanged}}
+{\footnotesize\ttfamily void Q\+Serial\+Port\+::data\+Terminal\+Ready\+Changed (\begin{DoxyParamCaption}\item[{bool}]{set }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+This signal is emitted after the state (high or low) of the line signal D\+TR has been changed. The new the state (high or low) of the line signal D\+TR is passed as {\itshape set}.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_q_serial_port_a90d9cb53f0b7948a1e2166fd395e7458}{Q\+Serial\+Port\+::data\+Terminal\+Ready}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{class_q_serial_port_a5614a5d76859606e2c2aed87da333157}\label{class_q_serial_port_a5614a5d76859606e2c2aed87da333157}} 
+\index{QSerialPort@{QSerialPort}!errorOccurred@{errorOccurred}}
+\index{errorOccurred@{errorOccurred}!QSerialPort@{QSerialPort}}
+\doxysubsubsection{\texorpdfstring{errorOccurred}{errorOccurred}}
+{\footnotesize\ttfamily void Q\+Serial\+Port\+::error\+Occurred (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_q_serial_port_aa31f0921d43bb30acfe9a6cc5abbe6b0}{Q\+Serial\+Port\+::\+Serial\+Port\+Error}}}]{error }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+\begin{DoxySince}{Since}
+5.\+8
+\end{DoxySince}
+This signal is emitted when an error occurs in the serial port. The specified {\itshape error} describes the type of error that occurred.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_q_serial_port_ad3b0d74404cf2d5432552d4bf578058a}{Q\+Serial\+Port\+::error}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{class_q_serial_port_aa9710460416a746be894fbec74915a4c}\label{class_q_serial_port_aa9710460416a746be894fbec74915a4c}} 
+\index{QSerialPort@{QSerialPort}!flowControlChanged@{flowControlChanged}}
+\index{flowControlChanged@{flowControlChanged}!QSerialPort@{QSerialPort}}
+\doxysubsubsection{\texorpdfstring{flowControlChanged}{flowControlChanged}}
+{\footnotesize\ttfamily void Q\+Serial\+Port\+::flow\+Control\+Changed (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_q_serial_port_ae3a50da39358348585e6e74dee63a353}{Q\+Serial\+Port\+::\+Flow\+Control}}}]{flow\+Control }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+This signal is emitted after the flow control mode has been changed. The new flow control mode is passed as {\itshape flow}.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_q_serial_port_a710167f7f790c5f7497319c273e14de9}{Q\+Serial\+Port\+::flow\+Control}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{class_q_serial_port_a7e97e0071618a7a0e70ab7d9f7aec5f4}\label{class_q_serial_port_a7e97e0071618a7a0e70ab7d9f7aec5f4}} 
+\index{QSerialPort@{QSerialPort}!flush@{flush}}
+\index{flush@{flush}!QSerialPort@{QSerialPort}}
+\doxysubsubsection{\texorpdfstring{flush()}{flush()}}
+{\footnotesize\ttfamily bool Q\+Serial\+Port\+::flush (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+This function writes as much as possible from the internal write buffer to the underlying serial port without blocking. If any data was written, this function returns {\ttfamily true}; otherwise returns {\ttfamily false}.
+
+Call this function for sending the buffered data immediately to the serial port. The number of bytes successfully written depends on the operating system. In most cases, this function does not need to be called, because the \mbox{\hyperlink{class_q_serial_port}{Q\+Serial\+Port}} class will start sending data automatically once control is returned to the event loop. In the absence of an event loop, call \mbox{\hyperlink{class_q_serial_port_a4df1aac683ab204adc11eaafc4c1cc0b}{wait\+For\+Bytes\+Written()}} instead.
+
+\begin{DoxyNote}{Note}
+The serial port has to be open before trying to flush any buffered data; otherwise returns {\ttfamily false} and sets the Not\+Open\+Error error code.
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+write(), \mbox{\hyperlink{class_q_serial_port_a4df1aac683ab204adc11eaafc4c1cc0b}{wait\+For\+Bytes\+Written()}} 
+\end{DoxySeeAlso}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1031 \{}
+\DoxyCodeLine{1032     Q\_D(\mbox{\hyperlink{class_q_serial_port}{QSerialPort}});}
+\DoxyCodeLine{1033 }
+\DoxyCodeLine{1034     \textcolor{keywordflow}{if} (!isOpen()) \{}
+\DoxyCodeLine{1035         d-\/>setError(QSerialPortErrorInfo(QSerialPort::NotOpenError));}
+\DoxyCodeLine{1036         qWarning(\textcolor{stringliteral}{"\%s: device not open"}, Q\_FUNC\_INFO);}
+\DoxyCodeLine{1037         \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{1038     \}}
+\DoxyCodeLine{1039 }
+\DoxyCodeLine{1040     \textcolor{keywordflow}{return} d-\/>flush();}
+\DoxyCodeLine{1041 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_q_serial_port_a5ab1aa30759ab7aa7c01036eaf681e39}\label{class_q_serial_port_a5ab1aa30759ab7aa7c01036eaf681e39}} 
+\index{QSerialPort@{QSerialPort}!handle@{handle}}
+\index{handle@{handle}!QSerialPort@{QSerialPort}}
+\doxysubsubsection{\texorpdfstring{handle()}{handle()}}
+{\footnotesize\ttfamily Handle Q\+Serial\+Port\+::handle (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\begin{DoxySince}{Since}
+5.\+2
+\end{DoxySince}
+If the platform is supported and the serial port is open, returns the native serial port handle; otherwise returns {\ttfamily -\/1}.
+
+\begin{DoxyWarning}{Warning}
+This function is for expert use only; use it at your own risk. Furthermore, this function carries no compatibility promise between minor Qt releases. 
+\end{DoxyWarning}
+\mbox{\Hypertarget{class_q_serial_port_a2ccb6e3962f65899d0907bbff09131e8}\label{class_q_serial_port_a2ccb6e3962f65899d0907bbff09131e8}} 
+\index{QSerialPort@{QSerialPort}!isSequential@{isSequential}}
+\index{isSequential@{isSequential}!QSerialPort@{QSerialPort}}
+\doxysubsubsection{\texorpdfstring{isSequential()}{isSequential()}}
+{\footnotesize\ttfamily bool Q\+Serial\+Port\+::is\+Sequential (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}}
+
+\textbackslash{}reimp
+
+Always returns {\ttfamily true}. The serial port is a sequential device. 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1240 \{}
+\DoxyCodeLine{1241     \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{1242 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_q_serial_port_a2d6586b11209863aa05574975f79615f}\label{class_q_serial_port_a2d6586b11209863aa05574975f79615f}} 
+\index{QSerialPort@{QSerialPort}!open@{open}}
+\index{open@{open}!QSerialPort@{QSerialPort}}
+\doxysubsubsection{\texorpdfstring{open()}{open()}}
+{\footnotesize\ttfamily bool Q\+Serial\+Port\+::open (\begin{DoxyParamCaption}\item[{Open\+Mode}]{mode }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+\textbackslash{}reimp
+
+Opens the serial port using Open\+Mode {\itshape mode}, and then returns {\ttfamily true} if successful; otherwise returns {\ttfamily false} and sets an error code which can be obtained by calling the \mbox{\hyperlink{class_q_serial_port_ad3b0d74404cf2d5432552d4bf578058a}{error()}} method.
+
+\begin{DoxyNote}{Note}
+The method returns {\ttfamily false} if opening the port is successful, but could not set any of the port settings successfully. In that case, the port is closed automatically not to leave the port around with incorrect settings.
+\end{DoxyNote}
+\begin{DoxyWarning}{Warning}
+The {\itshape mode} has to be Q\+I\+O\+Device\+::\+Read\+Only, Q\+I\+O\+Device\+::\+Write\+Only, or Q\+I\+O\+Device\+::\+Read\+Write. Other modes are unsupported.
+\end{DoxyWarning}
+\begin{DoxySeeAlso}{See also}
+Q\+I\+O\+Device\+::\+Open\+Mode, \mbox{\hyperlink{class_q_serial_port_a595e5a5cfd5cd0f7f53e35b439c7a6cf}{set\+Port()}} 
+\end{DoxySeeAlso}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{546 \{}
+\DoxyCodeLine{547     Q\_D(\mbox{\hyperlink{class_q_serial_port}{QSerialPort}});}
+\DoxyCodeLine{548 }
+\DoxyCodeLine{549     \textcolor{keywordflow}{if} (isOpen()) \{}
+\DoxyCodeLine{550         d-\/>setError(QSerialPortErrorInfo(QSerialPort::OpenError));}
+\DoxyCodeLine{551         \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{552     \}}
+\DoxyCodeLine{553 }
+\DoxyCodeLine{554     \textcolor{comment}{// Define while not supported modes.}}
+\DoxyCodeLine{555     \textcolor{keyword}{static} \textcolor{keyword}{const} OpenMode unsupportedModes = Append | Truncate | Text | Unbuffered;}
+\DoxyCodeLine{556     \textcolor{keywordflow}{if} ((mode \& unsupportedModes) || mode == NotOpen) \{}
+\DoxyCodeLine{557         d-\/>setError(QSerialPortErrorInfo(QSerialPort::UnsupportedOperationError, tr(\textcolor{stringliteral}{"Unsupported open mode"})));}
+\DoxyCodeLine{558         \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{559     \}}
+\DoxyCodeLine{560 }
+\DoxyCodeLine{561     clearError();}
+\DoxyCodeLine{562     \textcolor{keywordflow}{if} (!d-\/>open(mode))}
+\DoxyCodeLine{563         \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{564 }
+\DoxyCodeLine{565     QIODevice::open(mode);}
+\DoxyCodeLine{566     \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{567 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_q_serial_port_a412487863f92d9c6f0e40ac18258abeb}\label{class_q_serial_port_a412487863f92d9c6f0e40ac18258abeb}} 
+\index{QSerialPort@{QSerialPort}!parityChanged@{parityChanged}}
+\index{parityChanged@{parityChanged}!QSerialPort@{QSerialPort}}
+\doxysubsubsection{\texorpdfstring{parityChanged}{parityChanged}}
+{\footnotesize\ttfamily void Q\+Serial\+Port\+::parity\+Changed (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_q_serial_port_a86f1a911c1adf0ca0a5952f0957ada6f}{Q\+Serial\+Port\+::\+Parity}}}]{parity }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+This signal is emitted after the parity checking mode has been changed. The new parity checking mode is passed as {\itshape parity}.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_q_serial_port_ae3ef114c970dcbb5dbec109eab7de432}{Q\+Serial\+Port\+::parity}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{class_q_serial_port_a8f88f140bf533b8f97229163209c585f}\label{class_q_serial_port_a8f88f140bf533b8f97229163209c585f}} 
+\index{QSerialPort@{QSerialPort}!pinoutSignals@{pinoutSignals}}
+\index{pinoutSignals@{pinoutSignals}!QSerialPort@{QSerialPort}}
+\doxysubsubsection{\texorpdfstring{pinoutSignals()}{pinoutSignals()}}
+{\footnotesize\ttfamily Q\+Serial\+Port\+::\+Pinout\+Signals Q\+Serial\+Port\+::pinout\+Signals (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Returns the state of the line signals in a bitmap format.
+
+From this result, it is possible to allocate the state of the desired signal by applying a mask \char`\"{}\+A\+N\+D\char`\"{}, where the mask is the desired enumeration value from Q\+Serial\+Port\+::\+Pinout\+Signals.
+
+\begin{DoxyNote}{Note}
+This method performs a system call, thus ensuring that the line signal states are returned properly. This is necessary when the underlying operating systems cannot provide proper notifications about the changes.
+
+The serial port has to be open before trying to get the pinout signals; otherwise returns No\+Signal and sets the Not\+Open\+Error error code.
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_q_serial_port_a90d9cb53f0b7948a1e2166fd395e7458}{Q\+Serial\+Port\+::data\+Terminal\+Ready}}, \mbox{\hyperlink{class_q_serial_port_a918269d1550b4fe0d1333cdee98e8020}{Q\+Serial\+Port\+::request\+To\+Send}} 
+\end{DoxySeeAlso}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1001 \{}
+\DoxyCodeLine{1002     Q\_D(\mbox{\hyperlink{class_q_serial_port}{QSerialPort}});}
+\DoxyCodeLine{1003 }
+\DoxyCodeLine{1004     \textcolor{keywordflow}{if} (!isOpen()) \{}
+\DoxyCodeLine{1005         d-\/>setError(QSerialPortErrorInfo(QSerialPort::NotOpenError));}
+\DoxyCodeLine{1006         qWarning(\textcolor{stringliteral}{"\%s: device not open"}, Q\_FUNC\_INFO);}
+\DoxyCodeLine{1007         \textcolor{keywordflow}{return} QSerialPort::NoSignal;}
+\DoxyCodeLine{1008     \}}
+\DoxyCodeLine{1009 }
+\DoxyCodeLine{1010     \textcolor{keywordflow}{return} d-\/>pinoutSignals();}
+\DoxyCodeLine{1011 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_q_serial_port_aa703a7fafeaca6e8efaa83f2c3b9cf6e}\label{class_q_serial_port_aa703a7fafeaca6e8efaa83f2c3b9cf6e}} 
+\index{QSerialPort@{QSerialPort}!portName@{portName}}
+\index{portName@{portName}!QSerialPort@{QSerialPort}}
+\doxysubsubsection{\texorpdfstring{portName()}{portName()}}
+{\footnotesize\ttfamily Q\+String Q\+Serial\+Port\+::port\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Returns the name set by \mbox{\hyperlink{class_q_serial_port_a595e5a5cfd5cd0f7f53e35b439c7a6cf}{set\+Port()}} or passed to the \mbox{\hyperlink{class_q_serial_port}{Q\+Serial\+Port}} constructor. This name is short, i.\+e. it is extracted and converted from the internal variable system location of the device. The conversion algorithm is platform specific\+: \textbackslash{}table \textbackslash{}header \begin{DoxyItemize}
+\item Platform \item Brief Description \textbackslash{}row \item Windows \item Removes the prefix \char`\"{}\textbackslash{}\textbackslash{}\textbackslash{}\textbackslash{}.\textbackslash{}\textbackslash{}\char`\"{} or \char`\"{}//./\char`\"{} from the system location and returns the remainder of the string. \textbackslash{}row \item Unix, B\+SD \item Removes the prefix \char`\"{}/dev/\char`\"{} from the system location and returns the remainder of the string. \textbackslash{}endtable\end{DoxyItemize}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_q_serial_port_a595e5a5cfd5cd0f7f53e35b439c7a6cf}{set\+Port()}}, \mbox{\hyperlink{class_q_serial_port_info_a787309831ad8d73d421dec1fd4347bb5}{Q\+Serial\+Port\+Info\+::port\+Name()}} 
+\end{DoxySeeAlso}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{524 \{}
+\DoxyCodeLine{525     Q\_D(\textcolor{keyword}{const} \mbox{\hyperlink{class_q_serial_port}{QSerialPort}});}
+\DoxyCodeLine{526     \textcolor{keywordflow}{return} QSerialPortInfoPrivate::portNameFromSystemLocation(d-\/>systemLocation);}
+\DoxyCodeLine{527 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_q_serial_port_a2496c721431637b801efde42f0a8681c}\label{class_q_serial_port_a2496c721431637b801efde42f0a8681c}} 
+\index{QSerialPort@{QSerialPort}!readBufferSize@{readBufferSize}}
+\index{readBufferSize@{readBufferSize}!QSerialPort@{QSerialPort}}
+\doxysubsubsection{\texorpdfstring{readBufferSize()}{readBufferSize()}}
+{\footnotesize\ttfamily qint64 Q\+Serial\+Port\+::read\+Buffer\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Returns the size of the internal read buffer. This limits the amount of data that the client can receive before calling the read() or read\+All() methods.
+
+A read buffer size of {\ttfamily 0} (the default) means that the buffer has no size limit, ensuring that no data is lost.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_q_serial_port_affb5534880671d30438b2bc07b0008b1}{set\+Read\+Buffer\+Size()}}, read() 
+\end{DoxySeeAlso}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1205 \{}
+\DoxyCodeLine{1206     Q\_D(\textcolor{keyword}{const} \mbox{\hyperlink{class_q_serial_port}{QSerialPort}});}
+\DoxyCodeLine{1207     \textcolor{keywordflow}{return} d-\/>readBufferMaxSize;}
+\DoxyCodeLine{1208 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_q_serial_port_a00bf8d212fae7150091c57d0862109a6}\label{class_q_serial_port_a00bf8d212fae7150091c57d0862109a6}} 
+\index{QSerialPort@{QSerialPort}!readData@{readData}}
+\index{readData@{readData}!QSerialPort@{QSerialPort}}
+\doxysubsubsection{\texorpdfstring{readData()}{readData()}}
+{\footnotesize\ttfamily qint64 Q\+Serial\+Port\+::read\+Data (\begin{DoxyParamCaption}\item[{char $\ast$}]{data,  }\item[{qint64}]{max\+Size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}}
+
+\textbackslash{}reimp
+
+\textbackslash{}omit This function does not really read anything, as we use Q\+I\+O\+Device\+Private\textquotesingle{}s buffer. The buffer will be read inside of Q\+I\+O\+Device before this method will be called. \textbackslash{}endomit 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1419 \{}
+\DoxyCodeLine{1420     Q\_UNUSED(data);}
+\DoxyCodeLine{1421     Q\_UNUSED(maxSize);}
+\DoxyCodeLine{1422 }
+\DoxyCodeLine{1423     \textcolor{comment}{// In any case we need to start the notifications if they were}}
+\DoxyCodeLine{1424     \textcolor{comment}{// disabled by the read handler. If enabled, next call does nothing.}}
+\DoxyCodeLine{1425     d\_func()-\/>startAsyncRead();}
+\DoxyCodeLine{1426 }
+\DoxyCodeLine{1427     \textcolor{comment}{// return 0 indicating there may be more data in the future}}
+\DoxyCodeLine{1428     \textcolor{keywordflow}{return} qint64(0);}
+\DoxyCodeLine{1429 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_q_serial_port_a072a2e4ed40f448d3586078d57d8798c}\label{class_q_serial_port_a072a2e4ed40f448d3586078d57d8798c}} 
+\index{QSerialPort@{QSerialPort}!readLineData@{readLineData}}
+\index{readLineData@{readLineData}!QSerialPort@{QSerialPort}}
+\doxysubsubsection{\texorpdfstring{readLineData()}{readLineData()}}
+{\footnotesize\ttfamily qint64 Q\+Serial\+Port\+::read\+Line\+Data (\begin{DoxyParamCaption}\item[{char $\ast$}]{data,  }\item[{qint64}]{max\+Size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}}
+
+\textbackslash{}reimp 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1435 \{}
+\DoxyCodeLine{1436     \textcolor{keywordflow}{return} QIODevice::readLineData(data, maxSize);}
+\DoxyCodeLine{1437 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_q_serial_port_a23aae0a9cf0f4879601dd2d0ecc1d021}\label{class_q_serial_port_a23aae0a9cf0f4879601dd2d0ecc1d021}} 
+\index{QSerialPort@{QSerialPort}!requestToSendChanged@{requestToSendChanged}}
+\index{requestToSendChanged@{requestToSendChanged}!QSerialPort@{QSerialPort}}
+\doxysubsubsection{\texorpdfstring{requestToSendChanged}{requestToSendChanged}}
+{\footnotesize\ttfamily void Q\+Serial\+Port\+::request\+To\+Send\+Changed (\begin{DoxyParamCaption}\item[{bool}]{set }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+This signal is emitted after the state (high or low) of the line signal R\+TS has been changed. The new the state (high or low) of the line signal R\+TS is passed as {\itshape set}.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_q_serial_port_a918269d1550b4fe0d1333cdee98e8020}{Q\+Serial\+Port\+::request\+To\+Send}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{class_q_serial_port_a595e5a5cfd5cd0f7f53e35b439c7a6cf}\label{class_q_serial_port_a595e5a5cfd5cd0f7f53e35b439c7a6cf}} 
+\index{QSerialPort@{QSerialPort}!setPort@{setPort}}
+\index{setPort@{setPort}!QSerialPort@{QSerialPort}}
+\doxysubsubsection{\texorpdfstring{setPort()}{setPort()}}
+{\footnotesize\ttfamily void Q\+Serial\+Port\+::set\+Port (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_q_serial_port_info}{Q\+Serial\+Port\+Info}} \&}]{serial\+Port\+Info }\end{DoxyParamCaption})}
+
+Sets the port stored in the serial port info instance {\itshape serial\+Port\+Info}.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_q_serial_port_aa703a7fafeaca6e8efaa83f2c3b9cf6e}{port\+Name()}}, \mbox{\hyperlink{class_q_serial_port_info}{Q\+Serial\+Port\+Info}} 
+\end{DoxySeeAlso}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{497 \{}
+\DoxyCodeLine{498     Q\_D(\mbox{\hyperlink{class_q_serial_port}{QSerialPort}});}
+\DoxyCodeLine{499     d-\/>systemLocation = serialPortInfo.\mbox{\hyperlink{class_q_serial_port_info_a919ba9efe087997a049390a0f8c5d712}{systemLocation}}();}
+\DoxyCodeLine{500 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_q_serial_port_a34a8477c8deda835d8d9986f38834b0f}\label{class_q_serial_port_a34a8477c8deda835d8d9986f38834b0f}} 
+\index{QSerialPort@{QSerialPort}!setPortName@{setPortName}}
+\index{setPortName@{setPortName}!QSerialPort@{QSerialPort}}
+\doxysubsubsection{\texorpdfstring{setPortName()}{setPortName()}}
+{\footnotesize\ttfamily void Q\+Serial\+Port\+::set\+Port\+Name (\begin{DoxyParamCaption}\item[{const Q\+String \&}]{name }\end{DoxyParamCaption})}
+
+Sets the {\itshape name} of the serial port.
+
+The name of the serial port can be passed as either a short name or the long system location if necessary.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_q_serial_port_aa703a7fafeaca6e8efaa83f2c3b9cf6e}{port\+Name()}}, \mbox{\hyperlink{class_q_serial_port_info}{Q\+Serial\+Port\+Info}} 
+\end{DoxySeeAlso}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{486 \{}
+\DoxyCodeLine{487     Q\_D(\mbox{\hyperlink{class_q_serial_port}{QSerialPort}});}
+\DoxyCodeLine{488     d-\/>systemLocation = QSerialPortInfoPrivate::portNameToSystemLocation(name);}
+\DoxyCodeLine{489 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_q_serial_port_affb5534880671d30438b2bc07b0008b1}\label{class_q_serial_port_affb5534880671d30438b2bc07b0008b1}} 
+\index{QSerialPort@{QSerialPort}!setReadBufferSize@{setReadBufferSize}}
+\index{setReadBufferSize@{setReadBufferSize}!QSerialPort@{QSerialPort}}
+\doxysubsubsection{\texorpdfstring{setReadBufferSize()}{setReadBufferSize()}}
+{\footnotesize\ttfamily void Q\+Serial\+Port\+::set\+Read\+Buffer\+Size (\begin{DoxyParamCaption}\item[{qint64}]{size }\end{DoxyParamCaption})}
+
+Sets the size of \mbox{\hyperlink{class_q_serial_port}{Q\+Serial\+Port}}\textquotesingle{}s internal read buffer to be {\itshape size} bytes.
+
+If the buffer size is limited to a certain size, \mbox{\hyperlink{class_q_serial_port}{Q\+Serial\+Port}} will not buffer more than this size of data. The special case of a buffer size of {\ttfamily 0} means that the read buffer is unlimited and all incoming data is buffered. This is the default.
+
+This option is useful if the data is only read at certain points in time (for instance in a real-\/time streaming application) or if the serial port should be protected against receiving too much data, which may eventually cause the application to run out of memory.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_q_serial_port_a2496c721431637b801efde42f0a8681c}{read\+Buffer\+Size()}}, read() 
+\end{DoxySeeAlso}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1227 \{}
+\DoxyCodeLine{1228     Q\_D(\mbox{\hyperlink{class_q_serial_port}{QSerialPort}});}
+\DoxyCodeLine{1229     d-\/>readBufferMaxSize = size;}
+\DoxyCodeLine{1230     \textcolor{keywordflow}{if} (isReadable())}
+\DoxyCodeLine{1231         d-\/>startAsyncRead();}
+\DoxyCodeLine{1232 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_q_serial_port_a7cc5f4375402803e95a3f5b67e528d2e}\label{class_q_serial_port_a7cc5f4375402803e95a3f5b67e528d2e}} 
+\index{QSerialPort@{QSerialPort}!stopBitsChanged@{stopBitsChanged}}
+\index{stopBitsChanged@{stopBitsChanged}!QSerialPort@{QSerialPort}}
+\doxysubsubsection{\texorpdfstring{stopBitsChanged}{stopBitsChanged}}
+{\footnotesize\ttfamily void Q\+Serial\+Port\+::stop\+Bits\+Changed (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_q_serial_port_ad4ec8df2fd7623ca1f2450b0681e5082}{Q\+Serial\+Port\+::\+Stop\+Bits}}}]{stop\+Bits }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+This signal is emitted after the number of stop bits in a frame has been changed. The new number of stop bits in a frame is passed as {\itshape stop\+Bits}.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_q_serial_port_a811099894ac40e3a1f7aa5c07a26eb65}{Q\+Serial\+Port\+::stop\+Bits}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{class_q_serial_port_a4df1aac683ab204adc11eaafc4c1cc0b}\label{class_q_serial_port_a4df1aac683ab204adc11eaafc4c1cc0b}} 
+\index{QSerialPort@{QSerialPort}!waitForBytesWritten@{waitForBytesWritten}}
+\index{waitForBytesWritten@{waitForBytesWritten}!QSerialPort@{QSerialPort}}
+\doxysubsubsection{\texorpdfstring{waitForBytesWritten()}{waitForBytesWritten()}}
+{\footnotesize\ttfamily bool Q\+Serial\+Port\+::wait\+For\+Bytes\+Written (\begin{DoxyParamCaption}\item[{int}]{msecs = {\ttfamily 30000} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+\textbackslash{}reimp
+
+This function blocks until at least one byte has been written to the serial port and the \textbackslash{}l\{Q\+I\+O\+Device\+:\+:\}\{bytes\+Written()\} signal has been emitted. The function will timeout after {\itshape msecs} milliseconds; the default timeout is 30000 milliseconds. If {\itshape msecs} is -\/1, this function will not time out.
+
+The function returns {\ttfamily true} if the bytes\+Written() signal is emitted; otherwise it returns {\ttfamily false} (if an error occurred or the operation timed out). 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1331 \{}
+\DoxyCodeLine{1332     Q\_D(\mbox{\hyperlink{class_q_serial_port}{QSerialPort}});}
+\DoxyCodeLine{1333     \textcolor{keywordflow}{return} d-\/>waitForBytesWritten(msecs);}
+\DoxyCodeLine{1334 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_q_serial_port_a5a274fca3c9315fb5536cc8e716e4d9a}\label{class_q_serial_port_a5a274fca3c9315fb5536cc8e716e4d9a}} 
+\index{QSerialPort@{QSerialPort}!waitForReadyRead@{waitForReadyRead}}
+\index{waitForReadyRead@{waitForReadyRead}!QSerialPort@{QSerialPort}}
+\doxysubsubsection{\texorpdfstring{waitForReadyRead()}{waitForReadyRead()}}
+{\footnotesize\ttfamily bool Q\+Serial\+Port\+::wait\+For\+Ready\+Read (\begin{DoxyParamCaption}\item[{int}]{msecs = {\ttfamily 30000} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+\textbackslash{}reimp
+
+This function blocks until new data is available for reading and the \textbackslash{}l\{Q\+I\+O\+Device\+:\+:\}\{ready\+Read()\} signal has been emitted. The function will timeout after {\itshape msecs} milliseconds; the default timeout is 30000 milliseconds. If {\itshape msecs} is -\/1, this function will not time out.
+
+The function returns {\ttfamily true} if the ready\+Read() signal is emitted and there is new data available for reading; otherwise it returns {\ttfamily false} (if an error occurred or the operation timed out).
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_q_serial_port_a4df1aac683ab204adc11eaafc4c1cc0b}{wait\+For\+Bytes\+Written()}} 
+\end{DoxySeeAlso}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1302 \{}
+\DoxyCodeLine{1303     Q\_D(\mbox{\hyperlink{class_q_serial_port}{QSerialPort}});}
+\DoxyCodeLine{1304     \textcolor{keywordflow}{return} d-\/>waitForReadyRead(msecs);}
+\DoxyCodeLine{1305 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_q_serial_port_a41275d93730bc43a5fe09cffd8e9d4f8}\label{class_q_serial_port_a41275d93730bc43a5fe09cffd8e9d4f8}} 
+\index{QSerialPort@{QSerialPort}!writeData@{writeData}}
+\index{writeData@{writeData}!QSerialPort@{QSerialPort}}
+\doxysubsubsection{\texorpdfstring{writeData()}{writeData()}}
+{\footnotesize\ttfamily qint64 Q\+Serial\+Port\+::write\+Data (\begin{DoxyParamCaption}\item[{const char $\ast$}]{data,  }\item[{qint64}]{max\+Size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}}
+
+\textbackslash{}reimp 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1443 \{}
+\DoxyCodeLine{1444     Q\_D(\mbox{\hyperlink{class_q_serial_port}{QSerialPort}});}
+\DoxyCodeLine{1445     \textcolor{keywordflow}{return} d-\/>writeData(data, maxSize);}
+\DoxyCodeLine{1446 \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{class_q_serial_port_a63ff344d6da2bf735bdeeb84dd2c0415}\label{class_q_serial_port_a63ff344d6da2bf735bdeeb84dd2c0415}} 
+\index{QSerialPort@{QSerialPort}!breakEnabled@{breakEnabled}}
+\index{breakEnabled@{breakEnabled}!QSerialPort@{QSerialPort}}
+\doxysubsubsection{\texorpdfstring{breakEnabled}{breakEnabled}}
+{\footnotesize\ttfamily Q\+Serial\+Port\+::break\+Enabled\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}}
+
+
+
+the state of the transmission line in break 
+
+\begin{DoxySince}{Since}
+5.\+5 Returns {\ttfamily true} on success, {\ttfamily false} otherwise. If the flag is {\ttfamily true} then the transmission line is in break state; otherwise is in non-\/break state.
+\end{DoxySince}
+\begin{DoxyNote}{Note}
+The serial port has to be open before trying to set or get this property; otherwise returns {\ttfamily false} and sets the Not\+Open\+Error error code. This is a bit unusual as opposed to the regular Qt property settings of a class. However, this is a special use case since the property is set through the interaction with the kernel and hardware. Hence, the two scenarios cannot be completely compared to each other. 
+\end{DoxyNote}
+\mbox{\Hypertarget{class_q_serial_port_ae168fd2d888e7b635a33b5a1b132f8b2}\label{class_q_serial_port_ae168fd2d888e7b635a33b5a1b132f8b2}} 
+\index{QSerialPort@{QSerialPort}!dataBits@{dataBits}}
+\index{dataBits@{dataBits}!QSerialPort@{QSerialPort}}
+\doxysubsubsection{\texorpdfstring{dataBits}{dataBits}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_q_serial_port_a62ab4348249442e2b6e2d22e40e02ed5}{Q\+Serial\+Port\+::\+Data\+Bits}} Q\+Serial\+Port\+::data\+Bits\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}}
+
+
+
+the data bits in a frame 
+
+If the setting is successful or set before opening the port, returns {\ttfamily true}; otherwise returns {\ttfamily false} and sets an error code which can be obtained by accessing the value of the \mbox{\hyperlink{class_q_serial_port_ad3b0d74404cf2d5432552d4bf578058a}{Q\+Serial\+Port\+::error}} property.
+
+\begin{DoxyNote}{Note}
+If the setting is set before opening the port, the actual serial port setting is done automatically in the \textbackslash{}l\{\mbox{\hyperlink{class_q_serial_port_a2d6586b11209863aa05574975f79615f}{Q\+Serial\+Port\+::open()}}\} method right after that the opening of the port succeeds.
+\end{DoxyNote}
+The default value is Data8, i.\+e. 8 data bits. \mbox{\Hypertarget{class_q_serial_port_a90d9cb53f0b7948a1e2166fd395e7458}\label{class_q_serial_port_a90d9cb53f0b7948a1e2166fd395e7458}} 
+\index{QSerialPort@{QSerialPort}!dataTerminalReady@{dataTerminalReady}}
+\index{dataTerminalReady@{dataTerminalReady}!QSerialPort@{QSerialPort}}
+\doxysubsubsection{\texorpdfstring{dataTerminalReady}{dataTerminalReady}}
+{\footnotesize\ttfamily Q\+Serial\+Port\+::data\+Terminal\+Ready\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}}
+
+
+
+the state (high or low) of the line signal D\+TR 
+
+Returns {\ttfamily true} on success, {\ttfamily false} otherwise. If the flag is {\ttfamily true} then the D\+TR signal is set to high; otherwise low.
+
+\begin{DoxyNote}{Note}
+The serial port has to be open before trying to set or get this property; otherwise {\ttfamily false} is returned and the error code is set to Not\+Open\+Error.
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_q_serial_port_a8f88f140bf533b8f97229163209c585f}{pinout\+Signals()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{class_q_serial_port_ad3b0d74404cf2d5432552d4bf578058a}\label{class_q_serial_port_ad3b0d74404cf2d5432552d4bf578058a}} 
+\index{QSerialPort@{QSerialPort}!error@{error}}
+\index{error@{error}!QSerialPort@{QSerialPort}}
+\doxysubsubsection{\texorpdfstring{error}{error}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_q_serial_port_aa31f0921d43bb30acfe9a6cc5abbe6b0}{Q\+Serial\+Port\+::\+Serial\+Port\+Error}} Q\+Serial\+Port\+::error\hspace{0.3cm}{\ttfamily [read]}}
+
+
+
+the error status of the serial port 
+
+The I/O device status returns an error code. For example, if \mbox{\hyperlink{class_q_serial_port_a2d6586b11209863aa05574975f79615f}{open()}} returns {\ttfamily false}, or a read/write operation returns {\ttfamily -\/1}, this property can be used to figure out the reason why the operation failed.
+
+The error code is set to the default Q\+Serial\+Port\+::\+No\+Error after a call to clear\+Error() \mbox{\Hypertarget{class_q_serial_port_a710167f7f790c5f7497319c273e14de9}\label{class_q_serial_port_a710167f7f790c5f7497319c273e14de9}} 
+\index{QSerialPort@{QSerialPort}!flowControl@{flowControl}}
+\index{flowControl@{flowControl}!QSerialPort@{QSerialPort}}
+\doxysubsubsection{\texorpdfstring{flowControl}{flowControl}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_q_serial_port_ae3a50da39358348585e6e74dee63a353}{Q\+Serial\+Port\+::\+Flow\+Control}} Q\+Serial\+Port\+::flow\+Control\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}}
+
+
+
+the desired flow control mode 
+
+If the setting is successful or set before opening the port, returns {\ttfamily true}; otherwise returns {\ttfamily false} and sets an error code which can be obtained by accessing the value of the \mbox{\hyperlink{class_q_serial_port_ad3b0d74404cf2d5432552d4bf578058a}{Q\+Serial\+Port\+::error}} property.
+
+\begin{DoxyNote}{Note}
+If the setting is set before opening the port, the actual serial port setting is done automatically in the \textbackslash{}l\{\mbox{\hyperlink{class_q_serial_port_a2d6586b11209863aa05574975f79615f}{Q\+Serial\+Port\+::open()}}\} method right after that the opening of the port succeeds.
+\end{DoxyNote}
+The default value is No\+Flow\+Control, i.\+e. no flow control. \mbox{\Hypertarget{class_q_serial_port_ae3ef114c970dcbb5dbec109eab7de432}\label{class_q_serial_port_ae3ef114c970dcbb5dbec109eab7de432}} 
+\index{QSerialPort@{QSerialPort}!parity@{parity}}
+\index{parity@{parity}!QSerialPort@{QSerialPort}}
+\doxysubsubsection{\texorpdfstring{parity}{parity}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_q_serial_port_a86f1a911c1adf0ca0a5952f0957ada6f}{Q\+Serial\+Port\+::\+Parity}} Q\+Serial\+Port\+::parity\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}}
+
+
+
+the parity checking mode 
+
+If the setting is successful or set before opening the port, returns {\ttfamily true}; otherwise returns {\ttfamily false} and sets an error code which can be obtained by accessing the value of the \mbox{\hyperlink{class_q_serial_port_ad3b0d74404cf2d5432552d4bf578058a}{Q\+Serial\+Port\+::error}} property.
+
+\begin{DoxyNote}{Note}
+If the setting is set before opening the port, the actual serial port setting is done automatically in the \textbackslash{}l\{\mbox{\hyperlink{class_q_serial_port_a2d6586b11209863aa05574975f79615f}{Q\+Serial\+Port\+::open()}}\} method right after that the opening of the port succeeds.
+\end{DoxyNote}
+The default value is No\+Parity, i.\+e. no parity. \mbox{\Hypertarget{class_q_serial_port_a918269d1550b4fe0d1333cdee98e8020}\label{class_q_serial_port_a918269d1550b4fe0d1333cdee98e8020}} 
+\index{QSerialPort@{QSerialPort}!requestToSend@{requestToSend}}
+\index{requestToSend@{requestToSend}!QSerialPort@{QSerialPort}}
+\doxysubsubsection{\texorpdfstring{requestToSend}{requestToSend}}
+{\footnotesize\ttfamily Q\+Serial\+Port\+::request\+To\+Send\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}}
+
+
+
+the state (high or low) of the line signal R\+TS 
+
+Returns {\ttfamily true} on success, {\ttfamily false} otherwise. If the flag is {\ttfamily true} then the R\+TS signal is set to high; otherwise low.
+
+\begin{DoxyNote}{Note}
+The serial port has to be open before trying to set or get this property; otherwise {\ttfamily false} is returned and the error code is set to Not\+Open\+Error.
+
+An attempt to control the R\+TS signal in the Hardware\+Control mode will fail with error code set to Unsupported\+Operation\+Error, because the signal is automatically controlled by the driver.
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_q_serial_port_a8f88f140bf533b8f97229163209c585f}{pinout\+Signals()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{class_q_serial_port_a811099894ac40e3a1f7aa5c07a26eb65}\label{class_q_serial_port_a811099894ac40e3a1f7aa5c07a26eb65}} 
+\index{QSerialPort@{QSerialPort}!stopBits@{stopBits}}
+\index{stopBits@{stopBits}!QSerialPort@{QSerialPort}}
+\doxysubsubsection{\texorpdfstring{stopBits}{stopBits}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_q_serial_port_ad4ec8df2fd7623ca1f2450b0681e5082}{Q\+Serial\+Port\+::\+Stop\+Bits}} Q\+Serial\+Port\+::stop\+Bits\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}}
+
+
+
+the number of stop bits in a frame 
+
+If the setting is successful or set before opening the port, returns {\ttfamily true}; otherwise returns {\ttfamily false} and sets an error code which can be obtained by accessing the value of the \mbox{\hyperlink{class_q_serial_port_ad3b0d74404cf2d5432552d4bf578058a}{Q\+Serial\+Port\+::error}} property.
+
+\begin{DoxyNote}{Note}
+If the setting is set before opening the port, the actual serial port setting is done automatically in the \textbackslash{}l\{\mbox{\hyperlink{class_q_serial_port_a2d6586b11209863aa05574975f79615f}{Q\+Serial\+Port\+::open()}}\} method right after that the opening of the port succeeds.
+\end{DoxyNote}
+The default value is One\+Stop, i.\+e. 1 stop bit. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+qserialport.\+h\item 
+qserialport.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,17 @@
+digraph "supervision.h"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="supervision.h",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="supervision class declaration"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="badge.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$badge_8cpp.html",tooltip="Badge_qobject and Badge_qthread class definition."];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="main.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$main_8cpp.html",tooltip="main file"];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="mainwindow.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$mainwindow_8cpp.html",tooltip="MainWindow class and TouchesfonctionSqlModel class definition."];
+  Node1 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="process.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$process_8cpp.html",tooltip="Process_qobject and Process_qthread class definition."];
+  Node1 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="supervision.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$supervision_8cpp.html",tooltip="supervision class definition"];
+}

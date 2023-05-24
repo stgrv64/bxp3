@@ -1,0 +1,36 @@
+\hypertarget{x7lecteurrf_8cpp}{}\doxysection{x7lecteurrf.\+cpp File Reference}
+\label{x7lecteurrf_8cpp}\index{x7lecteurrf.cpp@{x7lecteurrf.cpp}}
+
+
+\mbox{\hyperlink{class_x7_lecteur_r_f}{X7\+Lecteur\+RF}} class definition.  
+
+
+{\ttfamily \#include \char`\"{}x7gestlecteur.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}x7lecteurrf.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$Q\+Timer$>$}\newline
+{\ttfamily \#include $<$Q\+Debug$>$}\newline
+{\ttfamily \#include $<$Q\+Date\+Time$>$}\newline
+{\ttfamily \#include $<$Q\+Application$>$}\newline
+{\ttfamily \#include $<$Q\+Reg\+Exp$>$}\newline
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{x7lecteurrf_8cpp_a5e80fe7f7d9a7ac816d66897a9c27062}\label{x7lecteurrf_8cpp_a5e80fe7f7d9a7ac816d66897a9c27062}} 
+log4cpp\+::\+Category $\ast$ {\bfseries x7\+Lecteur\+R\+F\+Log}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{class_x7_lecteur_r_f}{X7\+Lecteur\+RF}} class definition. 
+
+
+\begin{DoxyItemize}
+\item Paramétrage options lecteur\+:
+\item 0\+: standard
+\item 2\+: H\+ID 26bit H10301 (8+16 bits to 3+5 decimal digits)
+\item 3\+: Badge Mifare lecteur Deister wiegand 37 bits
+\item 4\+: Badge H\+ID 125khz wiegand 37 bits avec code site H10304 (16+19 bits to 5+7 decimal digits)
+\item 5\+: Badge H\+ID 125khz wiegand 37 bits sans code site H10302 (11 decimal digits)
+\item 11\+: Badge H\+ID 125khz Corporate 1000 35 bits (4+7 decimal digits)
+\item 13\+: Lecteur S\+T\+ID Mifare en interface 68 bits G\+FI, decodage decimal Chrono Gestor 
+\end{DoxyItemize}

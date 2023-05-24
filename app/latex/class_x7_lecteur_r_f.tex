@@ -1,0 +1,823 @@
+\hypertarget{class_x7_lecteur_r_f}{}\doxysection{X7\+Lecteur\+RF Class Reference}
+\label{class_x7_lecteur_r_f}\index{X7LecteurRF@{X7LecteurRF}}
+Inheritance diagram for X7\+Lecteur\+RF\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_x7_lecteur_r_f}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_x7_lecteur_r_f_a20d5827c314ec4edd5927490cc0eb8b3}\label{class_x7_lecteur_r_f_a20d5827c314ec4edd5927490cc0eb8b3}} 
+enum {\bfseries stat} \{ \newline
+{\bfseries X7\+\_\+\+W\+A\+I\+T\+\_\+\+I\+N\+IT}, 
+{\bfseries X7\+\_\+\+W\+A\+I\+T\+\_\+\+V\+E\+R\+S\+I\+ON}, 
+{\bfseries X7\+\_\+\+W\+A\+I\+T\+\_\+\+B\+A\+D\+GE}, 
+{\bfseries X7\+\_\+\+W\+A\+I\+T\+\_\+\+D\+E\+F\+A\+U\+LT}, 
+\newline
+{\bfseries X7\+\_\+\+R\+E\+A\+D\+\_\+\+P\+A\+R\+A\+M\+E\+T\+E\+R\+\_\+\+B\+A\+U\+D\+\_\+\+R\+A\+TE}, 
+{\bfseries X7\+\_\+\+R\+E\+A\+D\+\_\+\+P\+A\+R\+A\+M\+E\+T\+E\+R\+\_\+\+A\+U\+T\+O\+R\+E\+A\+D\+\_\+\+D\+A\+T\+A\+\_\+\+S\+T\+A\+R\+T\+\_\+\+P\+A\+GE}, 
+{\bfseries X7\+\_\+\+R\+E\+A\+D\+\_\+\+P\+A\+R\+A\+M\+E\+T\+E\+R\+\_\+\+A\+U\+T\+O\+R\+E\+A\+D\+\_\+\+D\+A\+T\+A\+\_\+\+B\+Y\+T\+E\+\_\+\+N\+U\+M\+B\+ER}, 
+{\bfseries X7\+\_\+\+R\+E\+A\+D\+\_\+\+P\+A\+R\+A\+M\+E\+T\+E\+R\+\_\+\+A\+U\+T\+O\+R\+E\+A\+D\+\_\+\+D\+A\+T\+A\+\_\+\+O\+F\+F\+S\+ET}, 
+\newline
+{\bfseries X7\+\_\+\+R\+E\+A\+D\+\_\+\+P\+A\+R\+A\+M\+E\+T\+E\+R\+\_\+\+R\+E\+V\+E\+R\+S\+E\+\_\+\+A\+U\+T\+O\+R\+E\+A\+D\+\_\+\+D\+A\+T\+A\+\_\+\+B\+Y\+T\+E\+\_\+\+O\+R\+D\+ER}, 
+{\bfseries X7\+\_\+\+R\+E\+A\+D\+\_\+\+P\+A\+R\+A\+M\+E\+T\+E\+R\+\_\+13\+\_\+56\+M\+H\+Z\+\_\+\+A\+U\+T\+O\+R\+E\+A\+D\+\_\+\+D\+A\+T\+A\+\_\+\+D\+E\+C\+O\+D\+E\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+F\+O\+R\+M\+AT}, 
+{\bfseries X7\+\_\+\+R\+E\+A\+D\+\_\+\+P\+A\+R\+A\+M\+E\+T\+E\+R\+\_\+\+C\+O\+M\+P\+L\+E\+M\+E\+N\+T\+E\+D\+\_\+\+U\+ID}, 
+{\bfseries X7\+\_\+\+R\+E\+A\+D\+\_\+\+P\+A\+R\+A\+M\+E\+T\+E\+R\+\_\+\+A\+U\+T\+O\+R\+E\+A\+D\+\_\+\+D\+A\+T\+A\+\_\+\+I\+N\+T\+E\+R\+F\+A\+C\+E\+\_\+\+T\+Y\+PE}, 
+\newline
+{\bfseries X7\+\_\+\+R\+E\+A\+D\+\_\+\+P\+A\+R\+A\+M\+E\+T\+E\+R\+\_\+\+F\+O\+R\+C\+E\+\_\+\+M\+I\+F\+A\+RE}, 
+{\bfseries X7\+\_\+\+R\+E\+A\+D\+\_\+\+P\+A\+R\+A\+M\+E\+T\+E\+R\+\_\+\+A\+U\+T\+O\+R\+E\+A\+D\+\_\+\+D\+A\+T\+A\+\_\+\+F\+I\+E\+L\+D\+\_\+\+S\+E\+P\+A\+R\+A\+T\+OR}, 
+{\bfseries X7\+\_\+\+R\+E\+A\+D\+\_\+\+P\+A\+R\+A\+M\+E\+T\+E\+R\+\_\+\+P\+O\+L\+L\+I\+N\+G\+\_\+\+S\+E\+Q\+U\+E\+N\+CE}, 
+{\bfseries X7\+\_\+\+R\+E\+A\+D\+\_\+\+P\+A\+R\+A\+M\+E\+T\+E\+R\+\_\+\+D\+I\+R\+E\+C\+T\+I\+O\+N\+\_\+\+F\+O\+R\+\_\+\+I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+RF}, 
+\newline
+{\bfseries X7\+\_\+\+R\+E\+A\+D\+\_\+\+P\+A\+R\+A\+M\+E\+T\+E\+R\+\_\+\+G\+A\+IN}, 
+{\bfseries X7\+\_\+\+R\+E\+A\+D\+\_\+\+P\+A\+R\+A\+M\+E\+T\+E\+R\+\_\+\+D\+A\+T\+A\+\_\+\+R\+A\+TE}, 
+{\bfseries X7\+\_\+\+R\+E\+A\+D\+\_\+\+P\+A\+R\+A\+M\+E\+T\+E\+R\+\_\+\+A\+U\+T\+O\+R\+E\+A\+D\+\_\+\+D\+A\+T\+A\+\_\+\+C\+A\+R\+D\+\_\+\+T\+Y\+PE}, 
+{\bfseries X7\+\_\+\+R\+E\+A\+D\+\_\+\+P\+A\+R\+A\+M\+E\+T\+E\+R\+\_\+\+L\+E\+D\+\_\+\+A\+C\+T\+I\+V\+I\+TY}, 
+\newline
+{\bfseries X7\+\_\+\+R\+E\+A\+D\+\_\+\+P\+A\+R\+A\+M\+E\+T\+E\+R\+\_\+\+D\+I\+S\+P\+L\+A\+Y\+\_\+\+C\+O\+N\+T\+R\+A\+ST}, 
+{\bfseries X7\+\_\+\+R\+E\+A\+D\+\_\+\+P\+A\+R\+A\+M\+E\+T\+E\+R\+\_\+\+S\+T\+A\+N\+D\+B\+Y\+\_\+\+L\+E\+D\+\_\+\+C\+O\+L\+OR}, 
+{\bfseries X7\+\_\+\+R\+E\+A\+D\+\_\+\+P\+A\+R\+A\+M\+E\+T\+E\+R\+\_\+\+R\+E\+A\+D\+\_\+\+M\+O\+DE}, 
+{\bfseries X7\+\_\+\+R\+E\+A\+D\+\_\+\+P\+A\+R\+A\+M\+E\+T\+E\+R\+\_\+\+M\+O\+D\+E\+\_\+\+T\+I\+M\+E\+O\+UT}, 
+\newline
+{\bfseries X7\+\_\+\+R\+E\+A\+D\+\_\+\+P\+A\+R\+A\+M\+E\+T\+E\+R\+\_\+\+C\+A\+R\+D\+\_\+\+T\+Y\+PE}, 
+{\bfseries X7\+\_\+\+R\+E\+A\+D\+\_\+\+P\+A\+R\+A\+M\+E\+T\+E\+R\+\_\+\+L\+A\+Y\+O\+U\+T\+\_\+\+S\+O\+U\+R\+CE}, 
+{\bfseries X7\+\_\+\+R\+E\+A\+D\+\_\+\+P\+A\+R\+A\+M\+E\+T\+E\+R\+\_\+\+A\+U\+T\+O\+R\+E\+A\+D\+\_\+\+D\+A\+T\+A\+\_\+\+P\+A\+D\+\_\+\+L\+E\+N\+G\+TH}, 
+{\bfseries X7\+\_\+\+R\+E\+A\+D\+\_\+\+P\+A\+R\+A\+M\+E\+T\+E\+R\+\_\+\+A\+U\+T\+O\+R\+E\+A\+D\+\_\+\+D\+A\+T\+A\+\_\+\+P\+A\+D\+\_\+\+A\+L\+I\+G\+N\+M\+E\+NT}, 
+\newline
+{\bfseries X7\+\_\+\+W\+R\+I\+T\+E\+\_\+\+P\+A\+R\+A\+M\+E\+T\+E\+R\+\_\+\+S\+E\+T\+\_\+\+D\+E\+A\+F\+U\+L\+T\+\_\+\+C\+O\+N\+F\+I\+G\+U\+R\+A\+T\+I\+ON}, 
+{\bfseries X7\+\_\+\+R\+E\+A\+D\+\_\+\+E\+R\+R\+O\+R\+\_\+\+C\+O\+DE}, 
+{\bfseries X7\+\_\+\+W\+R\+I\+T\+E\+\_\+\+P\+A\+R\+A\+M\+E\+T\+E\+R\+\_\+\+R\+E\+V\+E\+R\+S\+E\+\_\+\+A\+U\+T\+O\+R\+E\+A\+D\+\_\+\+D\+A\+T\+A\+\_\+\+B\+Y\+T\+E\+\_\+\+O\+R\+D\+ER}, 
+{\bfseries X7\+\_\+\+W\+R\+I\+T\+E\+\_\+\+P\+A\+R\+A\+M\+E\+T\+E\+R\+\_\+\+S\+T\+A\+N\+D\+B\+Y\+\_\+\+L\+E\+D\+\_\+\+C\+O\+L\+OR}, 
+\newline
+{\bfseries X7\+\_\+\+W\+R\+I\+T\+E\+\_\+\+P\+A\+R\+A\+M\+E\+T\+E\+R\+\_\+\+A\+U\+T\+O\+R\+E\+A\+D\+\_\+\+D\+A\+T\+A\+\_\+\+B\+Y\+T\+E\+\_\+\+N\+U\+M\+B\+ER}, 
+{\bfseries X7\+\_\+\+W\+R\+I\+T\+E\+\_\+\+P\+A\+R\+A\+M\+E\+T\+E\+R\+\_\+\+D\+I\+R\+E\+C\+T\+I\+ON}, 
+{\bfseries X7\+\_\+\+W\+R\+I\+T\+E\+\_\+\+P\+A\+R\+A\+M\+E\+T\+E\+R\+\_\+\+A\+U\+T\+O\+R\+E\+A\+D\+\_\+\+C\+A\+R\+D\+\_\+\+T\+Y\+PE}, 
+{\bfseries X7\+\_\+\+W\+R\+I\+T\+E\+\_\+\+P\+A\+R\+A\+M\+E\+T\+E\+R\+\_\+\+H\+I\+D\+\_\+\+P\+R\+O\+X\+\_\+125\+K\+H\+Z\+\_\+\+W\+I\+E\+G\+A\+ND}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Slots}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_x7_lecteur_r_f_a256fa699c65df161ab9eed883a2b1fbb}\label{class_x7_lecteur_r_f_a256fa699c65df161ab9eed883a2b1fbb}} 
+void {\bfseries auto\+Start} ()
+\item 
+virtual void \mbox{\hyperlink{class_x7_lecteur_r_f_ac524f8ca16720eae8e87cdb6a8c9e1f9}{recoit\+Data\+Du\+Port}} (Q\+Byte\+Array data)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_x7_lecteur_r_f_ac524f8ca16720eae8e87cdb6a8c9e1f9}{X7\+Lecteur\+R\+F\+::recoit\+Data\+Du\+Port}}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_x7_lecteur_r_f_a361e5addcee4258dd5884725537073f3}\label{class_x7_lecteur_r_f_a361e5addcee4258dd5884725537073f3}} 
+virtual void {\bfseries recoit\+Data\+Du\+Gest} (Q\+Variant)
+\end{DoxyCompactItemize}
+\doxysubsection*{Signals}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_x7_lecteur_r_f_aa85a99544d7effb20d7368f5bcbf35f5}\label{class_x7_lecteur_r_f_aa85a99544d7effb20d7368f5bcbf35f5}} 
+void {\bfseries envoie\+Data\+Vers\+Gest} (Q\+Variant)
+\item 
+\mbox{\Hypertarget{class_x7_lecteur_r_f_a8f725663eedf8c936b3ed89eaf95feba}\label{class_x7_lecteur_r_f_a8f725663eedf8c936b3ed89eaf95feba}} 
+void {\bfseries envoie\+Data\+Vers\+Port} (Q\+Byte\+Array)
+\item 
+\mbox{\Hypertarget{class_x7_lecteur_r_f_a55cd44822d69f7b652cd821e90aae660}\label{class_x7_lecteur_r_f_a55cd44822d69f7b652cd821e90aae660}} 
+void {\bfseries ihm\+\_\+badge} (Q\+Variant, Q\+Variant, Q\+Variant, Q\+Variant, Q\+Variant)
+\item 
+\mbox{\Hypertarget{class_x7_lecteur_r_f_accae88e476563729a3582f6f77f009ff}\label{class_x7_lecteur_r_f_accae88e476563729a3582f6f77f009ff}} 
+void {\bfseries ihm\+\_\+badge\+\_\+inconnu} (void)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_x7_lecteur_r_f_a08fea03888b6d7ba4c39274d210bf311}\label{class_x7_lecteur_r_f_a08fea03888b6d7ba4c39274d210bf311}} 
+{\bfseries X7\+Lecteur\+RF} (Q\+Object $\ast$parent=nullptr)
+\item 
+\mbox{\Hypertarget{class_x7_lecteur_r_f_aefea113695c81f3637f57b474fab05a6}\label{class_x7_lecteur_r_f_aefea113695c81f3637f57b474fab05a6}} 
+void {\bfseries get\+Version\+Lecteur} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_x7_lecteur_r_f_acd0104d32470e7be1bd8ebc94efe3b7b}\label{class_x7_lecteur_r_f_acd0104d32470e7be1bd8ebc94efe3b7b}} 
+Q\+String {\bfseries recherche\+Nom\+Prenom} (const Q\+String \&badge)
+\item 
+\mbox{\Hypertarget{class_x7_lecteur_r_f_aef4dbc7587504f9bcf33631f9feb496d}\label{class_x7_lecteur_r_f_aef4dbc7587504f9bcf33631f9feb496d}} 
+void {\bfseries update\+Tableau\+Nom\+Prenom} ()
+\item 
+\mbox{\Hypertarget{class_x7_lecteur_r_f_a5f23c4dcb9937e231f73c8b5235bc7f4}\label{class_x7_lecteur_r_f_a5f23c4dcb9937e231f73c8b5235bc7f4}} 
+Q\+String {\bfseries file\+Checksum} (const Q\+String \&file\+Name, Q\+Cryptographic\+Hash\+::\+Algorithm hash\+Algorithm)
+\item 
+\mbox{\Hypertarget{class_x7_lecteur_r_f_a3f01fdcb57e77070485b17a12ee7330b}\label{class_x7_lecteur_r_f_a3f01fdcb57e77070485b17a12ee7330b}} 
+void {\bfseries lecture\+Parametrage\+Lecteur\+RF} ()
+\item 
+void \mbox{\hyperlink{class_x7_lecteur_r_f_a6b4d756f3bb832c786183fb9839c7ad1}{set\+Parametrage\+Lecteur\+RF}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_x7_lecteur_r_f_a6b4d756f3bb832c786183fb9839c7ad1}{X7\+Lecteur\+R\+F\+::set\+Parametrage\+Lecteur\+RF}}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_x7_lecteur_r_f_abf4ef64432b683947cc1eb610f6e59d8}\label{class_x7_lecteur_r_f_abf4ef64432b683947cc1eb610f6e59d8}} 
+void {\bfseries set\+Parametrage02} ()
+\item 
+\mbox{\Hypertarget{class_x7_lecteur_r_f_a2becf04b63025bd13a4875e222b8285e}\label{class_x7_lecteur_r_f_a2becf04b63025bd13a4875e222b8285e}} 
+void {\bfseries set\+Parametrage11} ()
+\item 
+\mbox{\Hypertarget{class_x7_lecteur_r_f_af670df9e6d35b39d0414982af54daf86}\label{class_x7_lecteur_r_f_af670df9e6d35b39d0414982af54daf86}} 
+void {\bfseries set\+Parametrage15} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_x7_lecteur_r_f_a22bf2b9ade91e07b3b1aff700dddff2a}\label{class_x7_lecteur_r_f_a22bf2b9ade91e07b3b1aff700dddff2a}} 
+stat {\bfseries \+\_\+stat}
+\item 
+\mbox{\Hypertarget{class_x7_lecteur_r_f_a8890424e5fb4fea8cec51e9d60339a17}\label{class_x7_lecteur_r_f_a8890424e5fb4fea8cec51e9d60339a17}} 
+bool {\bfseries \+\_\+emit\+Msg}
+\item 
+\mbox{\Hypertarget{class_x7_lecteur_r_f_a44636bba9268791c7e2c115e0648a2fe}\label{class_x7_lecteur_r_f_a44636bba9268791c7e2c115e0648a2fe}} 
+Q\+Timer {\bfseries lecture\+Port\+Serie}
+\item 
+\mbox{\Hypertarget{class_x7_lecteur_r_f_a146b3ed3b8444b7b379211dc49ce6e77}\label{class_x7_lecteur_r_f_a146b3ed3b8444b7b379211dc49ce6e77}} 
+Q\+Hash$<$ Q\+String, Q\+String $>$ {\bfseries tableau\+Nom\+Prenom}
+\item 
+\mbox{\Hypertarget{class_x7_lecteur_r_f_a04db702ada0526c6cc8a915084ebae96}\label{class_x7_lecteur_r_f_a04db702ada0526c6cc8a915084ebae96}} 
+Q\+String {\bfseries nom\+Pre\+Md5}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_x7_lecteur_r_f_ac524f8ca16720eae8e87cdb6a8c9e1f9}\label{class_x7_lecteur_r_f_ac524f8ca16720eae8e87cdb6a8c9e1f9}} 
+\index{X7LecteurRF@{X7LecteurRF}!recoitDataDuPort@{recoitDataDuPort}}
+\index{recoitDataDuPort@{recoitDataDuPort}!X7LecteurRF@{X7LecteurRF}}
+\doxysubsubsection{\texorpdfstring{recoitDataDuPort}{recoitDataDuPort}}
+{\footnotesize\ttfamily void X7\+Lecteur\+R\+F\+::recoit\+Data\+Du\+Port (\begin{DoxyParamCaption}\item[{Q\+Byte\+Array}]{data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [slot]}}
+
+
+
+\mbox{\hyperlink{class_x7_lecteur_r_f_ac524f8ca16720eae8e87cdb6a8c9e1f9}{X7\+Lecteur\+R\+F\+::recoit\+Data\+Du\+Port}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{54 \{}
+\DoxyCodeLine{55     x7LecteurRFLog-\/>debug(\textcolor{stringliteral}{"void X7LecteurRF::recoitDataDuPort(QByteArray data)"});}
+\DoxyCodeLine{56     \textcolor{keywordflow}{switch}(\_stat)}
+\DoxyCodeLine{57     \{}
+\DoxyCodeLine{58     \textcolor{keywordflow}{case} X7LecteurRF::X7\_WAIT\_INIT:}
+\DoxyCodeLine{59         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{60     \textcolor{keywordflow}{case} X7LecteurRF::X7\_WAIT\_VERSION:}
+\DoxyCodeLine{61         x7LecteurRFLog-\/>debug(\textcolor{stringliteral}{"X7LecteurRF version : "} + QString(data).toStdString());}
+\DoxyCodeLine{62         X7GestLecteur::getInstance()-\/>setVersionLecteur( QString(data));}
+\DoxyCodeLine{63         \_stat = X7\_WAIT\_DEFAULT;}
+\DoxyCodeLine{64         \_emitMsg = \textcolor{keyword}{true};}
+\DoxyCodeLine{65         emit  envoieDataVersPort(QByteArray(\textcolor{stringliteral}{"wp4fff"}));}
+\DoxyCodeLine{66         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{67     \textcolor{keywordflow}{case} X7\_WAIT\_DEFAULT:}
+\DoxyCodeLine{68     \{}
+\DoxyCodeLine{69         x7LecteurRFLog-\/>debug(\textcolor{stringliteral}{"X7LecteurRFdefault"});}
+\DoxyCodeLine{70         \_stat = X7\_WAIT\_BADGE;}
+\DoxyCodeLine{71         \_emitMsg = \textcolor{keyword}{false};}
+\DoxyCodeLine{72         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{73     \}}
+\DoxyCodeLine{74     \textcolor{keywordflow}{case} X7LecteurRF::X7\_WAIT\_BADGE:}
+\DoxyCodeLine{75     \{}
+\DoxyCodeLine{76         x7LecteurRFLog-\/>debug(\textcolor{stringliteral}{"badge brut : "}+QString(data).toStdString());}
+\DoxyCodeLine{77         \textcolor{comment}{//TODO identifier le pourquoi de cette condition dans les anciennes sources badge.cpp L712}}
+\DoxyCodeLine{78         \textcolor{comment}{//if (supervision\_thread.supervision.http\_etat >0 || supervision\_thread.supervision.badge\_db\_etat >0 )}}
+\DoxyCodeLine{79         QString badge(30);}
+\DoxyCodeLine{80 }
+\DoxyCodeLine{81         badge = QString(data);}
+\DoxyCodeLine{82         badge.remove(QRegExp(\textcolor{stringliteral}{"[<>\(\backslash\)\(\backslash\)r]"})); \textcolor{comment}{// suppression du caractère < ou > et \(\backslash\)r retour chariot}}
+\DoxyCodeLine{83         x7LecteurRFLog-\/>debug(\textcolor{stringliteral}{"badge sans le sens : "}+badge.toStdString());}
+\DoxyCodeLine{84         uint option = X7GestLecteur::getInstance()-\/>getOption();}
+\DoxyCodeLine{85 }
+\DoxyCodeLine{86         x7LecteurRFLog-\/>debug(QString(\textcolor{stringliteral}{"badge size : \%1"}).arg(badge.size()).toStdString());}
+\DoxyCodeLine{87         \textcolor{keywordflow}{if}(option ==13)}
+\DoxyCodeLine{88         \{}
+\DoxyCodeLine{89             \textcolor{keywordflow}{if}(badge.size()!=20)}
+\DoxyCodeLine{90             \{}
+\DoxyCodeLine{91                 x7LecteurRFLog-\/>warn(\textcolor{stringliteral}{"badge lu : "}+badge.toStdString());}
+\DoxyCodeLine{92                 x7LecteurRFLog-\/>warn(QString(\textcolor{stringliteral}{"badge size : \%1"}).arg(badge.size()).toStdString());}
+\DoxyCodeLine{93                 \textcolor{keywordflow}{break};}
+\DoxyCodeLine{94             \}}
+\DoxyCodeLine{95             \textcolor{keywordflow}{if}(!QRegExp(\textcolor{stringliteral}{"\string^[0-\/9]+\$"}).exactMatch(badge))}
+\DoxyCodeLine{96             \{}
+\DoxyCodeLine{97                 x7LecteurRFLog-\/>warn(\textcolor{stringliteral}{"badge lu ne contient pas que des chiffres : "}+badge.toStdString());}
+\DoxyCodeLine{98                 \textcolor{keywordflow}{break};}
+\DoxyCodeLine{99             \}}
+\DoxyCodeLine{100             \textcolor{comment}{// FIXME problème de décalage au decodage}}
+\DoxyCodeLine{101             badge.remove(0,2);}
+\DoxyCodeLine{102         \}}
+\DoxyCodeLine{103 }
+\DoxyCodeLine{104 }
+\DoxyCodeLine{105         QString j=QDate::currentDate().toString(Qt::ISODate);}
+\DoxyCodeLine{106         QString h=QTime::currentTime().toString(Qt::TextDate);}
+\DoxyCodeLine{107 }
+\DoxyCodeLine{108         \textcolor{comment}{//FIXME Badge inconnu ? vraiment ?}}
+\DoxyCodeLine{109         \textcolor{keywordflow}{if} (!badge.compare(\textcolor{stringliteral}{"Badge inconnu"}))}
+\DoxyCodeLine{110         \{}
+\DoxyCodeLine{111             emit ihm\_badge\_inconnu(); \textcolor{comment}{//signal vers ihm erreur de bit badge}}
+\DoxyCodeLine{112         \}}
+\DoxyCodeLine{113         \textcolor{keywordflow}{else}}
+\DoxyCodeLine{114         \{}
+\DoxyCodeLine{115             badge=X7GestLecteur::getInstance()-\/>extraireMatricule(badge);}
+\DoxyCodeLine{116             badge=badge.toUpper();}
+\DoxyCodeLine{117             \textcolor{comment}{//Badge encode base64 pour les touches de fonction.}}
+\DoxyCodeLine{118             \textcolor{comment}{//TODO faire la conversion dans la partie IHM et supprimer le paramètre.}}
+\DoxyCodeLine{119             QString badge\_encode(\textcolor{stringliteral}{" "}+badge);}
+\DoxyCodeLine{120             badge\_encode = badge\_encode.toLatin1().toBase64();}
+\DoxyCodeLine{121             \textcolor{comment}{//TODO Ajouter l'affichage du nom et prenom rechercheNomPre() badge.cpp L743}}
+\DoxyCodeLine{122             QString nomPrenom;}
+\DoxyCodeLine{123             nomPrenom = rechercheNomPrenom(badge\_encode);}
+\DoxyCodeLine{124             emit ihm\_badge((QVariant) badge,(QVariant) j,(QVariant) h,(QVariant) badge\_encode, (QVariant) nomPrenom);}
+\DoxyCodeLine{125         \}}
+\DoxyCodeLine{126         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{127     \}}
+\DoxyCodeLine{128 \textcolor{comment}{        /**************************************************/}}
+\DoxyCodeLine{129         \textcolor{comment}{/*                                                */}}
+\DoxyCodeLine{130         \textcolor{comment}{/* COMMANDES rp                                   */}}
+\DoxyCodeLine{131         \textcolor{comment}{/*                                                */}}
+\DoxyCodeLine{132 \textcolor{comment}{        /**************************************************/}}
+\DoxyCodeLine{133     \textcolor{keywordflow}{case} X7LecteurRF::X7\_READ\_PARAMETER\_BAUD\_RATE:}
+\DoxyCodeLine{134 \textcolor{comment}{        /****************************/}}
+\DoxyCodeLine{135         \textcolor{comment}{/* parameter baud rate 0x00 */}}
+\DoxyCodeLine{136 \textcolor{comment}{        /****************************/}}
+\DoxyCodeLine{137         \textcolor{keywordflow}{if}(data.contains(\textcolor{stringliteral}{"01"}))}
+\DoxyCodeLine{138             x7LecteurRFLog-\/>debug(\textcolor{stringliteral}{"X7LecteurRF parameter baud rate : 9600bps"});}
+\DoxyCodeLine{139         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(data.contains(\textcolor{stringliteral}{"02"}))}
+\DoxyCodeLine{140             x7LecteurRFLog-\/>debug(\textcolor{stringliteral}{"X7LecteurRF parameter baud rate : 19200bps"});}
+\DoxyCodeLine{141         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(data.contains(\textcolor{stringliteral}{"03"}))}
+\DoxyCodeLine{142             x7LecteurRFLog-\/>debug(\textcolor{stringliteral}{"X7LecteurRF parameter baud rate : 38400bps"});}
+\DoxyCodeLine{143         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(data.contains(\textcolor{stringliteral}{"04"}))}
+\DoxyCodeLine{144             x7LecteurRFLog-\/>debug(\textcolor{stringliteral}{"X7LecteurRF parameter baud rate : 57600bps (default)"});}
+\DoxyCodeLine{145         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(data.contains(\textcolor{stringliteral}{"05"}))}
+\DoxyCodeLine{146             x7LecteurRFLog-\/>debug(\textcolor{stringliteral}{"X7LecteurRF parameter baud rate : 115200bps"});}
+\DoxyCodeLine{147         \textcolor{keywordflow}{else}}
+\DoxyCodeLine{148             x7LecteurRFLog-\/>debug(\textcolor{stringliteral}{"X7LecteurRF parameter baud rate : "}+QString(data).toStdString());}
+\DoxyCodeLine{149         \_stat = X7\_READ\_PARAMETER\_AUTOREAD\_DATA\_START\_PAGE;}
+\DoxyCodeLine{150         emit  envoieDataVersPort(QByteArray(\textcolor{stringliteral}{"rp01"}));}
+\DoxyCodeLine{151         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{152     \textcolor{keywordflow}{case} X7LecteurRF::X7\_READ\_PARAMETER\_AUTOREAD\_DATA\_START\_PAGE:}
+\DoxyCodeLine{153 \textcolor{comment}{        /*******************************************/}}
+\DoxyCodeLine{154         \textcolor{comment}{/* parameter autoread data start page 0x01 */}}
+\DoxyCodeLine{155 \textcolor{comment}{        /*******************************************/}}
+\DoxyCodeLine{156         x7LecteurRFLog-\/>debug(\textcolor{stringliteral}{"X7LecteurRF autoread data start page : "}+QString(data).toStdString());}
+\DoxyCodeLine{157         \_stat = X7\_READ\_PARAMETER\_AUTOREAD\_DATA\_BYTE\_NUMBER;}
+\DoxyCodeLine{158         emit  envoieDataVersPort(QByteArray(\textcolor{stringliteral}{"rp02"}));}
+\DoxyCodeLine{159         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{160     \textcolor{keywordflow}{case} X7LecteurRF::X7\_READ\_PARAMETER\_AUTOREAD\_DATA\_BYTE\_NUMBER:}
+\DoxyCodeLine{161 \textcolor{comment}{        /********************************************/}}
+\DoxyCodeLine{162         \textcolor{comment}{/* parameter autoread data byte number 0x02 */}}
+\DoxyCodeLine{163 \textcolor{comment}{        /********************************************/}}
+\DoxyCodeLine{164         x7LecteurRFLog-\/>debug(\textcolor{stringliteral}{"X7LecteurRF autoread data byte number : "}+QString(data).toStdString());}
+\DoxyCodeLine{165         \_stat = X7\_READ\_PARAMETER\_AUTOREAD\_DATA\_OFFSET;}
+\DoxyCodeLine{166         emit  envoieDataVersPort(QByteArray(\textcolor{stringliteral}{"rp03"}));}
+\DoxyCodeLine{167         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{168     \textcolor{keywordflow}{case} X7LecteurRF::X7\_READ\_PARAMETER\_AUTOREAD\_DATA\_OFFSET:}
+\DoxyCodeLine{169 \textcolor{comment}{        /********************************************/}}
+\DoxyCodeLine{170         \textcolor{comment}{/* parameter autoread data offset 0x03      */}}
+\DoxyCodeLine{171 \textcolor{comment}{        /********************************************/}}
+\DoxyCodeLine{172         x7LecteurRFLog-\/>debug(\textcolor{stringliteral}{"X7LecteurRF autoread data offset : "}+QString(data).toStdString());}
+\DoxyCodeLine{173         \_stat = X7\_READ\_PARAMETER\_REVERSE\_AUTOREAD\_DATA\_BYTE\_ORDER;}
+\DoxyCodeLine{174         emit  envoieDataVersPort(QByteArray(\textcolor{stringliteral}{"rp04"}));}
+\DoxyCodeLine{175         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{176     \textcolor{keywordflow}{case} X7LecteurRF::X7\_READ\_PARAMETER\_REVERSE\_AUTOREAD\_DATA\_BYTE\_ORDER:}
+\DoxyCodeLine{177 \textcolor{comment}{        /***************************************************/}}
+\DoxyCodeLine{178         \textcolor{comment}{/* parameter reverse autoread data byte order 0x04 */}}
+\DoxyCodeLine{179 \textcolor{comment}{        /***************************************************/}}
+\DoxyCodeLine{180         \textcolor{keywordflow}{if}(data.contains(\textcolor{stringliteral}{"00"}))}
+\DoxyCodeLine{181             x7LecteurRFLog-\/>debug(\textcolor{stringliteral}{"X7LecteurRF parameter Reverse autoread data byte order : LSB byte first (default)"});}
+\DoxyCodeLine{182         \textcolor{keywordflow}{else}  \textcolor{keywordflow}{if}(data.contains(\textcolor{stringliteral}{"01"}))}
+\DoxyCodeLine{183             x7LecteurRFLog-\/>debug(\textcolor{stringliteral}{"X7LecteurRF parameter Reverse autoread data byte order : MSB byte first"});}
+\DoxyCodeLine{184         \textcolor{keywordflow}{else}}
+\DoxyCodeLine{185             x7LecteurRFLog-\/>debug(\textcolor{stringliteral}{"X7LecteurRF parameter Reverse autoread data byte order : "}+QString(data).toStdString());}
+\DoxyCodeLine{186         \_stat = X7\_READ\_PARAMETER\_13\_56MHZ\_AUTOREAD\_DATA\_DECODE\_OUTPUT\_FORMAT;}
+\DoxyCodeLine{187         emit  envoieDataVersPort(QByteArray(\textcolor{stringliteral}{"rp05"}));}
+\DoxyCodeLine{188         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{189     \textcolor{keywordflow}{case} X7LecteurRF::X7\_READ\_PARAMETER\_13\_56MHZ\_AUTOREAD\_DATA\_DECODE\_OUTPUT\_FORMAT:}
+\DoxyCodeLine{190 \textcolor{comment}{        /*************************************************************/}}
+\DoxyCodeLine{191         \textcolor{comment}{/* parameter 13.56MHz autoread data decode ouput format 0x05 */}}
+\DoxyCodeLine{192 \textcolor{comment}{        /*************************************************************/}}
+\DoxyCodeLine{193         \textcolor{keywordflow}{if}(data.contains(\textcolor{stringliteral}{"00"}))}
+\DoxyCodeLine{194             x7LecteurRFLog-\/>debug(\textcolor{stringliteral}{"X7LecteurRF parameter 13.56Mhz Autoread data decode output format : 2+2+4 bytes to 5+5+10 decimal digits (default)"});}
+\DoxyCodeLine{195         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(data.contains(\textcolor{stringliteral}{"01"}))}
+\DoxyCodeLine{196             x7LecteurRFLog-\/>debug(\textcolor{stringliteral}{"X7LecteurRF parameter 13.56Mhz Autoread data decode output format : Decode nibbles as BCD / Hex format"});}
+\DoxyCodeLine{197         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(data.contains(\textcolor{stringliteral}{"02"}))}
+\DoxyCodeLine{198             x7LecteurRFLog-\/>debug(\textcolor{stringliteral}{"X7LecteurRF parameter 13.56Mhz Autoread data decode output format : ASCII as is"});}
+\DoxyCodeLine{199         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(data.contains(\textcolor{stringliteral}{"03"}))}
+\DoxyCodeLine{200             x7LecteurRFLog-\/>debug(\textcolor{stringliteral}{"X7LecteurRF parameter 13.56Mhz Autoread data decode output format : 4 + 4 bytes to 10 + 10 decimal Digits"});}
+\DoxyCodeLine{201         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(data.contains(\textcolor{stringliteral}{"0E"}))}
+\DoxyCodeLine{202             x7LecteurRFLog-\/>debug(\textcolor{stringliteral}{"X7LecteurRF parameter 13.56Mhz Autoread data decode output format : Selected bytes to 20 decimals digits"});}
+\DoxyCodeLine{203         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(data.contains(\textcolor{stringliteral}{"0F"}))}
+\DoxyCodeLine{204             x7LecteurRFLog-\/>debug(\textcolor{stringliteral}{"X7LecteurRF parameter 13.56Mhz Autoread data decode output format : Custom 6 (ISP)"});}
+\DoxyCodeLine{205         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(data.contains(\textcolor{stringliteral}{"10"}))}
+\DoxyCodeLine{206             x7LecteurRFLog-\/>debug(\textcolor{stringliteral}{"X7LecteurRF parameter 13.56Mhz Autoread data decode output format : Memory block content XOR with UID diversification"});}
+\DoxyCodeLine{207         \textcolor{keywordflow}{else}}
+\DoxyCodeLine{208             x7LecteurRFLog-\/>debug(\textcolor{stringliteral}{"X7LecteurRF parameter 13.56Mhz Autoread data decode output format : "}+QString(data).toStdString());}
+\DoxyCodeLine{209         \_stat = X7\_READ\_PARAMETER\_COMPLEMENTED\_UID;}
+\DoxyCodeLine{210         emit  envoieDataVersPort(QByteArray(\textcolor{stringliteral}{"rp0A"}));}
+\DoxyCodeLine{211         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{212     \textcolor{keywordflow}{case} X7LecteurRF::X7\_READ\_PARAMETER\_COMPLEMENTED\_UID:}
+\DoxyCodeLine{213 \textcolor{comment}{        /*************************************************************/}}
+\DoxyCodeLine{214         \textcolor{comment}{/* parameter complemented uid 0x0A                           */}}
+\DoxyCodeLine{215 \textcolor{comment}{        /*************************************************************/}}
+\DoxyCodeLine{216         \textcolor{keywordflow}{if}(data.contains(\textcolor{stringliteral}{"00"}))}
+\DoxyCodeLine{217             x7LecteurRFLog-\/>debug(\textcolor{stringliteral}{"X7LecteurRF parameter completed UID : Normal (default)"});}
+\DoxyCodeLine{218         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(data.contains(\textcolor{stringliteral}{"01"}))}
+\DoxyCodeLine{219             x7LecteurRFLog-\/>debug(\textcolor{stringliteral}{"X7LecteurRF parameter completed UID : Complemented"});}
+\DoxyCodeLine{220         \textcolor{keywordflow}{else}}
+\DoxyCodeLine{221             x7LecteurRFLog-\/>debug(\textcolor{stringliteral}{"X7LecteurRF parameter completed UID : "}+QString(data).toStdString());}
+\DoxyCodeLine{222         \_stat = X7\_READ\_PARAMETER\_AUTOREAD\_DATA\_INTERFACE\_TYPE;}
+\DoxyCodeLine{223         emit  envoieDataVersPort(QByteArray(\textcolor{stringliteral}{"rp0B"}));}
+\DoxyCodeLine{224         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{225     \textcolor{keywordflow}{case} X7LecteurRF::X7\_READ\_PARAMETER\_AUTOREAD\_DATA\_INTERFACE\_TYPE:}
+\DoxyCodeLine{226 \textcolor{comment}{        /*************************************************************/}}
+\DoxyCodeLine{227         \textcolor{comment}{/* parameter autoread data interface type 0x0B               */}}
+\DoxyCodeLine{228 \textcolor{comment}{        /*************************************************************/}}
+\DoxyCodeLine{229         \textcolor{keywordflow}{if}(data.contains(\textcolor{stringliteral}{"00"}))}
+\DoxyCodeLine{230             x7LecteurRFLog-\/>debug(\textcolor{stringliteral}{"X7LecteurRF parameter autoread data interface type : Serial (default)"});}
+\DoxyCodeLine{231         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(data.contains(\textcolor{stringliteral}{"01"}))}
+\DoxyCodeLine{232             x7LecteurRFLog-\/>debug(\textcolor{stringliteral}{"X7LecteurRF parameter autoread data interface type : Clock \& data (default)"});}
+\DoxyCodeLine{233         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(data.contains(\textcolor{stringliteral}{"02"}))}
+\DoxyCodeLine{234             x7LecteurRFLog-\/>debug(\textcolor{stringliteral}{"X7LecteurRF parameter autoread data interface type : Wiegand 26 bits"});}
+\DoxyCodeLine{235         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(data.contains(\textcolor{stringliteral}{"03"}))}
+\DoxyCodeLine{236             x7LecteurRFLog-\/>debug(\textcolor{stringliteral}{"X7LecteurRF parameter autoread data interface type : Wiegand 37 bits"});}
+\DoxyCodeLine{237         \textcolor{keywordflow}{else}}
+\DoxyCodeLine{238             x7LecteurRFLog-\/>debug(\textcolor{stringliteral}{"X7LecteurRF parameter autoread data interface type : "}+QString(data).toStdString());}
+\DoxyCodeLine{239         \_stat = X7\_READ\_PARAMETER\_FORCE\_MIFARE;}
+\DoxyCodeLine{240         emit  envoieDataVersPort(QByteArray(\textcolor{stringliteral}{"rp0E"}));}
+\DoxyCodeLine{241         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{242     \textcolor{keywordflow}{case} X7LecteurRF::X7\_READ\_PARAMETER\_FORCE\_MIFARE:}
+\DoxyCodeLine{243 \textcolor{comment}{        /*************************************************************/}}
+\DoxyCodeLine{244         \textcolor{comment}{/* parameter autoread force mifare 0x0E                      */}}
+\DoxyCodeLine{245 \textcolor{comment}{        /*************************************************************/}}
+\DoxyCodeLine{246         \textcolor{keywordflow}{if}(data.contains(\textcolor{stringliteral}{"00"}))}
+\DoxyCodeLine{247             x7LecteurRFLog-\/>debug(\textcolor{stringliteral}{"X7LecteurRF parameter force Mifare : ISO14443 parts 1-\/4 card (default)"});}
+\DoxyCodeLine{248         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(data.contains(\textcolor{stringliteral}{"01"}))}
+\DoxyCodeLine{249             x7LecteurRFLog-\/>debug(\textcolor{stringliteral}{"X7LecteurRF parameter force Mifare : Force JCOP ISO14443A to work as Mifare"});}
+\DoxyCodeLine{250         \textcolor{keywordflow}{else}}
+\DoxyCodeLine{251             x7LecteurRFLog-\/>debug(\textcolor{stringliteral}{"X7LecteurRF parameter force Mifare : "}+QString(data).toStdString());}
+\DoxyCodeLine{252         \_stat = X7\_READ\_PARAMETER\_AUTOREAD\_DATA\_FIELD\_SEPARATOR;}
+\DoxyCodeLine{253         emit  envoieDataVersPort(QByteArray(\textcolor{stringliteral}{"rp0F"}));}
+\DoxyCodeLine{254         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{255     \textcolor{keywordflow}{case} X7LecteurRF::X7\_READ\_PARAMETER\_AUTOREAD\_DATA\_FIELD\_SEPARATOR:}
+\DoxyCodeLine{256 \textcolor{comment}{        /*************************************************************/}}
+\DoxyCodeLine{257         \textcolor{comment}{/* parameter autoread autoread data field separator 0x0F     */}}
+\DoxyCodeLine{258 \textcolor{comment}{        /*************************************************************/}}
+\DoxyCodeLine{259         \textcolor{keywordflow}{if}(data.contains(\textcolor{stringliteral}{"00"}))}
+\DoxyCodeLine{260             x7LecteurRFLog-\/>debug(\textcolor{stringliteral}{"X7LecteurRF parameter autoread data field separator : Disabled (default)"});}
+\DoxyCodeLine{261         \textcolor{keywordflow}{else}}
+\DoxyCodeLine{262             x7LecteurRFLog-\/>debug(\textcolor{stringliteral}{"X7LecteurRF parameter autoread data field separator : "}+QString(data).toStdString());}
+\DoxyCodeLine{263         \_stat = X7\_READ\_PARAMETER\_POLLING\_SEQUENCE;}
+\DoxyCodeLine{264         emit  envoieDataVersPort(QByteArray(\textcolor{stringliteral}{"rp10"}));}
+\DoxyCodeLine{265         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{266     \textcolor{keywordflow}{case} X7LecteurRF::X7\_READ\_PARAMETER\_POLLING\_SEQUENCE:}
+\DoxyCodeLine{267 \textcolor{comment}{        /*************************************************************/}}
+\DoxyCodeLine{268         \textcolor{comment}{/* parameter autoread polling sequence 0x10                  */}}
+\DoxyCodeLine{269 \textcolor{comment}{        /*************************************************************/}}
+\DoxyCodeLine{270         x7LecteurRFLog-\/>debug(\textcolor{stringliteral}{"X7LecteurRF parameter polling sequence : "}+QString(data).toStdString());}
+\DoxyCodeLine{271         \_stat = X7\_READ\_PARAMETER\_DIRECTION\_FOR\_INTERNAL\_RF;}
+\DoxyCodeLine{272         emit  envoieDataVersPort(QByteArray(\textcolor{stringliteral}{"rp11"}));}
+\DoxyCodeLine{273         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{274     \textcolor{keywordflow}{case} X7LecteurRF::X7\_READ\_PARAMETER\_DIRECTION\_FOR\_INTERNAL\_RF:}
+\DoxyCodeLine{275 \textcolor{comment}{        /*************************************************************/}}
+\DoxyCodeLine{276         \textcolor{comment}{/* parameter autoread direction for internal RF  0x11        */}}
+\DoxyCodeLine{277 \textcolor{comment}{        /*************************************************************/}}
+\DoxyCodeLine{278         \textcolor{keywordflow}{if}(data.contains(\textcolor{stringliteral}{"00"}))}
+\DoxyCodeLine{279             x7LecteurRFLog-\/>debug(\textcolor{stringliteral}{"X7LecteurRF parameter direction (for internal RF dual antenna modules only) : Direction enabled (default)"});}
+\DoxyCodeLine{280         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(data.contains(\textcolor{stringliteral}{"01"}))}
+\DoxyCodeLine{281             x7LecteurRFLog-\/>debug(\textcolor{stringliteral}{"X7LecteurRF parameter direction (for internal RF dual antenna modules only) : direction disabled"});}
+\DoxyCodeLine{282         \textcolor{keywordflow}{else}}
+\DoxyCodeLine{283             x7LecteurRFLog-\/>debug(\textcolor{stringliteral}{"X7LecteurRF parameter direction (for internal RF dual antenna modules only) : "}+QString(data).toStdString());}
+\DoxyCodeLine{284         \_stat = X7\_READ\_PARAMETER\_GAIN;}
+\DoxyCodeLine{285         emit  envoieDataVersPort(QByteArray(\textcolor{stringliteral}{"rp12"}));}
+\DoxyCodeLine{286         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{287     \textcolor{keywordflow}{case} X7LecteurRF::X7\_READ\_PARAMETER\_GAIN:}
+\DoxyCodeLine{288 \textcolor{comment}{        /*************************************************************/}}
+\DoxyCodeLine{289         \textcolor{comment}{/* parameter autoread gain  0x12                             */}}
+\DoxyCodeLine{290 \textcolor{comment}{        /*************************************************************/}}
+\DoxyCodeLine{291         \textcolor{keywordflow}{if}(data.contains(\textcolor{stringliteral}{"00"}))}
+\DoxyCodeLine{292             x7LecteurRFLog-\/>debug(\textcolor{stringliteral}{"X7LecteurRF parameter gain : 18db"});}
+\DoxyCodeLine{293         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(data.contains(\textcolor{stringliteral}{"01"}))}
+\DoxyCodeLine{294             x7LecteurRFLog-\/>debug(\textcolor{stringliteral}{"X7LecteurRF parameter gain : 23db"});}
+\DoxyCodeLine{295         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(data.contains(\textcolor{stringliteral}{"02"}))}
+\DoxyCodeLine{296             x7LecteurRFLog-\/>debug(\textcolor{stringliteral}{"X7LecteurRF parameter gain : 18db"});}
+\DoxyCodeLine{297         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(data.contains(\textcolor{stringliteral}{"03"}))}
+\DoxyCodeLine{298             x7LecteurRFLog-\/>debug(\textcolor{stringliteral}{"X7LecteurRF parameter gain : 23db"});}
+\DoxyCodeLine{299         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(data.contains(\textcolor{stringliteral}{"04"}))}
+\DoxyCodeLine{300             x7LecteurRFLog-\/>debug(\textcolor{stringliteral}{"X7LecteurRF parameter gain : 33db"});}
+\DoxyCodeLine{301         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(data.contains(\textcolor{stringliteral}{"05"}))}
+\DoxyCodeLine{302             x7LecteurRFLog-\/>debug(\textcolor{stringliteral}{"X7LecteurRF parameter gain : 33db (default)"});}
+\DoxyCodeLine{303         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(data.contains(\textcolor{stringliteral}{"06"}))}
+\DoxyCodeLine{304             x7LecteurRFLog-\/>debug(\textcolor{stringliteral}{"X7LecteurRF parameter gain : 43db"});}
+\DoxyCodeLine{305         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(data.contains(\textcolor{stringliteral}{"07"}))}
+\DoxyCodeLine{306             x7LecteurRFLog-\/>debug(\textcolor{stringliteral}{"X7LecteurRF parameter gain : 48db (default)"});}
+\DoxyCodeLine{307         \textcolor{keywordflow}{else}}
+\DoxyCodeLine{308             x7LecteurRFLog-\/>debug(\textcolor{stringliteral}{"X7LecteurRF parameter gain : "}+QString(data).toStdString());}
+\DoxyCodeLine{309         \_stat = X7\_READ\_PARAMETER\_DATA\_RATE;}
+\DoxyCodeLine{310         emit  envoieDataVersPort(QByteArray(\textcolor{stringliteral}{"rp13"}));}
+\DoxyCodeLine{311         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{312     \textcolor{keywordflow}{case} X7LecteurRF::X7\_READ\_PARAMETER\_DATA\_RATE:}
+\DoxyCodeLine{313 \textcolor{comment}{        /*************************************************************/}}
+\DoxyCodeLine{314         \textcolor{comment}{/* parameter autoread data rate  0x13                        */}}
+\DoxyCodeLine{315 \textcolor{comment}{        /*************************************************************/}}
+\DoxyCodeLine{316         \textcolor{keywordflow}{if}(data.contains(\textcolor{stringliteral}{"00"}))}
+\DoxyCodeLine{317             x7LecteurRFLog-\/>debug(\textcolor{stringliteral}{"X7LecteurRF parameter data rate : 106Kbit/s (default)"});}
+\DoxyCodeLine{318         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(data.contains(\textcolor{stringliteral}{"01"}))}
+\DoxyCodeLine{319             x7LecteurRFLog-\/>debug(\textcolor{stringliteral}{"X7LecteurRF parameter data rate : 212Kbit/s"});}
+\DoxyCodeLine{320         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(data.contains(\textcolor{stringliteral}{"02"}))}
+\DoxyCodeLine{321             x7LecteurRFLog-\/>debug(\textcolor{stringliteral}{"X7LecteurRF parameter data rate : 424Kbit/s"});}
+\DoxyCodeLine{322         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(data.contains(\textcolor{stringliteral}{"03"}))}
+\DoxyCodeLine{323             x7LecteurRFLog-\/>debug(\textcolor{stringliteral}{"X7LecteurRF parameter data rate : 848Kbit/s"});}
+\DoxyCodeLine{324         \textcolor{keywordflow}{else}}
+\DoxyCodeLine{325             x7LecteurRFLog-\/>debug(\textcolor{stringliteral}{"X7LecteurRF parameter data rate : "}+QString(data).toStdString());}
+\DoxyCodeLine{326         \_stat = X7\_READ\_PARAMETER\_AUTOREAD\_DATA\_CARD\_TYPE;}
+\DoxyCodeLine{327         emit  envoieDataVersPort(QByteArray(\textcolor{stringliteral}{"rp15"}));}
+\DoxyCodeLine{328         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{329     \textcolor{keywordflow}{case} X7LecteurRF::X7\_READ\_PARAMETER\_AUTOREAD\_DATA\_CARD\_TYPE:}
+\DoxyCodeLine{330 \textcolor{comment}{        /*************************************************************/}}
+\DoxyCodeLine{331         \textcolor{comment}{/* parameter autoread data card type  0x15                   */}}
+\DoxyCodeLine{332 \textcolor{comment}{        /*************************************************************/}}
+\DoxyCodeLine{333         \textcolor{keywordflow}{if}(data.contains(\textcolor{stringliteral}{"00"}))}
+\DoxyCodeLine{334             x7LecteurRFLog-\/>debug(\textcolor{stringliteral}{"X7LecteurRF parameter autoread data card type : Card type disabled (default)"});}
+\DoxyCodeLine{335         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(data.contains(\textcolor{stringliteral}{"01"}))}
+\DoxyCodeLine{336             x7LecteurRFLog-\/>debug(\textcolor{stringliteral}{"X7LecteurRF parameter autoread data card type : Add char prefix"});}
+\DoxyCodeLine{337         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(data.contains(\textcolor{stringliteral}{"02"}))}
+\DoxyCodeLine{338             x7LecteurRFLog-\/>debug(\textcolor{stringliteral}{"X7LecteurRF parameter autoread data card type : Add char suffix"});}
+\DoxyCodeLine{339         \textcolor{keywordflow}{else}}
+\DoxyCodeLine{340             x7LecteurRFLog-\/>debug(\textcolor{stringliteral}{"X7LecteurRF parameter autoread data card type : "}+QString(data).toStdString());}
+\DoxyCodeLine{341         \_stat = X7\_READ\_PARAMETER\_LED\_ACTIVITY;}
+\DoxyCodeLine{342         emit  envoieDataVersPort(QByteArray(\textcolor{stringliteral}{"rp1B"}));}
+\DoxyCodeLine{343         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{344     \textcolor{keywordflow}{case} X7LecteurRF::X7\_READ\_PARAMETER\_LED\_ACTIVITY:}
+\DoxyCodeLine{345 \textcolor{comment}{        /*************************************************************/}}
+\DoxyCodeLine{346         \textcolor{comment}{/* parameter led activity  0x1B                              */}}
+\DoxyCodeLine{347 \textcolor{comment}{        /*************************************************************/}}
+\DoxyCodeLine{348         \textcolor{keywordflow}{if}(data.contains(\textcolor{stringliteral}{"00"}))}
+\DoxyCodeLine{349             x7LecteurRFLog-\/>debug(\textcolor{stringliteral}{"X7LecteurRF parameter led activity : Disabled (default)"});}
+\DoxyCodeLine{350         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(data.contains(\textcolor{stringliteral}{"01"}))}
+\DoxyCodeLine{351             x7LecteurRFLog-\/>debug(\textcolor{stringliteral}{"X7LecteurRF parameter led activity : Enabled"});}
+\DoxyCodeLine{352         \textcolor{keywordflow}{else}}
+\DoxyCodeLine{353             x7LecteurRFLog-\/>debug(\textcolor{stringliteral}{"X7LecteurRF parameter led activity : "}+QString(data).toStdString());}
+\DoxyCodeLine{354         \_stat = X7\_READ\_PARAMETER\_DISPLAY\_CONTRAST;}
+\DoxyCodeLine{355         emit  envoieDataVersPort(QByteArray(\textcolor{stringliteral}{"rp1C"}));}
+\DoxyCodeLine{356         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{357     \textcolor{keywordflow}{case} X7LecteurRF::X7\_READ\_PARAMETER\_DISPLAY\_CONTRAST:}
+\DoxyCodeLine{358 \textcolor{comment}{        /*************************************************************/}}
+\DoxyCodeLine{359         \textcolor{comment}{/* parameter display contrast  0x1C                          */}}
+\DoxyCodeLine{360 \textcolor{comment}{        /*************************************************************/}}
+\DoxyCodeLine{361         \textcolor{keywordflow}{if}(data.contains(\textcolor{stringliteral}{"00"}))}
+\DoxyCodeLine{362             x7LecteurRFLog-\/>debug(\textcolor{stringliteral}{"X7LecteurRF parameter display contrast : Min value"});}
+\DoxyCodeLine{363         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(data.contains(\textcolor{stringliteral}{"18"}))}
+\DoxyCodeLine{364             x7LecteurRFLog-\/>debug(\textcolor{stringliteral}{"X7LecteurRF parameter display contrast : Default contrast value"});}
+\DoxyCodeLine{365         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(data.contains(\textcolor{stringliteral}{"3F"}))}
+\DoxyCodeLine{366             x7LecteurRFLog-\/>debug(\textcolor{stringliteral}{"X7LecteurRF parameter display contrast : Max value"});}
+\DoxyCodeLine{367         \textcolor{keywordflow}{else}}
+\DoxyCodeLine{368             x7LecteurRFLog-\/>debug(\textcolor{stringliteral}{"X7LecteurRF parameter display contrast : "}+QString(data).toStdString());}
+\DoxyCodeLine{369         \_stat = X7\_READ\_PARAMETER\_STANDBY\_LED\_COLOR;}
+\DoxyCodeLine{370         emit  envoieDataVersPort(QByteArray(\textcolor{stringliteral}{"rp1E"}));}
+\DoxyCodeLine{371         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{372     \textcolor{keywordflow}{case} X7LecteurRF::X7\_READ\_PARAMETER\_STANDBY\_LED\_COLOR:}
+\DoxyCodeLine{373 \textcolor{comment}{        /*************************************************************/}}
+\DoxyCodeLine{374         \textcolor{comment}{/* parameter standby led color  0x1E                         */}}
+\DoxyCodeLine{375 \textcolor{comment}{        /*************************************************************/}}
+\DoxyCodeLine{376         \textcolor{keywordflow}{if}(data.contains(\textcolor{stringliteral}{"00"}))}
+\DoxyCodeLine{377             x7LecteurRFLog-\/>debug(\textcolor{stringliteral}{"X7LecteurRF parameter standby led color : LED off"});}
+\DoxyCodeLine{378         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(data.contains(\textcolor{stringliteral}{"01"}))}
+\DoxyCodeLine{379             x7LecteurRFLog-\/>debug(\textcolor{stringliteral}{"X7LecteurRF parameter standby led color : green"});}
+\DoxyCodeLine{380         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(data.contains(\textcolor{stringliteral}{"02"}))}
+\DoxyCodeLine{381             x7LecteurRFLog-\/>debug(\textcolor{stringliteral}{"X7LecteurRF parameter standby led color : red"});}
+\DoxyCodeLine{382         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(data.contains(\textcolor{stringliteral}{"03"}))}
+\DoxyCodeLine{383             x7LecteurRFLog-\/>debug(\textcolor{stringliteral}{"X7LecteurRF parameter standby led color : yellow"});}
+\DoxyCodeLine{384         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(data.contains(\textcolor{stringliteral}{"04"}))}
+\DoxyCodeLine{385             x7LecteurRFLog-\/>debug(\textcolor{stringliteral}{"X7LecteurRF parameter standby led color : blue"});}
+\DoxyCodeLine{386         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(data.contains(\textcolor{stringliteral}{"05"}))}
+\DoxyCodeLine{387             x7LecteurRFLog-\/>debug(\textcolor{stringliteral}{"X7LecteurRF parameter standby led color : cyan"});}
+\DoxyCodeLine{388         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(data.contains(\textcolor{stringliteral}{"06"}))}
+\DoxyCodeLine{389             x7LecteurRFLog-\/>debug(\textcolor{stringliteral}{"X7LecteurRF parameter standby led color : magenta"});}
+\DoxyCodeLine{390         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(data.contains(\textcolor{stringliteral}{"07"}))}
+\DoxyCodeLine{391             x7LecteurRFLog-\/>debug(\textcolor{stringliteral}{"X7LecteurRF parameter standby led color : white"});}
+\DoxyCodeLine{392         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(data.contains(\textcolor{stringliteral}{"08"}))}
+\DoxyCodeLine{393             x7LecteurRFLog-\/>debug(\textcolor{stringliteral}{"X7LecteurRF parameter standby led color : Led driven externally (default)"});}
+\DoxyCodeLine{394         \textcolor{keywordflow}{else}}
+\DoxyCodeLine{395             x7LecteurRFLog-\/>debug(\textcolor{stringliteral}{"X7LecteurRF parameter standby led color : "}+QString(data).toStdString());}
+\DoxyCodeLine{396         \_stat = X7\_READ\_PARAMETER\_READ\_MODE;}
+\DoxyCodeLine{397         emit  envoieDataVersPort(QByteArray(\textcolor{stringliteral}{"rp30"}));}
+\DoxyCodeLine{398         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{399     \textcolor{keywordflow}{case} X7LecteurRF::X7\_READ\_PARAMETER\_READ\_MODE:}
+\DoxyCodeLine{400 \textcolor{comment}{        /*************************************************************/}}
+\DoxyCodeLine{401         \textcolor{comment}{/* parameter read mode  0x30                                 */}}
+\DoxyCodeLine{402 \textcolor{comment}{        /*************************************************************/}}
+\DoxyCodeLine{403         \textcolor{keywordflow}{if}(data.contains(\textcolor{stringliteral}{"00"}))}
+\DoxyCodeLine{404             x7LecteurRFLog-\/>debug(\textcolor{stringliteral}{"X7LecteurRF parameter read mode : Only when card is placed on the reader (default)"});}
+\DoxyCodeLine{405         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(data.contains(\textcolor{stringliteral}{"01"}))}
+\DoxyCodeLine{406             x7LecteurRFLog-\/>debug(\textcolor{stringliteral}{"X7LecteurRF parameter read mode : In/out"});}
+\DoxyCodeLine{407         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(data.contains(\textcolor{stringliteral}{"02"}))}
+\DoxyCodeLine{408             x7LecteurRFLog-\/>debug(\textcolor{stringliteral}{"X7LecteurRF parameter read mode : Repetition"});}
+\DoxyCodeLine{409         \textcolor{keywordflow}{else}}
+\DoxyCodeLine{410             x7LecteurRFLog-\/>debug(\textcolor{stringliteral}{"X7LecteurRF parameter read mode : "}+QString(data).toStdString());}
+\DoxyCodeLine{411         \_stat = X7\_READ\_PARAMETER\_MODE\_TIMEOUT;}
+\DoxyCodeLine{412         emit  envoieDataVersPort(QByteArray(\textcolor{stringliteral}{"rp31"}));}
+\DoxyCodeLine{413         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{414     \textcolor{keywordflow}{case} X7LecteurRF::X7\_READ\_PARAMETER\_MODE\_TIMEOUT:}
+\DoxyCodeLine{415 \textcolor{comment}{        /*************************************************************/}}
+\DoxyCodeLine{416         \textcolor{comment}{/* parameter mode timeout  0x31                              */}}
+\DoxyCodeLine{417 \textcolor{comment}{        /*************************************************************/}}
+\DoxyCodeLine{418         \textcolor{keywordflow}{if}(data.contains(\textcolor{stringliteral}{"03"}))}
+\DoxyCodeLine{419             x7LecteurRFLog-\/>debug(\textcolor{stringliteral}{"X7LecteurRF parameter mode timeout : Default time interval value"});}
+\DoxyCodeLine{420         \textcolor{keywordflow}{else}}
+\DoxyCodeLine{421             x7LecteurRFLog-\/>debug(\textcolor{stringliteral}{"X7LecteurRF parameter mode timeout : "}+QString(data).toStdString());}
+\DoxyCodeLine{422         \_stat = X7\_READ\_PARAMETER\_CARD\_TYPE;}
+\DoxyCodeLine{423         emit  envoieDataVersPort(QByteArray(\textcolor{stringliteral}{"rp32"}));}
+\DoxyCodeLine{424         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{425     \textcolor{keywordflow}{case} X7LecteurRF::X7\_READ\_PARAMETER\_CARD\_TYPE:}
+\DoxyCodeLine{426 \textcolor{comment}{        /*************************************************************/}}
+\DoxyCodeLine{427         \textcolor{comment}{/* parameter card type  0x32                                 */}}
+\DoxyCodeLine{428 \textcolor{comment}{        /*************************************************************/}}
+\DoxyCodeLine{429         \textcolor{keywordflow}{if}(data.contains(\textcolor{stringliteral}{"00"}))}
+\DoxyCodeLine{430             x7LecteurRFLog-\/>debug(\textcolor{stringliteral}{"X7LecteurRF parameter card type : Disabled (default)"});}
+\DoxyCodeLine{431         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(data.contains(\textcolor{stringliteral}{"01"}))}
+\DoxyCodeLine{432             x7LecteurRFLog-\/>debug(\textcolor{stringliteral}{"X7LecteurRF parameter card type : All supported (default)"});}
+\DoxyCodeLine{433         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(data.contains(\textcolor{stringliteral}{"02"}))}
+\DoxyCodeLine{434             x7LecteurRFLog-\/>debug(\textcolor{stringliteral}{"X7LecteurRF parameter card type : Only Mifare 1K \& 4K"});}
+\DoxyCodeLine{435         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(data.contains(\textcolor{stringliteral}{"03"}))}
+\DoxyCodeLine{436             x7LecteurRFLog-\/>debug(\textcolor{stringliteral}{"X7LecteurRF parameter card type : Only Mifare 1K"});}
+\DoxyCodeLine{437         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(data.contains(\textcolor{stringliteral}{"04"}))}
+\DoxyCodeLine{438             x7LecteurRFLog-\/>debug(\textcolor{stringliteral}{"X7LecteurRF parameter card type : Only Mifare 4K"});}
+\DoxyCodeLine{439         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(data.contains(\textcolor{stringliteral}{"05"}))}
+\DoxyCodeLine{440             x7LecteurRFLog-\/>debug(\textcolor{stringliteral}{"X7LecteurRF parameter card type : Only Mifare Ultralight"});}
+\DoxyCodeLine{441         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(data.contains(\textcolor{stringliteral}{"06"}))}
+\DoxyCodeLine{442             x7LecteurRFLog-\/>debug(\textcolor{stringliteral}{"X7LecteurRF parameter card type : RFU"});}
+\DoxyCodeLine{443         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(data.contains(\textcolor{stringliteral}{"07"}))}
+\DoxyCodeLine{444             x7LecteurRFLog-\/>debug(\textcolor{stringliteral}{"X7LecteurRF parameter card type : Only Mifare DESFire"});}
+\DoxyCodeLine{445         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(data.contains(\textcolor{stringliteral}{"0E"}))}
+\DoxyCodeLine{446             x7LecteurRFLog-\/>debug(\textcolor{stringliteral}{"X7LecteurRF parameter card type : Only badge codes received from ENTRO app via BLE"});}
+\DoxyCodeLine{447         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(data.contains(\textcolor{stringliteral}{"0F"}))}
+\DoxyCodeLine{448             x7LecteurRFLog-\/>debug(\textcolor{stringliteral}{"X7LecteurRF parameter card type : Only badge codes received from a BLE tag"});}
+\DoxyCodeLine{449         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(data.contains(\textcolor{stringliteral}{"10"}))}
+\DoxyCodeLine{450             x7LecteurRFLog-\/>debug(\textcolor{stringliteral}{"X7LecteurRF parameter card type : Only 125KHz EM4102"});}
+\DoxyCodeLine{451         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(data.contains(\textcolor{stringliteral}{"11"}))}
+\DoxyCodeLine{452             x7LecteurRFLog-\/>debug(\textcolor{stringliteral}{"X7LecteurRF parameter card type : Only 125KHz T5557 (Gymgest)"});}
+\DoxyCodeLine{453         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(data.contains(\textcolor{stringliteral}{"12"}))}
+\DoxyCodeLine{454             x7LecteurRFLog-\/>debug(\textcolor{stringliteral}{"X7LecteurRF parameter card type : Only 125KHz EM4150 (Selesta)"});}
+\DoxyCodeLine{455         \textcolor{keywordflow}{else}}
+\DoxyCodeLine{456             x7LecteurRFLog-\/>debug(\textcolor{stringliteral}{"X7LecteurRF parameter card type : "}+QString(data).toStdString());}
+\DoxyCodeLine{457         \_stat = X7\_READ\_PARAMETER\_LAYOUT\_SOURCE;}
+\DoxyCodeLine{458         emit  envoieDataVersPort(QByteArray(\textcolor{stringliteral}{"rp33"}));}
+\DoxyCodeLine{459         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{460     \textcolor{keywordflow}{case} X7LecteurRF::X7\_READ\_PARAMETER\_LAYOUT\_SOURCE:}
+\DoxyCodeLine{461 \textcolor{comment}{        /*************************************************************/}}
+\DoxyCodeLine{462         \textcolor{comment}{/* parameter layout source  0x33            lecturePortSerie                 */}}
+\DoxyCodeLine{463 \textcolor{comment}{        /*************************************************************/}}
+\DoxyCodeLine{464         \textcolor{keywordflow}{if}(data.contains(\textcolor{stringliteral}{"00"}))}
+\DoxyCodeLine{465             x7LecteurRFLog-\/>debug(\textcolor{stringliteral}{"X7LecteurRF parameter layout source : Disabled (default)"});}
+\DoxyCodeLine{466         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(data.contains(\textcolor{stringliteral}{"01"}))}
+\DoxyCodeLine{467             x7LecteurRFLog-\/>debug(\textcolor{stringliteral}{"X7LecteurRF parameter layout source : Autoread (default)"});}
+\DoxyCodeLine{468         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(data.contains(\textcolor{stringliteral}{"02"}))}
+\DoxyCodeLine{469             x7LecteurRFLog-\/>debug(\textcolor{stringliteral}{"X7LecteurRF parameter layout source : Biometric"});}
+\DoxyCodeLine{470         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(data.contains(\textcolor{stringliteral}{"03"}))}
+\DoxyCodeLine{471             x7LecteurRFLog-\/>debug(\textcolor{stringliteral}{"X7LecteurRF parameter layout source : Biometric"});}
+\DoxyCodeLine{472         \textcolor{keywordflow}{else}}
+\DoxyCodeLine{473             x7LecteurRFLog-\/>debug(\textcolor{stringliteral}{"X7LecteurRF parameter layout source : "}+QString(data).toStdString());}
+\DoxyCodeLine{474         \_stat = X7\_READ\_PARAMETER\_AUTOREAD\_DATA\_PAD\_LENGTH;}
+\DoxyCodeLine{475         emit  envoieDataVersPort(QByteArray(\textcolor{stringliteral}{"rp34"}));}
+\DoxyCodeLine{476         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{477     \textcolor{keywordflow}{case} X7LecteurRF::X7\_READ\_PARAMETER\_AUTOREAD\_DATA\_PAD\_LENGTH:}
+\DoxyCodeLine{478 \textcolor{comment}{        /*************************************************************/}}
+\DoxyCodeLine{479         \textcolor{comment}{/* parameter autoread data pad length  0x34                  */}}
+\DoxyCodeLine{480 \textcolor{comment}{        /*************************************************************/}}
+\DoxyCodeLine{481         \textcolor{keywordflow}{if}(data.contains(\textcolor{stringliteral}{"00"}))}
+\DoxyCodeLine{482             x7LecteurRFLog-\/>debug(\textcolor{stringliteral}{"X7LecteurRF parameter autoread data pad length : Not used (default)"});}
+\DoxyCodeLine{483         \textcolor{keywordflow}{else}}
+\DoxyCodeLine{484             x7LecteurRFLog-\/>debug(\textcolor{stringliteral}{"X7LecteurRF parameter autoread data pad length : "}+QString(data).toStdString());}
+\DoxyCodeLine{485         \_stat = X7\_READ\_PARAMETER\_AUTOREAD\_DATA\_PAD\_ALIGNMENT;}
+\DoxyCodeLine{486         emit  envoieDataVersPort(QByteArray(\textcolor{stringliteral}{"rp35"}));}
+\DoxyCodeLine{487         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{488     \textcolor{keywordflow}{case} X7LecteurRF::X7\_READ\_PARAMETER\_AUTOREAD\_DATA\_PAD\_ALIGNMENT:}
+\DoxyCodeLine{489 \textcolor{comment}{        /*************************************************************/}}
+\DoxyCodeLine{490         \textcolor{comment}{/* parameter autoread data pad alignment  0x35               */}}
+\DoxyCodeLine{491 \textcolor{comment}{        /*************************************************************/}}
+\DoxyCodeLine{492         \textcolor{keywordflow}{if}(data.contains(\textcolor{stringliteral}{"00"}))}
+\DoxyCodeLine{493             x7LecteurRFLog-\/>debug(\textcolor{stringliteral}{"X7LecteurRF parameter autoread data pad alignment : Left padding (default)"});}
+\DoxyCodeLine{494         \textcolor{keywordflow}{else}         \textcolor{keywordflow}{if}(data.contains(\textcolor{stringliteral}{"01"}))}
+\DoxyCodeLine{495             x7LecteurRFLog-\/>debug(\textcolor{stringliteral}{"X7LecteurRF parameter autoread data pad alignment : Right padding"});}
+\DoxyCodeLine{496         \textcolor{keywordflow}{else}}
+\DoxyCodeLine{497             x7LecteurRFLog-\/>debug(\textcolor{stringliteral}{"X7LecteurRF parameter autoread data pad alignment : "}+QString(data).toStdString());}
+\DoxyCodeLine{498         \_stat = X7\_WAIT\_BADGE;}
+\DoxyCodeLine{499         \_emitMsg = \textcolor{keyword}{false};}
+\DoxyCodeLine{500         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{501     \textcolor{keywordflow}{case} X7LecteurRF::X7\_WRITE\_PARAMETER\_SET\_DEAFULT\_CONFIGURATION:}
+\DoxyCodeLine{502 \textcolor{comment}{        /*************************************************************/}}
+\DoxyCodeLine{503         \textcolor{comment}{/* parameter set default configuration  0x4F                 */}}
+\DoxyCodeLine{504 \textcolor{comment}{        /*************************************************************/}}
+\DoxyCodeLine{505         x7LecteurRFLog-\/>debug(\textcolor{stringliteral}{"X7LecteurRF set default configuration : "}+QString(data).toStdString());}
+\DoxyCodeLine{506         \_stat = X7\_WAIT\_BADGE;}
+\DoxyCodeLine{507         \_emitMsg = \textcolor{keyword}{false};}
+\DoxyCodeLine{508         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{509     \textcolor{keywordflow}{case} X7LecteurRF::X7\_READ\_ERROR\_CODE:}
+\DoxyCodeLine{510 \textcolor{comment}{        /*************************************************************/}}
+\DoxyCodeLine{511         \textcolor{comment}{/* parameter autoread data pad alignment  0xFF               */}}
+\DoxyCodeLine{512 \textcolor{comment}{        /*************************************************************/}}
+\DoxyCodeLine{513         x7LecteurRFLog-\/>debug(\textcolor{stringliteral}{"X7LecteurRF error code : "}+QString(data).toStdString());}
+\DoxyCodeLine{514         \_stat = X7\_WAIT\_BADGE;}
+\DoxyCodeLine{515         \_emitMsg = \textcolor{keyword}{false};}
+\DoxyCodeLine{516         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{517     \textcolor{keywordflow}{case} X7LecteurRF::X7\_WRITE\_PARAMETER\_REVERSE\_AUTOREAD\_DATA\_BYTE\_ORDER:}
+\DoxyCodeLine{518 \textcolor{comment}{        /*************************************************************/}}
+\DoxyCodeLine{519         \textcolor{comment}{/* parameter reverse autoread data byte order 0x04           */}}
+\DoxyCodeLine{520 \textcolor{comment}{        /*************************************************************/}}
+\DoxyCodeLine{521         x7LecteurRFLog-\/>debug(\textcolor{stringliteral}{"X7LecteurRF Write param reverse autoread data byte order : "}+QString(data).toStdString());}
+\DoxyCodeLine{522         \_stat = X7\_READ\_ERROR\_CODE;}
+\DoxyCodeLine{523         emit  envoieDataVersPort(QByteArray(\textcolor{stringliteral}{"rpFF"}));}
+\DoxyCodeLine{524         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{525     \textcolor{keywordflow}{case} X7LecteurRF::X7\_WRITE\_PARAMETER\_AUTOREAD\_DATA\_BYTE\_NUMBER:}
+\DoxyCodeLine{526 \textcolor{comment}{        /*************************************************************/}}
+\DoxyCodeLine{527         \textcolor{comment}{/* parameter autoread data byte number                       */}}
+\DoxyCodeLine{528 \textcolor{comment}{        /*************************************************************/}}
+\DoxyCodeLine{529         x7LecteurRFLog-\/>debug(\textcolor{stringliteral}{"X7LecteurRF Write param autoread data byte order : "}+QString(data).toStdString());}
+\DoxyCodeLine{530         \_stat = X7\_READ\_ERROR\_CODE;}
+\DoxyCodeLine{531         emit  envoieDataVersPort(QByteArray(\textcolor{stringliteral}{"rpFF"}));}
+\DoxyCodeLine{532         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{533     \textcolor{keywordflow}{case} X7LecteurRF::X7\_WRITE\_PARAMETER\_DIRECTION:}
+\DoxyCodeLine{534 \textcolor{comment}{        /*************************************************************/}}
+\DoxyCodeLine{535         \textcolor{comment}{/* parameter direction                      */}}
+\DoxyCodeLine{536 \textcolor{comment}{        /*************************************************************/}}
+\DoxyCodeLine{537         x7LecteurRFLog-\/>debug(\textcolor{stringliteral}{"X7LecteurRF Write param direction : "}+QString(data).toStdString());}
+\DoxyCodeLine{538         \_stat = X7\_READ\_ERROR\_CODE;}
+\DoxyCodeLine{539         emit  envoieDataVersPort(QByteArray(\textcolor{stringliteral}{"rpFF"}));}
+\DoxyCodeLine{540         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{541     \textcolor{keywordflow}{case} X7LecteurRF::X7\_WRITE\_PARAMETER\_AUTOREAD\_CARD\_TYPE:}
+\DoxyCodeLine{542 \textcolor{comment}{        /*************************************************************/}}
+\DoxyCodeLine{543         \textcolor{comment}{/* parameter autoread data card type                       */}}
+\DoxyCodeLine{544 \textcolor{comment}{        /*************************************************************/}}
+\DoxyCodeLine{545         x7LecteurRFLog-\/>debug(\textcolor{stringliteral}{"X7LecteurRF Write param autoread data card type : "}+QString(data).toStdString());}
+\DoxyCodeLine{546         \_stat = X7\_READ\_ERROR\_CODE;}
+\DoxyCodeLine{547         emit  envoieDataVersPort(QByteArray(\textcolor{stringliteral}{"rpFF"}));}
+\DoxyCodeLine{548         \textcolor{comment}{//lectureParametrageLecteurRF();}}
+\DoxyCodeLine{549         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{550     \textcolor{keywordflow}{case} X7LecteurRF::X7\_WRITE\_PARAMETER\_HID\_PROX\_125KHZ\_WIEGAND:}
+\DoxyCodeLine{551 \textcolor{comment}{        /*************************************************************/}}
+\DoxyCodeLine{552         \textcolor{comment}{/* parameter autoread data card type                       */}}
+\DoxyCodeLine{553 \textcolor{comment}{        /*************************************************************/}}
+\DoxyCodeLine{554         x7LecteurRFLog-\/>debug(\textcolor{stringliteral}{"X7LecteurRF Write param HID Prox 125khz wiegand card type : "}+QString(data).toStdString());}
+\DoxyCodeLine{555         \_stat = X7\_READ\_ERROR\_CODE;}
+\DoxyCodeLine{556         emit  envoieDataVersPort(QByteArray(\textcolor{stringliteral}{"rpFF"}));}
+\DoxyCodeLine{557         \textcolor{comment}{//lectureParametrageLecteurRF();}}
+\DoxyCodeLine{558         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{559     \}}
+\DoxyCodeLine{560 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_x7_lecteur_r_f_a6b4d756f3bb832c786183fb9839c7ad1}\label{class_x7_lecteur_r_f_a6b4d756f3bb832c786183fb9839c7ad1}} 
+\index{X7LecteurRF@{X7LecteurRF}!setParametrageLecteurRF@{setParametrageLecteurRF}}
+\index{setParametrageLecteurRF@{setParametrageLecteurRF}!X7LecteurRF@{X7LecteurRF}}
+\doxysubsubsection{\texorpdfstring{setParametrageLecteurRF()}{setParametrageLecteurRF()}}
+{\footnotesize\ttfamily void X7\+Lecteur\+R\+F\+::set\+Parametrage\+Lecteur\+RF (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\mbox{\hyperlink{class_x7_lecteur_r_f_a6b4d756f3bb832c786183fb9839c7ad1}{X7\+Lecteur\+R\+F\+::set\+Parametrage\+Lecteur\+RF}}. 
+
+
+\begin{DoxyItemize}
+\item options lecteur\+:
+\item 0\+: standard
+\item 2\+: H\+ID 26bit H10301 (8+16 bits to 3+5 decimal digits)
+\item 3\+: Badge Mifare lecteur Deister wiegand 37 bits
+\item 4\+: Badge H\+ID 125khz wiegand 37 bits avec code site H10304 (16+19 bits to 5+7 decimal digits)
+\item 5\+: Badge H\+ID 125khz wiegand 37 bits sans code site H10302 (11 decimal digits)
+\item 11\+: Badge H\+ID 125khz Corporate 1000 35 bits (4+7 decimal digits)
+\item 13\+: Lecteur S\+T\+ID Mifare en interface 68 bits G\+FI, decodage decimal Chrono Gestor 
+\end{DoxyItemize}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{586                                          \{}
+\DoxyCodeLine{587     x7LecteurRFLog-\/>debug(\textcolor{stringliteral}{"void X7LecteurRF::setParametrageLecteurRF()"});}
+\DoxyCodeLine{588     uint option = 0;}
+\DoxyCodeLine{589     \textcolor{keywordflow}{while}(\_emitMsg)\{}
+\DoxyCodeLine{590         QApplication::processEvents() ;}
+\DoxyCodeLine{591     \}}
+\DoxyCodeLine{592     \textcolor{keywordflow}{if}(!\_emitMsg)\{}
+\DoxyCodeLine{593         x7LecteurRFLog-\/>debug(\textcolor{stringliteral}{"option = \%d"}, X7GestLecteur::getInstance()-\/>getOption());}
+\DoxyCodeLine{594         option = X7GestLecteur::getInstance()-\/>getOption();}
+\DoxyCodeLine{595         \textcolor{keywordflow}{switch}(option) \{}
+\DoxyCodeLine{596         \textcolor{keywordflow}{case} 0:}
+\DoxyCodeLine{597             \_stat = X7\_WRITE\_PARAMETER\_REVERSE\_AUTOREAD\_DATA\_BYTE\_ORDER;}
+\DoxyCodeLine{598             \_emitMsg = \textcolor{keyword}{true};}
+\DoxyCodeLine{599             emit  envoieDataVersPort(QByteArray(\textcolor{stringliteral}{"wp0400"}));}
+\DoxyCodeLine{600             setParametrage02();}
+\DoxyCodeLine{601             \textcolor{comment}{// reader}}
+\DoxyCodeLine{602             \textcolor{comment}{//}}
+\DoxyCodeLine{603             \textcolor{comment}{// wp00 baud rate}}
+\DoxyCodeLine{604             \textcolor{comment}{// wp0B interface}}
+\DoxyCodeLine{605             \textcolor{comment}{// wp1B activity led}}
+\DoxyCodeLine{606             \textcolor{comment}{// wp1E standy led}}
+\DoxyCodeLine{607             \textcolor{comment}{// wp13 data rate}}
+\DoxyCodeLine{608             \textcolor{comment}{// wp1C contrast}}
+\DoxyCodeLine{609             \textcolor{comment}{// wp12 gain}}
+\DoxyCodeLine{610             \textcolor{comment}{// wp2E n-\/drive}}
+\DoxyCodeLine{611             \textcolor{comment}{// wp2F p-\/drive}}
+\DoxyCodeLine{612             \textcolor{comment}{// wp10 polling}}
+\DoxyCodeLine{613             \textcolor{comment}{// wp15 card type}}
+\DoxyCodeLine{614             \textcolor{comment}{// wp30 read mode}}
+\DoxyCodeLine{615             \textcolor{comment}{// wp31 mode timeout}}
+\DoxyCodeLine{616             \textcolor{comment}{// wp11 direction}}
+\DoxyCodeLine{617             \textcolor{comment}{// wp0E javacard}}
+\DoxyCodeLine{618             \textcolor{comment}{//}}
+\DoxyCodeLine{619             \textcolor{comment}{// card}}
+\DoxyCodeLine{620             \textcolor{comment}{//}}
+\DoxyCodeLine{621             \textcolor{comment}{// wp32 type}}
+\DoxyCodeLine{622             \textcolor{comment}{// wp0D security}}
+\DoxyCodeLine{623             \textcolor{comment}{// wp19 125khz format}}
+\DoxyCodeLine{624             \textcolor{comment}{// wp33 layout source}}
+\DoxyCodeLine{625             \textcolor{comment}{// wp01 start page}}
+\DoxyCodeLine{626             \textcolor{comment}{// wp03 offset}}
+\DoxyCodeLine{627             \textcolor{comment}{// wp34 pad length}}
+\DoxyCodeLine{628             \textcolor{comment}{// wp04 reverse}}
+\DoxyCodeLine{629             \textcolor{comment}{// wp22 fileid}}
+\DoxyCodeLine{630             \textcolor{comment}{// wp24 file type}}
+\DoxyCodeLine{631             \textcolor{comment}{// wp25 comm setting}}
+\DoxyCodeLine{632             \textcolor{comment}{// wp14 HCE}}
+\DoxyCodeLine{633             \textcolor{comment}{// wp36 erase bio}}
+\DoxyCodeLine{634             \textcolor{comment}{// wp37 bio 1}}
+\DoxyCodeLine{635             \textcolor{comment}{// wp05 decode output}}
+\DoxyCodeLine{636             \textcolor{comment}{// wp02 byte number}}
+\DoxyCodeLine{637             \textcolor{comment}{// wp0F separator}}
+\DoxyCodeLine{638             \textcolor{comment}{// wp35 pas alignmznt}}
+\DoxyCodeLine{639             \textcolor{comment}{// wp0A complement}}
+\DoxyCodeLine{640             \textcolor{comment}{// wp21 read key}}
+\DoxyCodeLine{641             \textcolor{comment}{// wp23 key slot}}
+\DoxyCodeLine{642             \textcolor{comment}{// wp28 read div}}
+\DoxyCodeLine{643             \textcolor{comment}{// wp26 write key}}
+\DoxyCodeLine{644             \textcolor{comment}{// wp27 key slot}}
+\DoxyCodeLine{645             \textcolor{comment}{// wp29 write div}}
+\DoxyCodeLine{646             \textcolor{comment}{// wp2A smartcard file}}
+\DoxyCodeLine{647             \textcolor{comment}{// wp2B authentication}}
+\DoxyCodeLine{648             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{649         \textcolor{keywordflow}{case} 2: \textcolor{comment}{/*HID 26bit H10301 (8+16 bits to 3+5 decimal digits)*/}}
+\DoxyCodeLine{650             \_stat = X7\_WRITE\_PARAMETER\_HID\_PROX\_125KHZ\_WIEGAND;}
+\DoxyCodeLine{651             \_emitMsg = \textcolor{keyword}{true};}
+\DoxyCodeLine{652             emit  envoieDataVersPort(QByteArray(\textcolor{stringliteral}{"wp1803"}));}
+\DoxyCodeLine{653             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{654         \textcolor{keywordflow}{case} 3: \textcolor{comment}{/* Badge Mifare lecteur Deister wiegand 37 bits */}}
+\DoxyCodeLine{655             \_stat = X7\_READ\_ERROR\_CODE;}
+\DoxyCodeLine{656             \_emitMsg = \textcolor{keyword}{true};}
+\DoxyCodeLine{657             emit  envoieDataVersPort(QByteArray(\textcolor{stringliteral}{"wp0500"}));}
+\DoxyCodeLine{658             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{659         \textcolor{keywordflow}{case} 4: \textcolor{comment}{/*Badge HID 125khz wiegand 37 bits avec code site H10304 (16+19 bits to 5+7 decimal digits)*/}}
+\DoxyCodeLine{660             \_stat = X7\_WRITE\_PARAMETER\_HID\_PROX\_125KHZ\_WIEGAND;}
+\DoxyCodeLine{661             \_emitMsg = \textcolor{keyword}{true};}
+\DoxyCodeLine{662             emit  envoieDataVersPort(QByteArray(\textcolor{stringliteral}{"wp1805"}));}
+\DoxyCodeLine{663             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{664         \textcolor{keywordflow}{case} 5: \textcolor{comment}{/*Badge HID 125khz wiegand 37 bits sans code site H10302 (11 decimal digits)*/}}
+\DoxyCodeLine{665             \_stat = X7\_WRITE\_PARAMETER\_HID\_PROX\_125KHZ\_WIEGAND;}
+\DoxyCodeLine{666             \_emitMsg = \textcolor{keyword}{true};}
+\DoxyCodeLine{667             emit  envoieDataVersPort(QByteArray(\textcolor{stringliteral}{"wp1806"}));}
+\DoxyCodeLine{668             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{669         \textcolor{keywordflow}{case} 11: \textcolor{comment}{/*Badge HID 125khz Corporate 1000 35 bits (4+7 decimal digits)*/}}
+\DoxyCodeLine{670             \_stat = X7\_WRITE\_PARAMETER\_HID\_PROX\_125KHZ\_WIEGAND;}
+\DoxyCodeLine{671             \_emitMsg = \textcolor{keyword}{true};}
+\DoxyCodeLine{672             emit  envoieDataVersPort(QByteArray(\textcolor{stringliteral}{"wp1808"}));}
+\DoxyCodeLine{673             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{674         \textcolor{keywordflow}{case} 13: \textcolor{comment}{/* Lecteur STID Mifare en interface 68 bits GFI, decodage decimal Chrono Gestor */}}
+\DoxyCodeLine{675 }
+\DoxyCodeLine{676             \textcolor{comment}{// lecture uniquement ISO 14443A}}
+\DoxyCodeLine{677             \_stat = X7\_READ\_ERROR\_CODE;}
+\DoxyCodeLine{678             \_emitMsg = \textcolor{keyword}{true};}
+\DoxyCodeLine{679             emit  envoieDataVersPort(QByteArray(\textcolor{stringliteral}{"wp1001"}));}
+\DoxyCodeLine{680             \textcolor{keywordflow}{while}(\_emitMsg)\{}
+\DoxyCodeLine{681                 QApplication::processEvents() ;}
+\DoxyCodeLine{682             \}}
+\DoxyCodeLine{683 }
+\DoxyCodeLine{684             \textcolor{comment}{// decode 8 byte to 20 digit}}
+\DoxyCodeLine{685             \_stat = X7\_READ\_ERROR\_CODE;}
+\DoxyCodeLine{686             \_emitMsg = \textcolor{keyword}{true};}
+\DoxyCodeLine{687             emit  envoieDataVersPort(QByteArray(\textcolor{stringliteral}{"wp050B"}));}
+\DoxyCodeLine{688             \textcolor{keywordflow}{while}(\_emitMsg)\{}
+\DoxyCodeLine{689                 QApplication::processEvents() ;}
+\DoxyCodeLine{690             \}}
+\DoxyCodeLine{691 }
+\DoxyCodeLine{692             \textcolor{comment}{// all supported card}}
+\DoxyCodeLine{693             \_stat = X7\_READ\_ERROR\_CODE;}
+\DoxyCodeLine{694             \_emitMsg = \textcolor{keyword}{true};}
+\DoxyCodeLine{695             emit  envoieDataVersPort(QByteArray(\textcolor{stringliteral}{"wp3201"}));}
+\DoxyCodeLine{696             \textcolor{keywordflow}{while}(\_emitMsg)\{}
+\DoxyCodeLine{697                 QApplication::processEvents() ;}
+\DoxyCodeLine{698             \}}
+\DoxyCodeLine{699 }
+\DoxyCodeLine{700             \textcolor{comment}{// gain +48db}}
+\DoxyCodeLine{701             \_stat = X7\_READ\_ERROR\_CODE;}
+\DoxyCodeLine{702             \_emitMsg = \textcolor{keyword}{true};}
+\DoxyCodeLine{703             emit  envoieDataVersPort(QByteArray(\textcolor{stringliteral}{"wp1207"}));}
+\DoxyCodeLine{704             \textcolor{keywordflow}{while}(\_emitMsg)\{}
+\DoxyCodeLine{705                 QApplication::processEvents() ;}
+\DoxyCodeLine{706             \}}
+\DoxyCodeLine{707             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{708         \}}
+\DoxyCodeLine{709     \}\textcolor{keywordflow}{else}}
+\DoxyCodeLine{710         x7LecteurRFLog-\/>debug(\textcolor{stringliteral}{""});}
+\DoxyCodeLine{711 \}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{x7lecteurrf_8h}{x7lecteurrf.\+h}}\item 
+\mbox{\hyperlink{x7lecteurrf_8cpp}{x7lecteurrf.\+cpp}}\end{DoxyCompactItemize}

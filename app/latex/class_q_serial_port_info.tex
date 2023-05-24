@@ -1,0 +1,415 @@
+\hypertarget{class_q_serial_port_info}{}\doxysection{Q\+Serial\+Port\+Info Class Reference}
+\label{class_q_serial_port_info}\index{QSerialPortInfo@{QSerialPortInfo}}
+
+
+Provides information about existing serial ports.  
+
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_q_serial_port_info_af6323396b806fcb26df7d14861a8469a}{Q\+Serial\+Port\+Info}} ()
+\item 
+\mbox{\hyperlink{class_q_serial_port_info_a7fddcf62bc37acf4fd1e44147fde363e}{Q\+Serial\+Port\+Info}} (const \mbox{\hyperlink{class_q_serial_port}{Q\+Serial\+Port}} \&port)
+\item 
+\mbox{\hyperlink{class_q_serial_port_info_a33d77507da0d0f303501d90b2042d417}{Q\+Serial\+Port\+Info}} (const Q\+String \&name)
+\item 
+\mbox{\hyperlink{class_q_serial_port_info_ab60b3a74c49ea2aabc98218cfae7ec57}{Q\+Serial\+Port\+Info}} (const \mbox{\hyperlink{class_q_serial_port_info}{Q\+Serial\+Port\+Info}} \&other)
+\item 
+\mbox{\hyperlink{class_q_serial_port_info_aaf7b732fbc8949aae33c8d532db1088b}{$\sim$\+Q\+Serial\+Port\+Info}} ()
+\item 
+\mbox{\hyperlink{class_q_serial_port_info}{Q\+Serial\+Port\+Info}} \& \mbox{\hyperlink{class_q_serial_port_info_af382451c237ef5b2869d29986b9fd9f3}{operator=}} (const \mbox{\hyperlink{class_q_serial_port_info}{Q\+Serial\+Port\+Info}} \&other)
+\item 
+void \mbox{\hyperlink{class_q_serial_port_info_a78497d89e73145f671607ad4c58305f1}{swap}} (\mbox{\hyperlink{class_q_serial_port_info}{Q\+Serial\+Port\+Info}} \&other)
+\item 
+Q\+String \mbox{\hyperlink{class_q_serial_port_info_a787309831ad8d73d421dec1fd4347bb5}{port\+Name}} () const
+\item 
+Q\+String \mbox{\hyperlink{class_q_serial_port_info_a919ba9efe087997a049390a0f8c5d712}{system\+Location}} () const
+\item 
+Q\+String \mbox{\hyperlink{class_q_serial_port_info_acce2afb8d7ebe297e14c494cf29cab42}{description}} () const
+\item 
+Q\+String \mbox{\hyperlink{class_q_serial_port_info_a782e57ab984a5fafb822d8df11da1d11}{manufacturer}} () const
+\item 
+Q\+String \mbox{\hyperlink{class_q_serial_port_info_a7a9e475cab3a21862cdfca93ef2b105a}{serial\+Number}} () const
+\item 
+quint16 \mbox{\hyperlink{class_q_serial_port_info_ad133e71acd5b1c92198dd49d4d44ba6b}{vendor\+Identifier}} () const
+\item 
+quint16 \mbox{\hyperlink{class_q_serial_port_info_a08a8bbbf718b3a694e1de16f34fd1545}{product\+Identifier}} () const
+\item 
+bool \mbox{\hyperlink{class_q_serial_port_info_a789b0174d33fe65f1adfe40bacb3e9ab}{has\+Vendor\+Identifier}} () const
+\item 
+bool \mbox{\hyperlink{class_q_serial_port_info_ad9708ed14ff5e0ca10e240715afe2e98}{has\+Product\+Identifier}} () const
+\item 
+bool \mbox{\hyperlink{class_q_serial_port_info_aaea506fe2fb706083c2ec0470b8603c9}{is\+Null}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static Q\+List$<$ qint32 $>$ \mbox{\hyperlink{class_q_serial_port_info_af898ab4a2a0a03ebd74048dc0def9280}{standard\+Baud\+Rates}} ()
+\item 
+static Q\+List$<$ \mbox{\hyperlink{class_q_serial_port_info}{Q\+Serial\+Port\+Info}} $>$ \mbox{\hyperlink{class_q_serial_port_info_a8a8f6f727c81bd7e22dfdecb56bed7e5}{available\+Ports}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_q_serial_port_info_a95755a595aa0f397033f1932ac75e67a}\label{class_q_serial_port_info_a95755a595aa0f397033f1932ac75e67a}} 
+{\bfseries Q\+Serial\+Port\+Info} (const Q\+Serial\+Port\+Info\+Private \&dd)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_q_serial_port_info_ac9eebbedc55cbdf1a5492d8d816ca6cd}\label{class_q_serial_port_info_ac9eebbedc55cbdf1a5492d8d816ca6cd}} 
+Q\+Scoped\+Pointer$<$ Q\+Serial\+Port\+Info\+Private, Q\+Serial\+Port\+Info\+Private\+Deleter $>$ {\bfseries d\+\_\+ptr}
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_q_serial_port_info_a72f0ffe3542a12fb48762b3306034c3c}\label{class_q_serial_port_info_a72f0ffe3542a12fb48762b3306034c3c}} 
+Q\+List$<$ \mbox{\hyperlink{class_q_serial_port_info}{Q\+Serial\+Port\+Info}} $>$ {\bfseries available\+Ports\+By\+Udev} (bool \&ok)
+\item 
+\mbox{\Hypertarget{class_q_serial_port_info_add3d1257b30400c5196f1e2ea6b78561}\label{class_q_serial_port_info_add3d1257b30400c5196f1e2ea6b78561}} 
+Q\+List$<$ \mbox{\hyperlink{class_q_serial_port_info}{Q\+Serial\+Port\+Info}} $>$ {\bfseries available\+Ports\+By\+Sysfs} (bool \&ok)
+\item 
+\mbox{\Hypertarget{class_q_serial_port_info_a93a0adaae47c5cee32350f8bf9b7a35e}\label{class_q_serial_port_info_a93a0adaae47c5cee32350f8bf9b7a35e}} 
+Q\+List$<$ \mbox{\hyperlink{class_q_serial_port_info}{Q\+Serial\+Port\+Info}} $>$ {\bfseries available\+Ports\+By\+Filters\+Of\+Devices} (bool \&ok)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Provides information about existing serial ports. 
+
+\textbackslash{}inmodule Qt\+Serial\+Port \begin{DoxySince}{Since}
+5.\+1
+\end{DoxySince}
+Use the static functions to generate a list of \mbox{\hyperlink{class_q_serial_port_info}{Q\+Serial\+Port\+Info}} objects. Each \mbox{\hyperlink{class_q_serial_port_info}{Q\+Serial\+Port\+Info}} object in the list represents a single serial port and can be queried for the port name, system location, description, and manufacturer. The \mbox{\hyperlink{class_q_serial_port_info}{Q\+Serial\+Port\+Info}} class can also be used as an input parameter for the set\+Port() method of the \mbox{\hyperlink{class_q_serial_port}{Q\+Serial\+Port}} class.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_q_serial_port}{Q\+Serial\+Port}} 
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_q_serial_port_info_af6323396b806fcb26df7d14861a8469a}\label{class_q_serial_port_info_af6323396b806fcb26df7d14861a8469a}} 
+\index{QSerialPortInfo@{QSerialPortInfo}!QSerialPortInfo@{QSerialPortInfo}}
+\index{QSerialPortInfo@{QSerialPortInfo}!QSerialPortInfo@{QSerialPortInfo}}
+\doxysubsubsection{\texorpdfstring{QSerialPortInfo()}{QSerialPortInfo()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily Q\+Serial\+Port\+Info\+::\+Q\+Serial\+Port\+Info (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Constructs an empty \mbox{\hyperlink{class_q_serial_port_info}{Q\+Serial\+Port\+Info}} object.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_q_serial_port_info_aaea506fe2fb706083c2ec0470b8603c9}{is\+Null()}} 
+\end{DoxySeeAlso}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{75 \{}
+\DoxyCodeLine{76 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_q_serial_port_info_a7fddcf62bc37acf4fd1e44147fde363e}\label{class_q_serial_port_info_a7fddcf62bc37acf4fd1e44147fde363e}} 
+\index{QSerialPortInfo@{QSerialPortInfo}!QSerialPortInfo@{QSerialPortInfo}}
+\index{QSerialPortInfo@{QSerialPortInfo}!QSerialPortInfo@{QSerialPortInfo}}
+\doxysubsubsection{\texorpdfstring{QSerialPortInfo()}{QSerialPortInfo()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily Q\+Serial\+Port\+Info\+::\+Q\+Serial\+Port\+Info (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_q_serial_port}{Q\+Serial\+Port}} \&}]{port }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+Constructs a \mbox{\hyperlink{class_q_serial_port_info}{Q\+Serial\+Port\+Info}} object from serial {\itshape port}. 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{90     : \mbox{\hyperlink{class_q_serial_port_info_af6323396b806fcb26df7d14861a8469a}{QSerialPortInfo}}(port.\mbox{\hyperlink{class_q_serial_port_aa703a7fafeaca6e8efaa83f2c3b9cf6e}{portName}}())}
+\DoxyCodeLine{91 \{}
+\DoxyCodeLine{92 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_q_serial_port_info_a33d77507da0d0f303501d90b2042d417}\label{class_q_serial_port_info_a33d77507da0d0f303501d90b2042d417}} 
+\index{QSerialPortInfo@{QSerialPortInfo}!QSerialPortInfo@{QSerialPortInfo}}
+\index{QSerialPortInfo@{QSerialPortInfo}!QSerialPortInfo@{QSerialPortInfo}}
+\doxysubsubsection{\texorpdfstring{QSerialPortInfo()}{QSerialPortInfo()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily Q\+Serial\+Port\+Info\+::\+Q\+Serial\+Port\+Info (\begin{DoxyParamCaption}\item[{const Q\+String \&}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+Constructs a \mbox{\hyperlink{class_q_serial_port_info}{Q\+Serial\+Port\+Info}} object from serial port {\itshape name}.
+
+This constructor finds the relevant serial port among the available ones according to the port name {\itshape name}, and constructs the serial port info instance for that port. 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{102 \{}
+\DoxyCodeLine{103     \textcolor{keyword}{const} \textcolor{keyword}{auto} infos = \mbox{\hyperlink{class_q_serial_port_info_a8a8f6f727c81bd7e22dfdecb56bed7e5}{QSerialPortInfo::availablePorts}}();}
+\DoxyCodeLine{104     \textcolor{keywordflow}{for} (\textcolor{keyword}{const} \mbox{\hyperlink{class_q_serial_port_info}{QSerialPortInfo}} \&info : infos) \{}
+\DoxyCodeLine{105         \textcolor{keywordflow}{if} (name == info.portName()) \{}
+\DoxyCodeLine{106             *\textcolor{keyword}{this} = info;}
+\DoxyCodeLine{107             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{108         \}}
+\DoxyCodeLine{109     \}}
+\DoxyCodeLine{110 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_q_serial_port_info_ab60b3a74c49ea2aabc98218cfae7ec57}\label{class_q_serial_port_info_ab60b3a74c49ea2aabc98218cfae7ec57}} 
+\index{QSerialPortInfo@{QSerialPortInfo}!QSerialPortInfo@{QSerialPortInfo}}
+\index{QSerialPortInfo@{QSerialPortInfo}!QSerialPortInfo@{QSerialPortInfo}}
+\doxysubsubsection{\texorpdfstring{QSerialPortInfo()}{QSerialPortInfo()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily Q\+Serial\+Port\+Info\+::\+Q\+Serial\+Port\+Info (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_q_serial_port_info}{Q\+Serial\+Port\+Info}} \&}]{other }\end{DoxyParamCaption})}
+
+Constructs a copy of {\itshape other}. 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{82     : d\_ptr(other.d\_ptr ? \textcolor{keyword}{new} QSerialPortInfoPrivate(*other.d\_ptr) : \textcolor{keyword}{nullptr})}
+\DoxyCodeLine{83 \{}
+\DoxyCodeLine{84 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_q_serial_port_info_aaf7b732fbc8949aae33c8d532db1088b}\label{class_q_serial_port_info_aaf7b732fbc8949aae33c8d532db1088b}} 
+\index{QSerialPortInfo@{QSerialPortInfo}!````~QSerialPortInfo@{$\sim$QSerialPortInfo}}
+\index{````~QSerialPortInfo@{$\sim$QSerialPortInfo}!QSerialPortInfo@{QSerialPortInfo}}
+\doxysubsubsection{\texorpdfstring{$\sim$QSerialPortInfo()}{~QSerialPortInfo()}}
+{\footnotesize\ttfamily Q\+Serial\+Port\+Info\+::$\sim$\+Q\+Serial\+Port\+Info (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Destroys the \mbox{\hyperlink{class_q_serial_port_info}{Q\+Serial\+Port\+Info}} object. References to the values in the object become invalid. 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{122 \{}
+\DoxyCodeLine{123 \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_q_serial_port_info_a8a8f6f727c81bd7e22dfdecb56bed7e5}\label{class_q_serial_port_info_a8a8f6f727c81bd7e22dfdecb56bed7e5}} 
+\index{QSerialPortInfo@{QSerialPortInfo}!availablePorts@{availablePorts}}
+\index{availablePorts@{availablePorts}!QSerialPortInfo@{QSerialPortInfo}}
+\doxysubsubsection{\texorpdfstring{availablePorts()}{availablePorts()}}
+{\footnotesize\ttfamily Q\+List$<$ \mbox{\hyperlink{class_q_serial_port_info}{Q\+Serial\+Port\+Info}} $>$ Q\+Serial\+Port\+Info\+::available\+Ports (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Returns a list of available serial ports on the system. \mbox{\Hypertarget{class_q_serial_port_info_acce2afb8d7ebe297e14c494cf29cab42}\label{class_q_serial_port_info_acce2afb8d7ebe297e14c494cf29cab42}} 
+\index{QSerialPortInfo@{QSerialPortInfo}!description@{description}}
+\index{description@{description}!QSerialPortInfo@{QSerialPortInfo}}
+\doxysubsubsection{\texorpdfstring{description()}{description()}}
+{\footnotesize\ttfamily Q\+String Q\+Serial\+Port\+Info\+::description (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Returns the description string of the serial port, if available; otherwise returns an empty string.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_q_serial_port_info_a782e57ab984a5fafb822d8df11da1d11}{manufacturer()}}, \mbox{\hyperlink{class_q_serial_port_info_a7a9e475cab3a21862cdfca93ef2b105a}{serial\+Number()}} 
+\end{DoxySeeAlso}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{172 \{}
+\DoxyCodeLine{173     Q\_D(\textcolor{keyword}{const} \mbox{\hyperlink{class_q_serial_port_info}{QSerialPortInfo}});}
+\DoxyCodeLine{174     \textcolor{keywordflow}{return} !d ? QString() : d-\/>\mbox{\hyperlink{class_q_serial_port_info_acce2afb8d7ebe297e14c494cf29cab42}{description}};}
+\DoxyCodeLine{175 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_q_serial_port_info_ad9708ed14ff5e0ca10e240715afe2e98}\label{class_q_serial_port_info_ad9708ed14ff5e0ca10e240715afe2e98}} 
+\index{QSerialPortInfo@{QSerialPortInfo}!hasProductIdentifier@{hasProductIdentifier}}
+\index{hasProductIdentifier@{hasProductIdentifier}!QSerialPortInfo@{QSerialPortInfo}}
+\doxysubsubsection{\texorpdfstring{hasProductIdentifier()}{hasProductIdentifier()}}
+{\footnotesize\ttfamily bool Q\+Serial\+Port\+Info\+::has\+Product\+Identifier (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Returns {\ttfamily true} if there is a valid {\ttfamily 16-\/bit} product number present; otherwise returns {\ttfamily false}.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_q_serial_port_info_a08a8bbbf718b3a694e1de16f34fd1545}{product\+Identifier()}}, \mbox{\hyperlink{class_q_serial_port_info_ad133e71acd5b1c92198dd49d4d44ba6b}{vendor\+Identifier()}}, \mbox{\hyperlink{class_q_serial_port_info_a789b0174d33fe65f1adfe40bacb3e9ab}{has\+Vendor\+Identifier()}} 
+\end{DoxySeeAlso}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{248 \{}
+\DoxyCodeLine{249     Q\_D(\textcolor{keyword}{const} \mbox{\hyperlink{class_q_serial_port_info}{QSerialPortInfo}});}
+\DoxyCodeLine{250     \textcolor{keywordflow}{return} !d ? false : d-\/>hasProductIdentifier;}
+\DoxyCodeLine{251 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_q_serial_port_info_a789b0174d33fe65f1adfe40bacb3e9ab}\label{class_q_serial_port_info_a789b0174d33fe65f1adfe40bacb3e9ab}} 
+\index{QSerialPortInfo@{QSerialPortInfo}!hasVendorIdentifier@{hasVendorIdentifier}}
+\index{hasVendorIdentifier@{hasVendorIdentifier}!QSerialPortInfo@{QSerialPortInfo}}
+\doxysubsubsection{\texorpdfstring{hasVendorIdentifier()}{hasVendorIdentifier()}}
+{\footnotesize\ttfamily bool Q\+Serial\+Port\+Info\+::has\+Vendor\+Identifier (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Returns {\ttfamily true} if there is a valid {\ttfamily 16-\/bit} vendor number present; otherwise returns {\ttfamily false}.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_q_serial_port_info_ad133e71acd5b1c92198dd49d4d44ba6b}{vendor\+Identifier()}}, \mbox{\hyperlink{class_q_serial_port_info_a08a8bbbf718b3a694e1de16f34fd1545}{product\+Identifier()}}, \mbox{\hyperlink{class_q_serial_port_info_ad9708ed14ff5e0ca10e240715afe2e98}{has\+Product\+Identifier()}} 
+\end{DoxySeeAlso}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{236 \{}
+\DoxyCodeLine{237     Q\_D(\textcolor{keyword}{const} \mbox{\hyperlink{class_q_serial_port_info}{QSerialPortInfo}});}
+\DoxyCodeLine{238     \textcolor{keywordflow}{return} !d ? false : d-\/>hasVendorIdentifier;}
+\DoxyCodeLine{239 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_q_serial_port_info_aaea506fe2fb706083c2ec0470b8603c9}\label{class_q_serial_port_info_aaea506fe2fb706083c2ec0470b8603c9}} 
+\index{QSerialPortInfo@{QSerialPortInfo}!isNull@{isNull}}
+\index{isNull@{isNull}!QSerialPortInfo@{QSerialPortInfo}}
+\doxysubsubsection{\texorpdfstring{isNull()}{isNull()}}
+{\footnotesize\ttfamily bool Q\+Serial\+Port\+Info\+::is\+Null (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns whether this \mbox{\hyperlink{class_q_serial_port_info}{Q\+Serial\+Port\+Info}} object holds a serial port definition.
+
+\begin{DoxySeeAlso}{See also}
+is\+Busy() 
+\end{DoxySeeAlso}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{101 \{ \textcolor{keywordflow}{return} !d\_ptr; \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_q_serial_port_info_a782e57ab984a5fafb822d8df11da1d11}\label{class_q_serial_port_info_a782e57ab984a5fafb822d8df11da1d11}} 
+\index{QSerialPortInfo@{QSerialPortInfo}!manufacturer@{manufacturer}}
+\index{manufacturer@{manufacturer}!QSerialPortInfo@{QSerialPortInfo}}
+\doxysubsubsection{\texorpdfstring{manufacturer()}{manufacturer()}}
+{\footnotesize\ttfamily Q\+String Q\+Serial\+Port\+Info\+::manufacturer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Returns the manufacturer string of the serial port, if available; otherwise returns an empty string.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_q_serial_port_info_acce2afb8d7ebe297e14c494cf29cab42}{description()}}, \mbox{\hyperlink{class_q_serial_port_info_a7a9e475cab3a21862cdfca93ef2b105a}{serial\+Number()}} 
+\end{DoxySeeAlso}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{184 \{}
+\DoxyCodeLine{185     Q\_D(\textcolor{keyword}{const} \mbox{\hyperlink{class_q_serial_port_info}{QSerialPortInfo}});}
+\DoxyCodeLine{186     \textcolor{keywordflow}{return} !d ? QString() : d-\/>\mbox{\hyperlink{class_q_serial_port_info_a782e57ab984a5fafb822d8df11da1d11}{manufacturer}};}
+\DoxyCodeLine{187 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_q_serial_port_info_af382451c237ef5b2869d29986b9fd9f3}\label{class_q_serial_port_info_af382451c237ef5b2869d29986b9fd9f3}} 
+\index{QSerialPortInfo@{QSerialPortInfo}!operator=@{operator=}}
+\index{operator=@{operator=}!QSerialPortInfo@{QSerialPortInfo}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_q_serial_port_info}{Q\+Serial\+Port\+Info}} \& Q\+Serial\+Port\+Info\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_q_serial_port_info}{Q\+Serial\+Port\+Info}} \&}]{other }\end{DoxyParamCaption})}
+
+Sets the \mbox{\hyperlink{class_q_serial_port_info}{Q\+Serial\+Port\+Info}} object to be equal to {\itshape other}. 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{138 \{}
+\DoxyCodeLine{139     \mbox{\hyperlink{class_q_serial_port_info_af6323396b806fcb26df7d14861a8469a}{QSerialPortInfo}}(other).swap(*\textcolor{keyword}{this});}
+\DoxyCodeLine{140     \textcolor{keywordflow}{return} *\textcolor{keyword}{this};}
+\DoxyCodeLine{141 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_q_serial_port_info_a787309831ad8d73d421dec1fd4347bb5}\label{class_q_serial_port_info_a787309831ad8d73d421dec1fd4347bb5}} 
+\index{QSerialPortInfo@{QSerialPortInfo}!portName@{portName}}
+\index{portName@{portName}!QSerialPortInfo@{QSerialPortInfo}}
+\doxysubsubsection{\texorpdfstring{portName()}{portName()}}
+{\footnotesize\ttfamily Q\+String Q\+Serial\+Port\+Info\+::port\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Returns the name of the serial port.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_q_serial_port_info_a919ba9efe087997a049390a0f8c5d712}{system\+Location()}} 
+\end{DoxySeeAlso}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{149 \{}
+\DoxyCodeLine{150     Q\_D(\textcolor{keyword}{const} \mbox{\hyperlink{class_q_serial_port_info}{QSerialPortInfo}});}
+\DoxyCodeLine{151     \textcolor{keywordflow}{return} !d ? QString() : d-\/>\mbox{\hyperlink{class_q_serial_port_info_a787309831ad8d73d421dec1fd4347bb5}{portName}};}
+\DoxyCodeLine{152 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_q_serial_port_info_a08a8bbbf718b3a694e1de16f34fd1545}\label{class_q_serial_port_info_a08a8bbbf718b3a694e1de16f34fd1545}} 
+\index{QSerialPortInfo@{QSerialPortInfo}!productIdentifier@{productIdentifier}}
+\index{productIdentifier@{productIdentifier}!QSerialPortInfo@{QSerialPortInfo}}
+\doxysubsubsection{\texorpdfstring{productIdentifier()}{productIdentifier()}}
+{\footnotesize\ttfamily quint16 Q\+Serial\+Port\+Info\+::product\+Identifier (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Returns the 16-\/bit product number for the serial port, if available; otherwise returns zero.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_q_serial_port_info_ad9708ed14ff5e0ca10e240715afe2e98}{has\+Product\+Identifier()}}, \mbox{\hyperlink{class_q_serial_port_info_ad133e71acd5b1c92198dd49d4d44ba6b}{vendor\+Identifier()}}, \mbox{\hyperlink{class_q_serial_port_info_a789b0174d33fe65f1adfe40bacb3e9ab}{has\+Vendor\+Identifier()}} 
+\end{DoxySeeAlso}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{224 \{}
+\DoxyCodeLine{225     Q\_D(\textcolor{keyword}{const} \mbox{\hyperlink{class_q_serial_port_info}{QSerialPortInfo}});}
+\DoxyCodeLine{226     \textcolor{keywordflow}{return} !d ? 0 : d-\/>productIdentifier;}
+\DoxyCodeLine{227 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_q_serial_port_info_a7a9e475cab3a21862cdfca93ef2b105a}\label{class_q_serial_port_info_a7a9e475cab3a21862cdfca93ef2b105a}} 
+\index{QSerialPortInfo@{QSerialPortInfo}!serialNumber@{serialNumber}}
+\index{serialNumber@{serialNumber}!QSerialPortInfo@{QSerialPortInfo}}
+\doxysubsubsection{\texorpdfstring{serialNumber()}{serialNumber()}}
+{\footnotesize\ttfamily Q\+String Q\+Serial\+Port\+Info\+::serial\+Number (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\begin{DoxySince}{Since}
+5.\+3
+\end{DoxySince}
+Returns the serial number string of the serial port, if available; otherwise returns an empty string.
+
+\begin{DoxyNote}{Note}
+The serial number may include letters.
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_q_serial_port_info_acce2afb8d7ebe297e14c494cf29cab42}{description()}}, \mbox{\hyperlink{class_q_serial_port_info_a782e57ab984a5fafb822d8df11da1d11}{manufacturer()}} 
+\end{DoxySeeAlso}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{200 \{}
+\DoxyCodeLine{201     Q\_D(\textcolor{keyword}{const} \mbox{\hyperlink{class_q_serial_port_info}{QSerialPortInfo}});}
+\DoxyCodeLine{202     \textcolor{keywordflow}{return} !d ? QString() : d-\/>\mbox{\hyperlink{class_q_serial_port_info_a7a9e475cab3a21862cdfca93ef2b105a}{serialNumber}};}
+\DoxyCodeLine{203 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_q_serial_port_info_af898ab4a2a0a03ebd74048dc0def9280}\label{class_q_serial_port_info_af898ab4a2a0a03ebd74048dc0def9280}} 
+\index{QSerialPortInfo@{QSerialPortInfo}!standardBaudRates@{standardBaudRates}}
+\index{standardBaudRates@{standardBaudRates}!QSerialPortInfo@{QSerialPortInfo}}
+\doxysubsubsection{\texorpdfstring{standardBaudRates()}{standardBaudRates()}}
+{\footnotesize\ttfamily Q\+List$<$ qint32 $>$ Q\+Serial\+Port\+Info\+::standard\+Baud\+Rates (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Returns a list of available standard baud rates supported by the target platform. 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{293 \{}
+\DoxyCodeLine{294     \textcolor{keywordflow}{return} QSerialPortPrivate::standardBaudRates();}
+\DoxyCodeLine{295 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_q_serial_port_info_a78497d89e73145f671607ad4c58305f1}\label{class_q_serial_port_info_a78497d89e73145f671607ad4c58305f1}} 
+\index{QSerialPortInfo@{QSerialPortInfo}!swap@{swap}}
+\index{swap@{swap}!QSerialPortInfo@{QSerialPortInfo}}
+\doxysubsubsection{\texorpdfstring{swap()}{swap()}}
+{\footnotesize\ttfamily void Q\+Serial\+Port\+Info\+::swap (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_q_serial_port_info}{Q\+Serial\+Port\+Info}} \&}]{other }\end{DoxyParamCaption})}
+
+Swaps \mbox{\hyperlink{class_q_serial_port_info}{Q\+Serial\+Port\+Info}} {\itshape other} with this \mbox{\hyperlink{class_q_serial_port_info}{Q\+Serial\+Port\+Info}}. This operation is very fast and never fails. 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{130 \{}
+\DoxyCodeLine{131     d\_ptr.swap(other.d\_ptr);}
+\DoxyCodeLine{132 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_q_serial_port_info_a919ba9efe087997a049390a0f8c5d712}\label{class_q_serial_port_info_a919ba9efe087997a049390a0f8c5d712}} 
+\index{QSerialPortInfo@{QSerialPortInfo}!systemLocation@{systemLocation}}
+\index{systemLocation@{systemLocation}!QSerialPortInfo@{QSerialPortInfo}}
+\doxysubsubsection{\texorpdfstring{systemLocation()}{systemLocation()}}
+{\footnotesize\ttfamily Q\+String Q\+Serial\+Port\+Info\+::system\+Location (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Returns the system location of the serial port.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_q_serial_port_info_a787309831ad8d73d421dec1fd4347bb5}{port\+Name()}} 
+\end{DoxySeeAlso}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{160 \{}
+\DoxyCodeLine{161     Q\_D(\textcolor{keyword}{const} \mbox{\hyperlink{class_q_serial_port_info}{QSerialPortInfo}});}
+\DoxyCodeLine{162     \textcolor{keywordflow}{return} !d ? QString() : d-\/>device;}
+\DoxyCodeLine{163 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_q_serial_port_info_ad133e71acd5b1c92198dd49d4d44ba6b}\label{class_q_serial_port_info_ad133e71acd5b1c92198dd49d4d44ba6b}} 
+\index{QSerialPortInfo@{QSerialPortInfo}!vendorIdentifier@{vendorIdentifier}}
+\index{vendorIdentifier@{vendorIdentifier}!QSerialPortInfo@{QSerialPortInfo}}
+\doxysubsubsection{\texorpdfstring{vendorIdentifier()}{vendorIdentifier()}}
+{\footnotesize\ttfamily quint16 Q\+Serial\+Port\+Info\+::vendor\+Identifier (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Returns the 16-\/bit vendor number for the serial port, if available; otherwise returns zero.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_q_serial_port_info_a789b0174d33fe65f1adfe40bacb3e9ab}{has\+Vendor\+Identifier()}}, \mbox{\hyperlink{class_q_serial_port_info_a08a8bbbf718b3a694e1de16f34fd1545}{product\+Identifier()}}, \mbox{\hyperlink{class_q_serial_port_info_ad9708ed14ff5e0ca10e240715afe2e98}{has\+Product\+Identifier()}} 
+\end{DoxySeeAlso}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{212 \{}
+\DoxyCodeLine{213     Q\_D(\textcolor{keyword}{const} \mbox{\hyperlink{class_q_serial_port_info}{QSerialPortInfo}});}
+\DoxyCodeLine{214     \textcolor{keywordflow}{return} !d ? 0 : d-\/>vendorIdentifier;}
+\DoxyCodeLine{215 \}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+qserialportinfo.\+h\item 
+qserialportinfo.\+cpp\end{DoxyCompactItemize}

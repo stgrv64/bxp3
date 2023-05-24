@@ -1,0 +1,66 @@
+\hypertarget{class_custom_network_manager_factory}{}\doxysection{Custom\+Network\+Manager\+Factory Class Reference}
+\label{class_custom_network_manager_factory}\index{CustomNetworkManagerFactory@{CustomNetworkManagerFactory}}
+Inheritance diagram for Custom\+Network\+Manager\+Factory\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_custom_network_manager_factory}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Slots}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_custom_network_manager_factory_ac2329d8bece8f7746cbb55db64f87dab}{on\+Ignore\+S\+S\+L\+Errors}} (Q\+Network\+Reply $\ast$reply, Q\+List$<$ Q\+Ssl\+Error $>$ error)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_custom_network_manager_factory_a28994d0090771e1fb96d80e388902108}\label{class_custom_network_manager_factory_a28994d0090771e1fb96d80e388902108}} 
+\mbox{\hyperlink{class_custom_network_manager_factory_a28994d0090771e1fb96d80e388902108}{Custom\+Network\+Manager\+Factory}} (Q\+Object $\ast$parent=0)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+virtual Q\+Network\+Access\+Manager $\ast$ \mbox{\hyperlink{class_custom_network_manager_factory_adc1373c334218bfc1992ab9454d63e30}{create}} (Q\+Object $\ast$parent)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_custom_network_manager_factory_a41930566a1582d9b518e3d932f6ed153}\label{class_custom_network_manager_factory_a41930566a1582d9b518e3d932f6ed153}} 
+Q\+Network\+Access\+Manager $\ast$ {\bfseries m\+\_\+network\+Manager}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_custom_network_manager_factory_adc1373c334218bfc1992ab9454d63e30}\label{class_custom_network_manager_factory_adc1373c334218bfc1992ab9454d63e30}} 
+\index{CustomNetworkManagerFactory@{CustomNetworkManagerFactory}!create@{create}}
+\index{create@{create}!CustomNetworkManagerFactory@{CustomNetworkManagerFactory}}
+\doxysubsubsection{\texorpdfstring{create()}{create()}}
+{\footnotesize\ttfamily Q\+Network\+Access\+Manager $\ast$ Custom\+Network\+Manager\+Factory\+::create (\begin{DoxyParamCaption}\item[{Q\+Object $\ast$}]{parent }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+this is a virtual method we need to implement this method , most important step we will create our custom Q\+Network\+Access\+Manager here and return that the second important thing we need to do here is to connect the ssl\+Errors signal from Q\+Network\+Access\+Manager to our own slot which will ignore the ssl\+Errors 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{24 \{}
+\DoxyCodeLine{25  qDebug() << \textcolor{stringliteral}{"CustomNetworkManagerFactory::create function"};}
+\DoxyCodeLine{26  m\_networkManager = \textcolor{keyword}{new} QNetworkAccessManager(\textcolor{keyword}{this});}
+\DoxyCodeLine{27  connect(m\_networkManager,SIGNAL(sslErrors(QNetworkReply*,QList<QSslError>)),\textcolor{keyword}{this},SLOT(\mbox{\hyperlink{class_custom_network_manager_factory_ac2329d8bece8f7746cbb55db64f87dab}{onIgnoreSSLErrors}}(QNetworkReply*,QList<QSslError>)));}
+\DoxyCodeLine{28  qDebug() << \textcolor{stringliteral}{"CustomNetworkManagerFactory::create function connect signal ignoreSslErrors"};}
+\DoxyCodeLine{29  \textcolor{keywordflow}{return} m\_networkManager;}
+\DoxyCodeLine{30 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_custom_network_manager_factory_ac2329d8bece8f7746cbb55db64f87dab}\label{class_custom_network_manager_factory_ac2329d8bece8f7746cbb55db64f87dab}} 
+\index{CustomNetworkManagerFactory@{CustomNetworkManagerFactory}!onIgnoreSSLErrors@{onIgnoreSSLErrors}}
+\index{onIgnoreSSLErrors@{onIgnoreSSLErrors}!CustomNetworkManagerFactory@{CustomNetworkManagerFactory}}
+\doxysubsubsection{\texorpdfstring{onIgnoreSSLErrors}{onIgnoreSSLErrors}}
+{\footnotesize\ttfamily void Custom\+Network\+Manager\+Factory\+::on\+Ignore\+S\+S\+L\+Errors (\begin{DoxyParamCaption}\item[{Q\+Network\+Reply $\ast$}]{reply,  }\item[{Q\+List$<$ Q\+Ssl\+Error $>$}]{error }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+Our own slot which is connected to the ssl\+Errors signal of Q\+Network\+Access\+Manager When this slot is called using the Q\+Network\+Reply object in the parameter we need to call ignore\+Ssl\+Errors method of Q\+Network\+Reply 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{36 \{}
+\DoxyCodeLine{37     reply-\/>ignoreSslErrors(error);}
+\DoxyCodeLine{38 \}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{customnetworkmanagerfactory_8h}{customnetworkmanagerfactory.\+h}}\item 
+\mbox{\hyperlink{customnetworkmanagerfactory_8cpp}{customnetworkmanagerfactory.\+cpp}}\end{DoxyCompactItemize}

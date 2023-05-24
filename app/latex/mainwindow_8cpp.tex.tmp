@@ -1,0 +1,21 @@
+\hypertarget{mainwindow_8cpp}{}\doxysection{mainwindow.\+cpp File Reference}
+\label{mainwindow_8cpp}\index{mainwindow.cpp@{mainwindow.cpp}}
+
+
+Define \mbox{\hyperlink{class_main_window}{Main\+Window}} class and \mbox{\hyperlink{class_touchesfonction_sql_model}{Touchesfonction\+Sql\+Model}} class.  
+
+
+{\ttfamily \#include $<$mainwindow.\+h$>$}\newline
+{\ttfamily \#include $<$process.\+h$>$}\newline
+{\ttfamily \#include $<$supervision.\+h$>$}\newline
+{\ttfamily \#include $<$log4cpp/\+Category.\+hh$>$}\newline
+{\ttfamily \#include $<$log4cpp/\+Property\+Configurator.\+hh$>$}\newline
+{\ttfamily \#include $<$Q\+Sql\+Record$>$}\newline
+{\ttfamily \#include $<$Q\+Sql\+Field$>$}\newline
+Include dependency graph for mainwindow.\+cpp\+:
+% FIG 0
+
+
+\doxysubsection{Detailed Description}
+Define \mbox{\hyperlink{class_main_window}{Main\+Window}} class and \mbox{\hyperlink{class_touchesfonction_sql_model}{Touchesfonction\+Sql\+Model}} class. 
+

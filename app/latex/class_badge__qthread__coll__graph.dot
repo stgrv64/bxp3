@@ -1,0 +1,20 @@
+digraph "Badge_qthread"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="Badge_qthread",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="The Badge_qthread class."];
+  Node2 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="QThread",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node3 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" badge" ];
+  Node3 [label="Badge_qobject",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_badge__qobject.html",tooltip="The Badge_qobject class."];
+  Node4 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="QObject",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node5 -> Node3 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" morpho" ];
+  Node5 [label="Morpho",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_morpho.html",tooltip=" "];
+  Node4 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node6 -> Node3 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" port" ];
+  Node6 [label="QSerialPort",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_q_serial_port.html",tooltip="Provides functions to access serial ports."];
+  Node7 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node7 [label="QIODevice",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+}

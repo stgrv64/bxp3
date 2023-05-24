@@ -1,0 +1,131 @@
+\hypertarget{class_x7_carte_i_o}{}\doxysection{X7\+Carte\+IO Class Reference}
+\label{class_x7_carte_i_o}\index{X7CarteIO@{X7CarteIO}}
+Inheritance diagram for X7\+Carte\+IO\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_x7_carte_i_o}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_x7_carte_i_o_a8e44746b48f5a7a31ed14cc344dfe36a}\label{class_x7_carte_i_o_a8e44746b48f5a7a31ed14cc344dfe36a}} 
+enum {\bfseries stat} \{ \newline
+{\bfseries X7\+\_\+\+W\+A\+I\+T\+\_\+\+I\+N\+IT}, 
+{\bfseries X7\+\_\+\+G\+E\+T\+\_\+\+V\+E\+R\+S\+I\+ON}, 
+{\bfseries X7\+\_\+\+G\+E\+T\+\_\+\+P\+O\+W\+E\+R\+\_\+\+L\+E\+V\+EL}, 
+{\bfseries X7\+\_\+\+S\+E\+T\+\_\+\+B\+L\+U\+E\+\_\+\+L\+I\+G\+HT}, 
+\newline
+{\bfseries X7\+\_\+\+S\+E\+T\+\_\+\+B\+R\+I\+G\+H\+T\+N\+E\+SS}, 
+{\bfseries X7\+\_\+\+G\+E\+T\+\_\+\+I\+O\+\_\+\+S\+T\+A\+TE}, 
+{\bfseries X7\+\_\+\+S\+E\+T\+\_\+\+I\+O\+\_\+\+S\+T\+A\+TE}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Slots}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_x7_carte_i_o_a33a7f504c834d6884bdcea8b60cd12db}\label{class_x7_carte_i_o_a33a7f504c834d6884bdcea8b60cd12db}} 
+void {\bfseries auto\+Start} ()
+\item 
+\mbox{\Hypertarget{class_x7_carte_i_o_ab0df355ce9532820d18edf7f03066ddb}\label{class_x7_carte_i_o_ab0df355ce9532820d18edf7f03066ddb}} 
+virtual void {\bfseries recoit\+Data\+Du\+Port} (Q\+Byte\+Array)
+\item 
+\mbox{\Hypertarget{class_x7_carte_i_o_a8ec40a9b314fe8fcf3ead948d8622daf}\label{class_x7_carte_i_o_a8ec40a9b314fe8fcf3ead948d8622daf}} 
+virtual void {\bfseries recoit\+Data\+Du\+Gest} (Q\+Variant)
+\end{DoxyCompactItemize}
+\doxysubsection*{Signals}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_x7_carte_i_o_a30ce6ffe3dc733c7005b0add715bc4d4}\label{class_x7_carte_i_o_a30ce6ffe3dc733c7005b0add715bc4d4}} 
+void {\bfseries envoie\+Data\+Vers\+Gest} (Q\+Variant)
+\item 
+\mbox{\Hypertarget{class_x7_carte_i_o_a132c9d971308f1c2d26191412fb370d5}\label{class_x7_carte_i_o_a132c9d971308f1c2d26191412fb370d5}} 
+void {\bfseries envoie\+Data\+Vers\+Port} (Q\+Byte\+Array)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_x7_carte_i_o_ac06710b844ccb1ef7b3190c3f5700998}\label{class_x7_carte_i_o_ac06710b844ccb1ef7b3190c3f5700998}} 
+{\bfseries X7\+Carte\+IO} (Q\+Object $\ast$parent=nullptr)
+\item 
+\mbox{\Hypertarget{class_x7_carte_i_o_ae1a8301a5246b28647f71a0067b00215}\label{class_x7_carte_i_o_ae1a8301a5246b28647f71a0067b00215}} 
+void {\bfseries custom\+Event} (Q\+Event $\ast$event)
+\item 
+\mbox{\Hypertarget{class_x7_carte_i_o_a6613700c8217069ca92820074d570067}\label{class_x7_carte_i_o_a6613700c8217069ca92820074d570067}} 
+void {\bfseries init\+Carte\+I\+O\+Port} ()
+\item 
+\mbox{\Hypertarget{class_x7_carte_i_o_afd2fd629717db83a16470b485dfb8ffc}\label{class_x7_carte_i_o_afd2fd629717db83a16470b485dfb8ffc}} 
+Q\+String {\bfseries get\+Version\+Carte\+IO} ()
+\item 
+\mbox{\Hypertarget{class_x7_carte_i_o_a24fade060e6a9bf016e8a667d45c90fe}\label{class_x7_carte_i_o_a24fade060e6a9bf016e8a667d45c90fe}} 
+void {\bfseries get\+Version} ()
+\item 
+\mbox{\Hypertarget{class_x7_carte_i_o_a64bbfe27ddb22a1edc52bad4900af8b8}\label{class_x7_carte_i_o_a64bbfe27ddb22a1edc52bad4900af8b8}} 
+void {\bfseries set\+Blue\+Light} (bool led)
+\item 
+\mbox{\Hypertarget{class_x7_carte_i_o_aa6398fd4c4fb207888cb5633ae21f503}\label{class_x7_carte_i_o_aa6398fd4c4fb207888cb5633ae21f503}} 
+void {\bfseries set\+Brightness} (uint brightness)
+\item 
+\mbox{\Hypertarget{class_x7_carte_i_o_a003048d94a455f0a401a12bea24628ab}\label{class_x7_carte_i_o_a003048d94a455f0a401a12bea24628ab}} 
+void {\bfseries get\+Power\+Level} (int level)
+\item 
+\mbox{\Hypertarget{class_x7_carte_i_o_a35eb038edef6b0acce03a9a393117025}\label{class_x7_carte_i_o_a35eb038edef6b0acce03a9a393117025}} 
+void {\bfseries get\+I\+O\+State} ()
+\item 
+\mbox{\Hypertarget{class_x7_carte_i_o_a1667cdfdfa8c938fb5c0090a4d2cf506}\label{class_x7_carte_i_o_a1667cdfdfa8c938fb5c0090a4d2cf506}} 
+bool {\bfseries get\+Emit\+Msg} ()
+\item 
+\mbox{\Hypertarget{class_x7_carte_i_o_a71528cb89c7e1b16c3b9a431d259d81a}\label{class_x7_carte_i_o_a71528cb89c7e1b16c3b9a431d259d81a}} 
+Q\+String {\bfseries get\+I\+O\+State\+Result} ()
+\item 
+\mbox{\Hypertarget{class_x7_carte_i_o_a6cb09c9741dcad7c81a5e48704b23006}\label{class_x7_carte_i_o_a6cb09c9741dcad7c81a5e48704b23006}} 
+Q\+String {\bfseries get\+Power\+Level\+Result} ()
+\item 
+\mbox{\Hypertarget{class_x7_carte_i_o_a935b2417077517522623d8fae3e86d68}\label{class_x7_carte_i_o_a935b2417077517522623d8fae3e86d68}} 
+void {\bfseries set\+I\+O\+State} (int relay, int state, int time\+Out)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_x7_carte_i_o_a414bfdc45e9df5504e44ae136507ad76}\label{class_x7_carte_i_o_a414bfdc45e9df5504e44ae136507ad76}} 
+static \mbox{\hyperlink{class_x7_carte_i_o}{X7\+Carte\+IO}} $\ast$ {\bfseries get\+Instance} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_x7_carte_i_o_a7db02649286611cdd653cdbc97edf188}\label{class_x7_carte_i_o_a7db02649286611cdd653cdbc97edf188}} 
+static \mbox{\hyperlink{class_x7_carte_i_o}{X7\+Carte\+IO}} $\ast$ {\bfseries instance} = 0
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_x7_carte_i_o_a9a4a602507b3066ee6724752b0aa07c6}\label{class_x7_carte_i_o_a9a4a602507b3066ee6724752b0aa07c6}} 
+stat {\bfseries \+\_\+stat}
+\item 
+\mbox{\Hypertarget{class_x7_carte_i_o_a010ae7eb4e2259cf5e809c0f3830234f}\label{class_x7_carte_i_o_a010ae7eb4e2259cf5e809c0f3830234f}} 
+bool {\bfseries \+\_\+emit\+Msg}
+\item 
+\mbox{\Hypertarget{class_x7_carte_i_o_a02630e26a77209fec54856935c974d85}\label{class_x7_carte_i_o_a02630e26a77209fec54856935c974d85}} 
+Q\+String {\bfseries \+\_\+version}
+\item 
+\mbox{\Hypertarget{class_x7_carte_i_o_a797391ea1e00d56880baa552beb0e10b}\label{class_x7_carte_i_o_a797391ea1e00d56880baa552beb0e10b}} 
+Q\+String {\bfseries \+\_\+power\+Level}
+\item 
+\mbox{\Hypertarget{class_x7_carte_i_o_a7192a7bd0aa22025385fcc831d8f3ee3}\label{class_x7_carte_i_o_a7192a7bd0aa22025385fcc831d8f3ee3}} 
+Q\+String {\bfseries \+\_\+io\+State}
+\item 
+\mbox{\Hypertarget{class_x7_carte_i_o_ad1308ed60bf189cb3a1ef208f3d5cc2d}\label{class_x7_carte_i_o_ad1308ed60bf189cb3a1ef208f3d5cc2d}} 
+Q\+Timer {\bfseries lecture\+Port\+Serie}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_x7_carte_i_o_aaeb705cedfba7099cbb8efc51150e727}\label{class_x7_carte_i_o_aaeb705cedfba7099cbb8efc51150e727}} 
+static log4cpp\+::\+Category $\ast$ {\bfseries log4cpp} = \&log4cpp\+::\+Category\+::get\+Instance(\char`\"{}X7\+Carte\+IO\char`\"{})
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+x7carteio.\+h\item 
+x7carteio.\+cpp\end{DoxyCompactItemize}

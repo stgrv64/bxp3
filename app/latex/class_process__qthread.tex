@@ -1,0 +1,86 @@
+\hypertarget{class_process__qthread}{}\doxysection{Process\+\_\+qthread Class Reference}
+\label{class_process__qthread}\index{Process\_qthread@{Process\_qthread}}
+
+
+The \mbox{\hyperlink{class_process__qthread}{Process\+\_\+qthread}} class.  
+
+
+
+
+{\ttfamily \#include $<$process.\+h$>$}
+
+Inheritance diagram for Process\+\_\+qthread\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_process__qthread}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_process__qthread_ae3ea741cd60417adbf5a8ed8199eca5f}{proc\+\_\+qthread\+\_\+init}} (void)
+\begin{DoxyCompactList}\small\item\em (N\+OT U\+S\+ED) Process\+\_\+qthread\+::init \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_process__qthread_ae890946d90c4d79df498935999bccc74}{run}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_process__qthread_ae890946d90c4d79df498935999bccc74}{Process\+\_\+qthread\+::run}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_process__qthread_a48719c85d71eaa58373de216c39fd8fa}\label{class_process__qthread_a48719c85d71eaa58373de216c39fd8fa}} 
+\mbox{\hyperlink{class_process__qobject}{Process\+\_\+qobject}} {\bfseries process}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{class_process__qthread}{Process\+\_\+qthread}} class. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_process__qthread_ae3ea741cd60417adbf5a8ed8199eca5f}\label{class_process__qthread_ae3ea741cd60417adbf5a8ed8199eca5f}} 
+\index{Process\_qthread@{Process\_qthread}!proc\_qthread\_init@{proc\_qthread\_init}}
+\index{proc\_qthread\_init@{proc\_qthread\_init}!Process\_qthread@{Process\_qthread}}
+\doxysubsubsection{\texorpdfstring{proc\_qthread\_init()}{proc\_qthread\_init()}}
+{\footnotesize\ttfamily void Process\+\_\+qthread\+::proc\+\_\+qthread\+\_\+init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+(N\+OT U\+S\+ED) Process\+\_\+qthread\+::init 
+
+
+\begin{DoxyItemize}
+\item init badge\+\_\+thread et supervision\+\_\+thread 
+\end{DoxyItemize}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{2450 \{}
+\DoxyCodeLine{2451     \textcolor{comment}{/*badge\_thread.start();}}
+\DoxyCodeLine{2452 \textcolor{comment}{supervision\_thread.start();}}
+\DoxyCodeLine{2453 \textcolor{comment}{*/}\}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_process__qthread_ae890946d90c4d79df498935999bccc74}\label{class_process__qthread_ae890946d90c4d79df498935999bccc74}} 
+\index{Process\_qthread@{Process\_qthread}!run@{run}}
+\index{run@{run}!Process\_qthread@{Process\_qthread}}
+\doxysubsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily void Process\+\_\+qthread\+::run (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{class_process__qthread_ae890946d90c4d79df498935999bccc74}{Process\+\_\+qthread\+::run}}. 
+
+
+\begin{DoxyItemize}
+\item lance \mbox{\hyperlink{class_process__qobject_ae04c99dad204f1f5993290d45a5ed903}{Process\+\_\+qobject\+::process\+\_\+init()}} 
+\end{DoxyItemize}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{2460 \{}
+\DoxyCodeLine{2461 }
+\DoxyCodeLine{2462     \textcolor{comment}{//proc\_qthread\_init(); //init badge\_thread et supervision\_thread (NOT USED)}}
+\DoxyCodeLine{2463     process.\mbox{\hyperlink{class_process__qobject_ae04c99dad204f1f5993290d45a5ed903}{process\_init}}();}
+\DoxyCodeLine{2464     exec();}
+\DoxyCodeLine{2465 \}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{process_8h}{process.\+h}}\item 
+\mbox{\hyperlink{process_8cpp}{process.\+cpp}}\end{DoxyCompactItemize}

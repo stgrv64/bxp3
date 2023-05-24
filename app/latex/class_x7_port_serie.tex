@@ -1,0 +1,72 @@
+\hypertarget{class_x7_port_serie}{}\doxysection{X7\+Port\+Serie Class Reference}
+\label{class_x7_port_serie}\index{X7PortSerie@{X7PortSerie}}
+Inheritance diagram for X7\+Port\+Serie\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_x7_port_serie}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_x7_port_serie_a8a0fec310bd445b75a3c8f320c8466af}\label{class_x7_port_serie_a8a0fec310bd445b75a3c8f320c8466af}} 
+enum {\bfseries Device} \{ \newline
+{\bfseries X7\+\_\+\+I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+IO}, 
+{\bfseries X7\+\_\+\+R\+E\+A\+D\+E\+R\+\_\+1}, 
+{\bfseries X7\+\_\+\+R\+E\+A\+D\+E\+R\+\_\+2}, 
+{\bfseries X7\+\_\+\+R\+E\+A\+D\+E\+R\+\_\+3}, 
+\newline
+{\bfseries X7\+\_\+\+R\+E\+A\+D\+E\+R\+\_\+4}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Slots}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_x7_port_serie_a362dbbaea9c5e4282a95b2b146f8afad}\label{class_x7_port_serie_a362dbbaea9c5e4282a95b2b146f8afad}} 
+void {\bfseries recoit\+Data\+Du\+Gest} (Q\+Byte\+Array array)
+\item 
+\mbox{\Hypertarget{class_x7_port_serie_a22ad2a38569d5c67dd8f5fcd4be94a8a}\label{class_x7_port_serie_a22ad2a38569d5c67dd8f5fcd4be94a8a}} 
+void {\bfseries read} ()
+\item 
+\mbox{\Hypertarget{class_x7_port_serie_ab6c042833893fa8351db644970922d0d}\label{class_x7_port_serie_ab6c042833893fa8351db644970922d0d}} 
+void {\bfseries close} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Signals}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_x7_port_serie_a85032050ff265bf2d4ffcda3d703fa87}\label{class_x7_port_serie_a85032050ff265bf2d4ffcda3d703fa87}} 
+void {\bfseries envoie\+Data\+Vers\+Gest} (Q\+Byte\+Array array)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_x7_port_serie_a43931777d574b1f0da116a228561efa1}\label{class_x7_port_serie_a43931777d574b1f0da116a228561efa1}} 
+{\bfseries X7\+Port\+Serie} (Q\+Object $\ast$parent=nullptr)
+\item 
+\mbox{\Hypertarget{class_x7_port_serie_abf1d962a0a9fd4ef1d49981d72bc8108}\label{class_x7_port_serie_abf1d962a0a9fd4ef1d49981d72bc8108}} 
+void {\bfseries connecte} (\mbox{\hyperlink{class_x7_interface_serie}{X7\+Interface\+Serie}} $\ast$interface\+Serie)
+\item 
+\mbox{\Hypertarget{class_x7_port_serie_a2a28daaea076bd965ea769811a5c143d}\label{class_x7_port_serie_a2a28daaea076bd965ea769811a5c143d}} 
+void {\bfseries config} (Device device)
+\item 
+\mbox{\Hypertarget{class_x7_port_serie_a21a32fe4dbaa388481bb5a72cc1f5a5c}\label{class_x7_port_serie_a21a32fe4dbaa388481bb5a72cc1f5a5c}} 
+Q\+String {\bfseries get\+Port\+Name} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_x7_port_serie_aa4f91ae1e7d3d649e78ad504d1311fcb}\label{class_x7_port_serie_aa4f91ae1e7d3d649e78ad504d1311fcb}} 
+static log4cpp\+::\+Category $\ast$ {\bfseries log4cpp} = \&log4cpp\+::\+Category\+::get\+Instance(\char`\"{}X7\+Port\+Serie\char`\"{})
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_x7_port_serie_a7ca2cd145430816d0e9c9416d0c18418}\label{class_x7_port_serie_a7ca2cd145430816d0e9c9416d0c18418}} 
+\mbox{\hyperlink{class_q_serial_port}{Q\+Serial\+Port}} $\ast$ {\bfseries \+\_\+port}
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+x7portserie.\+h\item 
+x7portserie.\+cpp\end{DoxyCompactItemize}

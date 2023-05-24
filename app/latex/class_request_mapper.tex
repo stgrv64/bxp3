@@ -1,0 +1,100 @@
+\hypertarget{class_request_mapper}{}\doxysection{Request\+Mapper Class Reference}
+\label{class_request_mapper}\index{RequestMapper@{RequestMapper}}
+
+
+{\ttfamily \#include $<$requestmapper.\+h$>$}
+
+Inheritance diagram for Request\+Mapper\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_request_mapper}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_request_mapper_aeab4be2b6943c3e8856e4d3aab023b71}{Request\+Mapper}} (Q\+Object $\ast$parent=0)
+\item 
+\mbox{\hyperlink{class_request_mapper_af70f9ba02375a818287f4a91aad23ead}{$\sim$\+Request\+Mapper}} ()
+\item 
+void \mbox{\hyperlink{class_request_mapper_a5faa3e99e8599b260d2c9ec1479b6419}{service}} (Http\+Request \&request, Http\+Response \&response)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_request_mapper_a64823703754c62c8b586aae818a023dc}\label{class_request_mapper_a64823703754c62c8b586aae818a023dc}} 
+static log4cpp\+::\+Category $\ast$ {\bfseries log4cpp} = \&log4cpp\+::\+Category\+::get\+Instance(\char`\"{}Request\+Mapper\char`\"{})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The request mapper dispatches incoming H\+T\+TP requests to controller classes depending on the requested path. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_request_mapper_aeab4be2b6943c3e8856e4d3aab023b71}\label{class_request_mapper_aeab4be2b6943c3e8856e4d3aab023b71}} 
+\index{RequestMapper@{RequestMapper}!RequestMapper@{RequestMapper}}
+\index{RequestMapper@{RequestMapper}!RequestMapper@{RequestMapper}}
+\doxysubsubsection{\texorpdfstring{RequestMapper()}{RequestMapper()}}
+{\footnotesize\ttfamily Request\+Mapper\+::\+Request\+Mapper (\begin{DoxyParamCaption}\item[{Q\+Object $\ast$}]{parent = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+Constructor. 
+\begin{DoxyParams}{Parameters}
+{\em parent} & Parent object \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{23                                             :HttpRequestHandler(parent) \{}
+\DoxyCodeLine{24     log4cpp-\/>debug(\textcolor{stringliteral}{"constructeur"});}
+\DoxyCodeLine{25 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_request_mapper_af70f9ba02375a818287f4a91aad23ead}\label{class_request_mapper_af70f9ba02375a818287f4a91aad23ead}} 
+\index{RequestMapper@{RequestMapper}!````~RequestMapper@{$\sim$RequestMapper}}
+\index{````~RequestMapper@{$\sim$RequestMapper}!RequestMapper@{RequestMapper}}
+\doxysubsubsection{\texorpdfstring{$\sim$RequestMapper()}{~RequestMapper()}}
+{\footnotesize\ttfamily Request\+Mapper\+::$\sim$\+Request\+Mapper (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Destructor. 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{27 \{}
+\DoxyCodeLine{28     qDebug(\textcolor{stringliteral}{"RequestMapper: deleted"});}
+\DoxyCodeLine{29 \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_request_mapper_a5faa3e99e8599b260d2c9ec1479b6419}\label{class_request_mapper_a5faa3e99e8599b260d2c9ec1479b6419}} 
+\index{RequestMapper@{RequestMapper}!service@{service}}
+\index{service@{service}!RequestMapper@{RequestMapper}}
+\doxysubsubsection{\texorpdfstring{service()}{service()}}
+{\footnotesize\ttfamily void Request\+Mapper\+::service (\begin{DoxyParamCaption}\item[{Http\+Request \&}]{request,  }\item[{Http\+Response \&}]{response }\end{DoxyParamCaption})}
+
+Dispatch incoming H\+T\+TP requests to different controllers depending on the U\+RL. 
+\begin{DoxyParams}{Parameters}
+{\em request} & The received H\+T\+TP request \\
+\hline
+{\em response} & Must be used to return the response \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{30                                                                         \{}
+\DoxyCodeLine{31     log4cpp-\/>debug(\textcolor{stringliteral}{"service"});}
+\DoxyCodeLine{32     QByteArray path=request.getPath();}
+\DoxyCodeLine{33     log4cpp-\/>debug(\textcolor{stringliteral}{"path="}+QString(path.data()).toStdString());}
+\DoxyCodeLine{34 }
+\DoxyCodeLine{35     \textcolor{keywordflow}{if} (path.startsWith(\textcolor{stringliteral}{"/setup"})) \{}
+\DoxyCodeLine{36         \mbox{\hyperlink{class_form_controller}{FormController}}().\mbox{\hyperlink{class_form_controller_af327951d82e5b89df6e006c370540b7a}{service}}(request, response);}
+\DoxyCodeLine{37     \}}
+\DoxyCodeLine{38     log4cpp-\/>debug(\textcolor{stringliteral}{"finished request"});}
+\DoxyCodeLine{39 \}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{requestmapper_8h}{requestmapper.\+h}}\item 
+\mbox{\hyperlink{requestmapper_8cpp}{requestmapper.\+cpp}}\end{DoxyCompactItemize}
